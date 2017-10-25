@@ -9,8 +9,7 @@ struct Nodo {
 
 	Nodo *anterior;
 
-	string valor;asd
-
+        string valor;
 
 	Nodo() {
 	}

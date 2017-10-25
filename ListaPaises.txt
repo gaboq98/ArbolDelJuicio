@@ -1,100 +1,100 @@
-Afganistán
-Albania
-Alemania
-Arabia Saudita
-Argelia
-Argentina
-Australia
-Austria
-Bangladés
-Brasil
-Brunéi
-Bulgaria
-Canadá
-Catar
-Chad
-Chile
-China
-Ciudad del Vaticano
-Colombia
-Corea del Sur
-Costa Rica
-Croacia
-Cuba
-Dinamarca
-Dominica
-Ecuador
-Egipto
-El Salvador
-Emiratos Árabes Unidos
-Eslovaquia
-España
-Estados Unidos
-Estonia
-Etiopía
-Filipinas
-Finlandia
-Francia
-Grecia
-Guatemala
-Honduras
-Hungría
-India
-Indonesia
-Irak
-Irán
-Irlanda
-Islandia
-Israel
-Italia
-Jamaica
-Japón
-Jordania
-Kazajistán
-Kenia
-Kuwait
-Luxemburgo
-Madagascar
-Malasia
-México
-Micronesia
-Mongolia
-Nepal
-Nicaragua
-Níger
-Nigeria
-Noruega
-Nueva Zelanda
-Países Bajos
-Pakistán
-Panamá
-Paraguay
-Perú
-Polonia
-Portugal
-Reino Unido
-República Centroafricana
-República Checa
-República Dominicana
-República Sudafricana
-Ruanda
-Rusia
-Senegal
-Serbia
-Singapur
-Siria
-Somalia
-Sri Lanka
-Sudán
-Suecia
-Suiza
-Tailandia
-Turquía
-Ucrania
-Uganda
-Uruguay
-Venezuela
-Vietnam
-Yemen
-Zambia
-Zimbabue
+4Afganistán
+2Albania
+2Alemania
+4Arabia Saudita
+1Argelia
+0Argentina
+3Australia
+2Austria
+4Bangladés
+0Brasil
+4Brunéi
+2Bulgaria
+0Canadá
+4Catar
+1Chad
+0Chile
+4China
+2Ciudad del Vaticano
+0Colombia
+4Corea del Sur
+0Costa Rica
+2Croacia
+0Cuba
+2Dinamarca
+0Dominica
+0Ecuador
+1Egipto
+0El Salvador
+4Emiratos Árabes Unidos
+2Eslovaquia
+2España
+0Estados Unidos
+2Estonia
+1Etiopía
+4Filipinas
+2Finlandia
+2Francia
+2Grecia
+0Guatemala
+0Honduras
+2Hungría
+4India
+4Indonesia
+4Irak
+4Irán
+2Irlanda
+2Islandia
+4Israel
+2Italia
+0Jamaica
+4Japón
+4Jordania
+4Kazajistán
+1Kenia
+1Kuwait
+2Luxemburgo
+1Madagascar
+4Malasia
+0México
+3Micronesia
+4Mongolia
+4Nepal
+0Nicaragua
+1Níger
+1Nigeria
+2Noruega
+3Nueva Zelanda
+2Países Bajos
+4Pakistán
+0Panamá
+0Paraguay
+0Perú
+2Polonia
+2Portugal
+2Reino Unido
+1República Centroafricana
+2República Checa
+0República Dominicana
+1República Sudafricana
+1Ruanda
+2Rusia
+1Senegal
+2Serbia
+4Singapur
+4Siria
+1Somalia
+4Sri Lanka
+1Sudán
+2Suecia
+2Suiza
+4Tailandia
+4Turquía
+2Ucrania
+1Uganda
+0Uruguay
+0Venezuela
+4Vietnam
+4Yemen
+1Zambia
+1Zimbabue
