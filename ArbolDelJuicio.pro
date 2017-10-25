@@ -30,14 +30,16 @@ SOURCES += \
     Generadorarchivos.cpp \
     Mundo.cpp \
     Persona.cpp \
-    estructuras.cpp
+    estructuras.cpp \
+    arbolavl.cpp
 
 HEADERS += \
         mainwindow.h \
     Lista.h \
     Generadorarchivos.h \
     Mundo.h \
-    Persona.h
+    Persona.h \
+    arbolavl.h
 
 FORMS += \
         mainwindow.ui

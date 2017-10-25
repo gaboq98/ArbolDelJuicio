@@ -35,4 +35,28 @@ Persona::Persona(string nombre, string apellido, string pais, string creencia, s
     this->profecion = profecion;
     this->correoElectonico = correo;
     this->horaYFecha = obtenerFecha();
+    limpiar();
+}
+
+void Persona::pecar()
+{
+    for(int i = 0; i < 7; i++ ){
+        int pecado = rand()%100;
+        pecados[i] += pecado;
+    }
+}
+
+void Persona::limpiar()
+{
+    for (int i: pecados){
+        i = 0;
+    }
+}
+
+int Persona::total_pecados()
+{
+    int total = 0;
+    for (int i: pecados){
+        total += i;
+    }
 }

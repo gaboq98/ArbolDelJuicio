@@ -23,6 +23,9 @@ struct Persona {
 
     Persona();
     Persona(string nombre, string apellido, string pais, string creencia, string profecion, string correo);
+    void pecar();
+    void limpiar();
+    int total_pecados();
 
     string obtenerFecha();
 
