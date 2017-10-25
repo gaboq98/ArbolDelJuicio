@@ -1,12 +1,16 @@
 #include <iostream>
-#include "Lista.h"
+#include "mainwindow.h"
+#include <QApplication>
+
 
 using namespace std;
 
-int main() {
 
-    GeneradorArchivos *g = new GeneradorArchivos();
-    string h= g->generadorNombre();
-
-    return 0;
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    qRegisterMetaType<QVector<int> >("QVector<int>");
+    return a.exec();
 }

@@ -7,9 +7,9 @@ struct Mundo {
 
     Lista personas;
     GeneradorArchivos *archivos;
-    void crearPersona();
+    Persona *crearPersona();
     string asignarCorreo(string pais);
+    void imprimir();
 
 };
-
 

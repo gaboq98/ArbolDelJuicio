@@ -5,10 +5,11 @@
 #include "Mundo.h"
 
 Mundo::Mundo() {
-
+    srand(time(0));
+    archivos = new GeneradorArchivos();
 }
 
-void Mundo::crearPersona()
+Persona *Mundo::crearPersona()
 {
     string nom = archivos->generadorNombre();
     string ape = archivos->generadorApellido();
@@ -18,6 +19,7 @@ void Mundo::crearPersona()
     string correo = asignarCorreo(pais);
     pais = pais.substr(1, pais.size());
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
+    return persona;
 }
 
 string Mundo::asignarCorreo(string pais)
@@ -27,5 +29,13 @@ string Mundo::asignarCorreo(string pais)
     int indice = stoi(pais.substr(0));
     string correo = correos[indice];
     return correo;
+}
+
+void Mundo::imprimir()
+{
+    for(int i = 0; i < 10000; i++) {
+        Persona *p = crearPersona();
+        cout << p->nombre << " " << p->apellido << " " << p->pais << " " << p->correoElectonico << endl;
+    }
 }
 
