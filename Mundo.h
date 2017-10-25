@@ -8,9 +8,9 @@ struct Mundo {
     QHash<int, int> diccionario;
     Lista* personas;
     GeneradorArchivos *archivos;
-    void crearPersona();
+    Persona *crearPersona();
     string asignarCorreo(string pais);
+    void imprimir();
 
 };
-
 

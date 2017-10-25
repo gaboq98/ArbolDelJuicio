@@ -6,9 +6,11 @@
 
 Mundo::Mundo() {
     personas = new Lista();
+    srand(time(0));
+    archivos = new GeneradorArchivos();
 }
 
-void Mundo::crearPersona()
+Persona *Mundo::crearPersona()
 {
     int id = rand()%10000000;
     while (diccionario.contains(id)) {
@@ -25,6 +27,7 @@ void Mundo::crearPersona()
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
     persona->id = id;
     personas->insertarOrdenado(persona);
+    return persona;
 }
 
 string Mundo::asignarCorreo(string pais)
@@ -34,5 +37,13 @@ string Mundo::asignarCorreo(string pais)
     int indice = stoi(pais.substr(0));
     string correo = correos[indice];
     return correo;
+}
+
+void Mundo::imprimir()
+{
+    for(int i = 0; i < 10000; i++) {
+        Persona *p = crearPersona();
+        cout << p->nombre << " " << p->apellido << " " << p->pais << " " << p->correoElectonico << endl;
+    }
 }
 
