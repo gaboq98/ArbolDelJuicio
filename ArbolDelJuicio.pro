@@ -30,7 +30,6 @@ SOURCES += \
     Generadorarchivos.cpp \
     Mundo.cpp \
     Persona.cpp \
-    estructuras.cpp \
     arbolavl.cpp
 
 HEADERS += \

@@ -33,9 +33,17 @@ string Mundo::asignarCorreo(string pais)
 
 void Mundo::imprimir()
 {
-    for(int i = 0; i < 10000; i++) {
+    for(int i = 0; i < 10; i++) {
         Persona *p = crearPersona();
-        cout << p->nombre << " " << p->apellido << " " << p->pais << " " << p->correoElectonico << endl;
+        cout << p->nombre << " " << p->apellido << " " << p->horaYFecha << endl;
+    }
+}
+
+void Mundo::nacer(int cantidad)
+{
+    for(int i = 0; i < cantidad; i++) {
+        Persona *per = crearPersona();
+        personas->insertarOrdenado(per);
     }
 }
 

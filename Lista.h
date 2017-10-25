@@ -28,46 +28,14 @@ struct Lista {
     Nodo *ultimoNodo;
 
 
-    void insertarAlInicio(Persona *persona) {
-        if(primerNodo == NULL)
-            primerNodo = ultimoNodo = new Nodo(persona);
-        else if(primerNodo == ultimoNodo){
-            Nodo *nuevo = new Nodo(persona);
-            primerNodo->siguiente = nuevo;
-            nuevo = ultimoNodo;
-        } else {
-            Nodo *nuevo = new Nodo(persona);
-            nuevo->siguiente = primerNodo;
-            primerNodo = nuevo;
-            primerNodo->siguiente->anterior = primerNodo;
-        }
+    void insertarAlInicio(Persona *persona);
 
-    }
+    void insertarOrdenado(Persona *persona);
 
-    void insertarAlFinal(Persona *persona) {
-        if(primerNodo == NULL) {
-            primerNodo = ultimoNodo = new Nodo(persona);
-        } else if(primerNodo == ultimoNodo){
-            Nodo *nuevo = new Nodo(persona);
-            primerNodo->siguiente = nuevo;
-            ultimoNodo = nuevo;
-            ultimoNodo->anterior = primerNodo;
-        } else {
-            Nodo *nuevo = new Nodo(persona);
-            nuevo->anterior = ultimoNodo;
-            ultimoNodo->siguiente = nuevo;
-            ultimoNodo = nuevo;
-        }
-        ultimoNodo->siguiente = NULL;
-    }
+    void insertarAlFinal(Persona *persona);
 
-    void imprimirLista() {
-        Nodo *temp = primerNodo;
-        while(temp != NULL) {
-            cout << temp->persona << " ";
-            temp = temp->siguiente;
-        }
-        cout << endl;
-    }
+    void imprimirLista();
+
+    void buscar();
 
 };

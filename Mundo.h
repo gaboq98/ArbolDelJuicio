@@ -5,11 +5,12 @@ struct Mundo {
 
     Mundo();
 
-    Lista personas;
+    Lista *personas;
     GeneradorArchivos *archivos;
     Persona *crearPersona();
     string asignarCorreo(string pais);
     void imprimir();
+    void nacer(int cantidad);
 
 };
 
