@@ -17,11 +17,15 @@ struct Persona {
     string correoElectonico;
     int fechaNacimiento;
     string horaNacimiento;
-    string pecados[7];
+    int pecados[7];
     Persona *hijos[8];
+    Persona *padre;
 
     Persona();
     Persona(string nombre, string apellido, string pais, string creencia, string profecion, string correo);
+    void pecar();
+    void limpiar();
+    int total_pecados();
 
 
 };
