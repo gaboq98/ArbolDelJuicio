@@ -5,11 +5,16 @@
 #include "Mundo.h"
 
 Mundo::Mundo() {
-
+    personas = new Lista();
 }
 
 void Mundo::crearPersona()
 {
+    int id = rand()%10000000;
+    while (diccionario.contains(id)) {
+        id = rand()%10000000;
+    }
+    diccionario[id] = 69;
     string nom = archivos->generadorNombre();
     string ape = archivos->generadorApellido();
     string cree = archivos->generadorCreencia();
@@ -18,6 +23,8 @@ void Mundo::crearPersona()
     string correo = asignarCorreo(pais);
     pais = pais.substr(1, pais.size());
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
+    persona->id = id;
+    personas->insertarOrdenado(persona);
 }
 
 string Mundo::asignarCorreo(string pais)

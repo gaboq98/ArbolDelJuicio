@@ -44,6 +44,21 @@ struct Lista {
 
     }
 
+    void insertarOrdenado(Persona* persona){
+        if(primerNodo == NULL)
+            primerNodo = ultimoNodo = new Nodo(persona);
+        Nodo* tmp = primerNodo;
+        while (tmp->siguiente != nullptr) {
+            if(persona->id < tmp->persona->id){
+                break;
+            }
+            tmp = tmp->siguiente;
+        }
+        Nodo* nodo = new Nodo(persona);
+        nodo->anterior = tmp;
+        nodo->siguiente = tmp->siguiente;
+    }
+
     void insertarAlFinal(Persona *persona) {
         if(primerNodo == NULL) {
             primerNodo = ultimoNodo = new Nodo(persona);

@@ -41,7 +41,7 @@ Persona::Persona(string nombre, string apellido, string pais, string creencia, s
 void Persona::pecar()
 {
     for(int i = 0; i < 7; i++ ){
-        int pecado = rand()%100;
+        int pecado = rand()%101;
         pecados[i] += pecado;
     }
 }
