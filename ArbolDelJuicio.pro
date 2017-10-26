@@ -31,7 +31,8 @@ SOURCES += \
     Mundo.cpp \
     Persona.cpp \
     estructuras.cpp \
-    arbolavl.cpp
+    arbolavl.cpp \
+    mapamundi.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,10 +40,12 @@ HEADERS += \
     Generadorarchivos.h \
     Mundo.h \
     Persona.h \
-    arbolavl.h
+    arbolavl.h \
+    mapamundi.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    mapamundi.ui
 
 RESOURCES += \
     imagenes.qrc

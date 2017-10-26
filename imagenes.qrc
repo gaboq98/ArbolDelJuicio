@@ -1,3 +1,5 @@
 <RCC>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>continentes (1).png</file>
+    </qresource>
 </RCC>
