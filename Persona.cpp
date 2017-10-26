@@ -44,6 +44,7 @@ void Persona::pecar()
     for(int i = 0; i < 7; i++ ){
         int pecado = rand()%101;
         pecados[i] += pecado;
+        total_pecados += pecado;
     }
 }
 
@@ -51,14 +52,6 @@ void Persona::limpiar()
 {
     for (int i: pecados){
         i = 0;
+        total_pecados = 0;
     }
-}
-
-int Persona::total_pecados()
-{
-    int total = 0;
-    for (int i: pecados){
-        total += i;
-    }
-    return total;
 }

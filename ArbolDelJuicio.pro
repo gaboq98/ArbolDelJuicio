@@ -30,8 +30,10 @@ SOURCES += \
     Generadorarchivos.cpp \
     Mundo.cpp \
     Persona.cpp \
+    mapamundi.cpp \
     abb.cpp \
-    avltree.cpp
+    infierno.cpp \
+    paraiso.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,11 +41,14 @@ HEADERS += \
     Generadorarchivos.h \
     Mundo.h \
     Persona.h \
+    mapamundi.h \
     abb.h \
-    avltree.h
+    infierno.h \
+    paraiso.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    mapamundi.ui
 
 RESOURCES += \
     imagenes.qrc

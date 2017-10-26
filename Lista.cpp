@@ -40,6 +40,32 @@ void Lista::insertarOrdenado(Persona *persona)
     }
 }
 
+
+void Lista::insertarPecador(Persona *persona){
+    if(primerNodo == NULL) {
+        primerNodo = ultimoNodo = new Nodo(persona);
+    } else if(primerNodo == ultimoNodo) {
+        if(persona->total_pecados > ultimoNodo->persona->total_pecados) {
+            insertarAlFinal(persona);
+        } else {
+            insertarAlInicio(persona);
+        }
+    } else {
+        Nodo *temp = primerNodo;
+        while(temp != NULL) {
+            if(temp->siguiente->persona->total_pecados > persona->total_pecados) {
+                Nodo *newNodo = new Nodo(persona);
+                temp->siguiente->anterior = newNodo;
+                newNodo->siguiente = temp->siguiente;
+                newNodo->anterior = temp;
+                temp->siguiente = newNodo;
+                break;
+            }
+            temp = temp->siguiente;
+        }
+    }
+}
+
 void Lista::insertarAlFinal(Persona *persona) {
     if(primerNodo == NULL) {
         primerNodo = ultimoNodo = new Nodo(persona);
@@ -75,25 +101,9 @@ Nodo *Lista::buscar(Persona *p)
         }
         temp = temp->siguiente;
     }
-    return NULL;
 }
 
 Persona *Lista::borrar(Persona *p)
 {
     Nodo *temp = buscar(p);
-    if(temp != NULL) {
-        return temp->persona;
-    }
 }
-
-int Lista::largo()
-{
-    Nodo *temp = primerNodo;
-    int contador = 0;
-    while(temp != NULL) {
-        contador++;
-        temp = temp->siguiente;
-    }
-    return contador;
-}
-
