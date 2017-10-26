@@ -71,3 +71,35 @@ void Lista::imprimirLista() {
     }
     cout << endl;
 }
+
+Nodo *Lista::buscar(Persona *p)
+{
+    Nodo *temp = primerNodo;
+    while(temp != NULL) {
+        if(temp->persona->id == p->id) {
+            return temp;
+        }
+        temp = temp->siguiente;
+    }
+    return NULL;
+}
+
+Persona *Lista::borrar(Persona *p)
+{
+    Nodo *temp = buscar(p);
+    if(temp != NULL) {
+        return temp->persona;
+    }
+}
+
+int Lista::largo()
+{
+    Nodo *temp = primerNodo;
+    int contador = 0;
+    while(temp != NULL) {
+        contador++;
+        temp = temp->siguiente;
+    }
+    return contador;
+}
+

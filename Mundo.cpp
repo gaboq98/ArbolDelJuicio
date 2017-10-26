@@ -26,6 +26,7 @@ Persona *Mundo::crearPersona()
     pais = pais.substr(1, pais.size());
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
     persona->id = id;
+
     personas->insertarOrdenado(persona);
     return persona;
 }
