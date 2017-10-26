@@ -32,7 +32,41 @@ struct Lista {
 
     void insertarOrdenado(Persona *persona);
 
+<<<<<<< HEAD
     void insertarAlFinal(Persona *persona);
+=======
+    void insertarOrdenado(Persona* persona){
+        if(primerNodo == NULL)
+            primerNodo = ultimoNodo = new Nodo(persona);
+        Nodo* tmp = primerNodo;
+        while (tmp->siguiente != nullptr) {
+            if(persona->id < tmp->persona->id){
+                break;
+            }
+            tmp = tmp->siguiente;
+        }
+        Nodo* nodo = new Nodo(persona);
+        nodo->anterior = tmp;
+        nodo->siguiente = tmp->siguiente;
+    }
+
+    void insertarAlFinal(Persona *persona) {
+        if(primerNodo == NULL) {
+            primerNodo = ultimoNodo = new Nodo(persona);
+        } else if(primerNodo == ultimoNodo){
+            Nodo *nuevo = new Nodo(persona);
+            primerNodo->siguiente = nuevo;
+            ultimoNodo = nuevo;
+            ultimoNodo->anterior = primerNodo;
+        } else {
+            Nodo *nuevo = new Nodo(persona);
+            nuevo->anterior = ultimoNodo;
+            ultimoNodo->siguiente = nuevo;
+            ultimoNodo = nuevo;
+        }
+        ultimoNodo->siguiente = NULL;
+    }
+>>>>>>> cce1c221f60ff67f8bce435fc14ecf2a596120a0
 
     void imprimirLista();
 
