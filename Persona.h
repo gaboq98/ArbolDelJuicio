@@ -19,13 +19,13 @@ struct Persona {
     string horaYFecha;
     int pecados[7];
     Persona *hijos[8];
+    int total_pecados;
     bool hijo;
 
     Persona();
     Persona(string nombre, string apellido, string pais, string creencia, string profecion, string correo);
     void pecar();
     void limpiar();
-    int total_pecados();
 
     string obtenerFecha();
 

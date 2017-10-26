@@ -5,7 +5,6 @@
 struct Mundo {
 
     Mundo();
-
     QHash<int, int> diccionario;
     Lista* personas;
     GeneradorArchivos *archivos;

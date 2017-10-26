@@ -32,14 +32,14 @@ struct Lista {
 
     void insertarOrdenado(Persona *persona);
 
+    void insertarPecador(Persona *persona);
+
     void insertarAlFinal(Persona *persona);
 
     void imprimirLista();
 
     Nodo *buscar(Persona *p);
-
+    
     Persona *borrar(Persona *p);
-
-    int largo();
 
 };

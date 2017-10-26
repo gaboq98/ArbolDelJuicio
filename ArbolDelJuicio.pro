@@ -32,7 +32,9 @@ SOURCES += \
     Persona.cpp \
     estructuras.cpp \
     mapamundi.cpp \
-    abb.cpp
+    abb.cpp \
+    infierno.cpp \
+    paraiso.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,7 +43,9 @@ HEADERS += \
     Mundo.h \
     Persona.h \
     mapamundi.h \
-    abb.h
+    abb.h \
+    infierno.h \
+    paraiso.h
 
 FORMS += \
         mainwindow.ui \
