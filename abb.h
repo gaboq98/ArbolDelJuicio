@@ -3,13 +3,13 @@
 #include <iostream>
 #include <string>
 
-struct Nodo
+struct NodoABB
 {
     int id;
-    Nodo *hijoIzq;
-    Nodo *hijoDer;
+    NodoABB *hijoIzq;
+    NodoABB *hijoDer;
 
-    Nodo(int dato) {
+    NodoABB(int dato) {
         id = dato;
     }
 };
@@ -18,12 +18,13 @@ struct ABB {
 
 public:
 
-    Nodo *raiz;
+    NodoABB *raiz;
 
     ABB();
     void insertar(int id);
-    Nodo *insertarAux(Nodo *raiz, int id);
-
+    NodoABB *insertarAux(NodoABB *raiz, int id);
+    NodoABB *buscar(int id);
+    NodoABB *buscarAux(NodoABB *raiz, int id);
 
 };
 

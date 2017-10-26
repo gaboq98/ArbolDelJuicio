@@ -30,7 +30,8 @@ SOURCES += \
     Generadorarchivos.cpp \
     Mundo.cpp \
     Persona.cpp \
-    abb.cpp
+    abb.cpp \
+    avltree.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -38,7 +39,8 @@ HEADERS += \
     Generadorarchivos.h \
     Mundo.h \
     Persona.h \
-    abb.h
+    abb.h \
+    avltree.h
 
 FORMS += \
         mainwindow.ui

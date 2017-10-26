@@ -19,7 +19,7 @@ struct Persona {
     string horaYFecha;
     int pecados[7];
     Persona *hijos[8];
-    bool hijo;
+    Persona *papa;
 
     Persona();
     Persona(string nombre, string apellido, string pais, string creencia, string profecion, string correo);

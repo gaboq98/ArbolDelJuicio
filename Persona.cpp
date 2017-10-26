@@ -28,6 +28,7 @@ string Persona::obtenerFecha()
 }
 
 Persona::Persona(string nombre, string apellido, string pais, string creencia, string profecion, string correo) {
+    this->papa = NULL;
     this->nombre = nombre;
     this->apellido = apellido;
     this->pais = pais;

@@ -5,8 +5,8 @@
 #include "Mundo.h"
 
 Mundo::Mundo() {
-    personas = new Lista();
     srand(time(0));
+    personas = new Lista();
     archivos = new GeneradorArchivos();
 }
 
@@ -52,7 +52,37 @@ void Mundo::nacer(int cantidad)
 {
     for(int i = 0; i < cantidad; i++) {
         Persona *per = crearPersona();
+        AVLtree *aux;
+        if (!apellidosArbol.contains(per->apellido)) {
+            aux = new AVLtree();
+            aux->insert(per);
+            apellidosArbol[per->apellido] = *aux;
+        } else {
+            aux = &apellidosArbol[per->apellido];
+            aux->insert(per);
+        }
+        int random = rand()%9;
+        for(int i = 0; i < random; i++) {
+            TreeNode *temp = aux->root;
+            while(temp != NULL) {
+                if(temp->ptHumano->papa != NULL) {
+                    per->hijos[i] = temp->ptHumano;
+                    break;
+                } else {
+                    temp = temp->lson;
+                }
+            }
+        }
         personas->insertarOrdenado(per);
+    }
+}
+
+void Mundo::pecar()
+{
+    Nodo *temp = personas->primerNodo;
+    while(temp != NULL) {
+        temp->persona->pecar();
+        temp = temp->siguiente;
     }
 }
 

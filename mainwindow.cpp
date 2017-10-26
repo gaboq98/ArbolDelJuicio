@@ -8,8 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    Mundo *m = new Mundo();
-    m->imprimir();
 
 }
 

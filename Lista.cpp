@@ -24,12 +24,6 @@ void Lista::insertarOrdenado(Persona *persona)
 {
     if(primerNodo == NULL) {
         primerNodo = ultimoNodo = new Nodo(persona);
-    } else if(primerNodo == ultimoNodo) {
-        if(persona->id > ultimoNodo->persona->id) {
-            insertarAlFinal(persona);
-        } else {
-            insertarAlInicio(persona);
-        }
     } else {
         Nodo *temp = primerNodo;
         while(temp != NULL) {
