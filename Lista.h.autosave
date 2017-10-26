@@ -37,9 +37,7 @@ struct Lista {
     void imprimirLista();
 
     Nodo *buscar(Persona *p);
-
+    
     Persona *borrar(Persona *p);
-
-    int largo();
 
 };

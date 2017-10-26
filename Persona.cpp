@@ -59,4 +59,5 @@ int Persona::total_pecados()
     for (int i: pecados){
         total += i;
     }
+    return total;
 }

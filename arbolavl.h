@@ -10,7 +10,6 @@ struct Nodo
     Nodo* hijo_derecho;
     int ancho;
 
-
     Nodo(){}
 
     Nodo(Persona* persona)

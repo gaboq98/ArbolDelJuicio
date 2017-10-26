@@ -16,7 +16,7 @@ Persona *Mundo::crearPersona()
     while (diccionario.contains(id)) {
         id = rand()%10000000;
     }
-    diccionario[id] = 69;
+    
     string nom = archivos->generadorNombre();
     string ape = archivos->generadorApellido();
     string cree = archivos->generadorCreencia();
@@ -26,7 +26,7 @@ Persona *Mundo::crearPersona()
     pais = pais.substr(1, pais.size());
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
     persona->id = id;
-
+    diccionario[id] = persona;
     personas->insertarOrdenado(persona);
     return persona;
 }

@@ -31,8 +31,8 @@ SOURCES += \
     Mundo.cpp \
     Persona.cpp \
     estructuras.cpp \
-    arbolavl.cpp \
-    mapamundi.cpp
+    mapamundi.cpp \
+    abb.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,8 +40,8 @@ HEADERS += \
     Generadorarchivos.h \
     Mundo.h \
     Persona.h \
-    arbolavl.h \
-    mapamundi.h
+    mapamundi.h \
+    abb.h
 
 FORMS += \
         mainwindow.ui \
