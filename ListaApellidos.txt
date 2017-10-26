@@ -438,7 +438,7 @@ Campos
 Camposano
 Campusano
 Cana
-Canal
+Canales
 Canceco
 Canchola
 Cancino
@@ -1812,6 +1812,7 @@ Tejeda
 Tepale
 Tepos
 Teran
+Teras
 Terraso
 Terriquez
 Terrones
