@@ -26,9 +26,11 @@ Persona *Mundo::crearPersona()
     pais = pais.substr(1, pais.size());
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
     persona->id = id;
-
-    personas->insertarOrdenado(persona);
-    return persona;
+    if(! paraiso->no_nacidos.contains(id)){
+       personas->insertarOrdenado(persona);
+       return persona;
+    }
+    return nullptr;
 }
 
 string Mundo::asignarCorreo(string pais)
@@ -52,20 +54,27 @@ void Mundo::nacer(int cantidad)
 {
     for(int i = 0; i < cantidad; i++) {
         Persona *per = crearPersona();
-        AVLtree *aux;
-        if (!apellidosArbol.contains(per->apellido)) {
-            aux = new AVLtree();
-            aux->insert(per);
-            apellidosArbol[per->apellido] = *aux;
-        } else {
-            aux = &apellidosArbol[per->apellido];
-            aux->insert(per);
-        }
-        int random = rand()%9;
-        for(int i = 0; i < random; i++) {
-            aux->agregar(&(per->hijos));
+        if(per != nullptr){
+            AVLtree *aux;
+            if (!apellidosArbol.contains(per->apellido)) {
+                aux = new AVLtree();
+                aux->insert(per);
+                apellidosArbol[per->apellido] = *aux;
+            } else {
+                aux = &apellidosArbol[per->apellido];
+                aux->insert(per);
+            }
+            int random = rand()%9;
+            for(int i = 0; i < random; i++) {
+                aux->agregar(&(per->hijos));
+            }
         }
     }
+}
+
+
+Persona* Mundo::eliminar(int id){
+    return personas->borrar(id);
 }
 
 void Mundo::pecar()

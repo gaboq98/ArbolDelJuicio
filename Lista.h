@@ -38,8 +38,8 @@ struct Lista {
 
     void imprimirLista();
 
-    Nodo *buscar(Persona *p);
+    Nodo *buscar(int id);
     
-    Persona *borrar(Persona *p);
+    Persona *borrar(int id);
 
 };

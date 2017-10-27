@@ -92,18 +92,30 @@ void Lista::imprimirLista() {
     cout << endl;
 }
 
-Nodo *Lista::buscar(Persona *p)
+Nodo *Lista::buscar(int id)
 {
     Nodo *temp = primerNodo;
     while(temp != NULL) {
-        if(temp->persona->id == p->id) {
+        if(temp->persona->id == id) {
             return temp;
         }
         temp = temp->siguiente;
     }
 }
 
-Persona *Lista::borrar(Persona *p)
+Persona *Lista::borrar(int id)
 {
-    Nodo *temp = buscar(p);
+    Nodo *tmp = buscar(id);
+    if(tmp == primerNodo){
+        primerNodo = primerNodo->siguiente;
+        return tmp->persona;
+    }else if(tmp->anterior != nullptr && tmp->siguiente != nullptr){
+        tmp->anterior->siguiente = tmp->siguiente;
+        tmp->siguiente->anterior = tmp->anterior;
+        tmp->anterior = nullptr;
+        tmp->siguiente = nullptr;
+    }else{
+        tmp->anterior->siguiente = tmp->siguiente;
+        return tmp->persona;
+    }
 }
