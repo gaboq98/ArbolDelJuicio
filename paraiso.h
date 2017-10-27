@@ -1,6 +1,7 @@
 #ifndef PARAISO_H
 #define PARAISO_H
 #include <QVector>
+#include "Lista.h"
 
 
 struct Paraiso

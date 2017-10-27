@@ -19,8 +19,8 @@ public:
     int OCEANIA = 4;
     int r_am, r_eu, r_af, r_oc, r_as, g_am, g_eu, g_af, g_oc, g_as, b_am, b_eu, b_af, b_oc, b_as;
     explicit MapaMundi(QWidget *parent = 0);
-    void aumentar(r,g,b);
-    void cambiar_color(r,g,b,i);
+    void aumentar(int r,int g,int b);
+    void cambiar_color(int r,int g,int b,int i);
     ~MapaMundi();
 
 private:

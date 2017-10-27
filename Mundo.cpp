@@ -5,7 +5,6 @@
 #include "Mundo.h"
 
 Mundo::Mundo() {
-    srand(time(0));
     personas = new Lista();
     archivos = new GeneradorArchivos();
 }
@@ -44,7 +43,8 @@ void Mundo::imprimir()
 {
     for(int i = 0; i < 10; i++) {
         Persona *p = crearPersona();
-        cout << p->nombre << " " << p->apellido << " " << p->horaYFecha << endl;
+        cout << p->nombre << " " << p->apellido << " " << p->profecion << " " << p->creencia
+             << " " << p->correoElectonico << " " << p->horaYFecha << endl;
     }
 }
 
@@ -52,27 +52,6 @@ void Mundo::nacer(int cantidad)
 {
     for(int i = 0; i < cantidad; i++) {
         Persona *per = crearPersona();
-        AVLtree *aux;
-        if (!apellidosArbol.contains(per->apellido)) {
-            aux = new AVLtree();
-            aux->insert(per);
-            apellidosArbol[per->apellido] = *aux;
-        } else {
-            aux = &apellidosArbol[per->apellido];
-            aux->insert(per);
-        }
-        int random = rand()%9;
-        for(int i = 0; i < random; i++) {
-            TreeNode *temp = aux->root;
-            while(temp != NULL) {
-                if(temp->ptHumano->papa != NULL) {
-                    per->hijos[i] = temp->ptHumano;
-                    break;
-                } else {
-                    temp = temp->lson;
-                }
-            }
-        }
         personas->insertarOrdenado(per);
     }
 }

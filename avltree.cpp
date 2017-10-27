@@ -138,7 +138,6 @@ Persona *AVLtree::buscarPersona(TreeNode *raiz)
         if(temp->papa != NULL) {
             return temp;
         } else {
-            temp
         }
 
     }

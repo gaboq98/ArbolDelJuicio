@@ -24,8 +24,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
     Lista.cpp \
     Generadorarchivos.cpp \
     Mundo.cpp \
@@ -33,10 +33,12 @@ SOURCES += \
     mapamundi.cpp \
     abb.cpp \
     infierno.cpp \
-    paraiso.cpp
+    paraiso.cpp \
+    avltree.cpp \
+    ventanapersonas.cpp
 
 HEADERS += \
-        mainwindow.h \
+    mainwindow.h \
     Lista.h \
     Generadorarchivos.h \
     Mundo.h \
@@ -44,11 +46,14 @@ HEADERS += \
     mapamundi.h \
     abb.h \
     infierno.h \
-    paraiso.h
+    paraiso.h \
+    avltree.h \
+    ventanapersonas.h
 
 FORMS += \
-        mainwindow.ui \
-    mapamundi.ui
+    mainwindow.ui \
+    mapamundi.ui \
+    ventanapersonas.ui
 
 RESOURCES += \
     imagenes.qrc
