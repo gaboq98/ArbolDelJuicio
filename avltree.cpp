@@ -129,22 +129,6 @@ TreeNode* AVLtree::find(Persona *x)
     return findpri(root,x);
 }
 
-Persona *AVLtree::buscarPersona(TreeNode *raiz)
-{
-    if(raiz == NULL) {
-        return NULL;
-    } else {
-        Persona *temp = raiz->ptHumano;
-        if(temp->papa != NULL) {
-            return temp;
-        } else {
-        }
-
-    }
-}
-
-//Borrar
-
 void AVLtree::Deletepri(TreeNode* &node,Persona *x)
 {
     if(node==nullptr) return ;//No es encontrar el valor X de los nodos
@@ -200,5 +184,20 @@ void AVLtree::Deletepri(TreeNode* &node,Persona *x)
     if(node==nullptr) return;
     node->hgt=Max(height(node->lson),height(node->rson))+1;
     return;
+}
+
+void AVLtree::agregar(QVector<Persona*>* l){
+    agregar(root, l);
+}
+
+bool AVLtree::agregar(TreeNode *r,QVector<Persona*>* l){
+    if(r == nullptr){
+        return true;
+    }else if(!r->isSon){
+        l->append(r->ptHumano);
+        r->isSon = true;
+        return false;
+    }
+    return agregar(r->lson, l) && agregar(r->rson, l);
 }
 

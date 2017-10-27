@@ -12,6 +12,7 @@ struct  TreeNode {
     TreeNode *lson;
     TreeNode *rson;
     int freq;
+    bool isSon;
 
 };
 
@@ -43,7 +44,9 @@ struct AVLtree {
 
     TreeNode *find(Persona *x);
 
-    Persona *buscarPersona(TreeNode *raiz);
+    void agregar(QVector<Persona*>* l);
+
+    bool agregar(TreeNode* r, QVector<Persona*>* l);
 
 };
 

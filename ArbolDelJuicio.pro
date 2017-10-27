@@ -37,6 +37,7 @@ SOURCES += \
     avltree.cpp \
     ventanapersonas.cpp
 
+
 HEADERS += \
     mainwindow.h \
     Lista.h \
@@ -49,6 +50,7 @@ HEADERS += \
     paraiso.h \
     avltree.h \
     ventanapersonas.h
+
 
 FORMS += \
     mainwindow.ui \
