@@ -3,6 +3,7 @@
 #include <fstream>
 #include <ctime>
 #include "GeneradorArchivos.h"
+#include <QVector>
 
 
 using namespace std;
@@ -18,7 +19,7 @@ struct Persona {
     string correoElectonico;
     string horaYFecha;
     int pecados[7];
-    Persona *hijos[8];
+    QVector<Persona*> hijos;
     Persona *papa;
     int total_pecados;
 

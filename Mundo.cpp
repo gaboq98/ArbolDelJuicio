@@ -63,17 +63,8 @@ void Mundo::nacer(int cantidad)
         }
         int random = rand()%9;
         for(int i = 0; i < random; i++) {
-            TreeNode *temp = aux->root;
-            while(temp != NULL) {
-                if(temp->ptHumano->papa != NULL) {
-                    per->hijos[i] = temp->ptHumano;
-                    break;
-                } else {
-                    temp = temp->lson;
-                }
-            }
+            aux->agregar(&(per->hijos));
         }
-        personas->insertarOrdenado(per);
     }
 }
 
@@ -85,4 +76,5 @@ void Mundo::pecar()
         temp = temp->siguiente;
     }
 }
+
 

@@ -33,7 +33,8 @@ SOURCES += \
     mapamundi.cpp \
     abb.cpp \
     infierno.cpp \
-    paraiso.cpp
+    paraiso.cpp \
+    avltree.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -44,7 +45,8 @@ HEADERS += \
     mapamundi.h \
     abb.h \
     infierno.h \
-    paraiso.h
+    paraiso.h \
+    avltree.h
 
 FORMS += \
         mainwindow.ui \

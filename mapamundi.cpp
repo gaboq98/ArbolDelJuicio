@@ -27,7 +27,7 @@ MapaMundi::~MapaMundi()
     delete ui;
 }
 
-void MapaMundi::cambiar_color(r, g, b, i){
+void MapaMundi::cambiar_color(int r, int g, int b, int i){
     if(i == AMERICA){
         ui->fondo_america->setStyleSheet("background-color: rgb(" +QString::number(r) + ","+ QString::number(g) + "," + QString::number(b) + ")");
     }else if(i == AFRICA){
@@ -50,7 +50,7 @@ void MapaMundi::cambiar_color(r, g, b, i){
 }
 
 
-void MapaMundi::aumentar(r, g, b)
+void MapaMundi::aumentar(int r, int g, int b)
 {
     if(g == 255 && r > 0 && r == b ){
         r -= 2;
