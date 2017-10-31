@@ -35,7 +35,8 @@ SOURCES += \
     infierno.cpp \
     paraiso.cpp \
     avltree.cpp \
-    ventanapersonas.cpp
+    ventanapersonas.cpp \
+    ventanaconsultaapellido.cpp
 
 
 HEADERS += \
@@ -49,13 +50,15 @@ HEADERS += \
     infierno.h \
     paraiso.h \
     avltree.h \
-    ventanapersonas.h
+    ventanapersonas.h \
+    ventanaconsultaapellido.h
 
 
 FORMS += \
     mainwindow.ui \
     mapamundi.ui \
-    ventanapersonas.ui
+    ventanapersonas.ui \
+    ventanaconsultaapellido.ui
 
 RESOURCES += \
     imagenes.qrc

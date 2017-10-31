@@ -6,6 +6,13 @@
 #include <process.h>
 #include "GeneradorArchivos.h"
 
+
+/*
+ *Entradas:ninguna
+ *Salidas: niguna
+ *
+ *Funcion que setea los arrays de archivos
+ */
 GeneradorArchivos::GeneradorArchivos() {
 
     setNombres();
@@ -15,40 +22,80 @@ GeneradorArchivos::GeneradorArchivos() {
     setCeencias();
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * genera un nombre aleatorio
+ */
 string GeneradorArchivos::generadorNombre() {
     int random = rand()%2000;
     string nombre = nombres[random];
     return nombre;
 }
 
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * genera un apellido aleatorio
+ */
 string GeneradorArchivos::generadorApellido() {
     int random = rand()%2000;
     string apellido = apellidos[random];
     return apellido;
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * genera un pais aleatorio
+ */
 string GeneradorArchivos::generadorPais() {
     int random = rand()%100;
     string pais = paises[random];
     return pais;
 }
 
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * genera una profesión aleatoria
+ */
 string GeneradorArchivos::genradorProfecion() {
     int random = rand()%50;
     string profesion = profesiones[random];
     return profesion;
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * genera una creencia aleatoria
+ */
 string GeneradorArchivos::generadorCreencia() {
     int random = rand()%10;
     string creencia = creencias[random];
     return creencia;
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * Abre el archivo y lo cargaen un array
+ */
 void GeneradorArchivos::setNombres() {
     ifstream archivoNombre;
     string lineaN;
-    archivoNombre.open("C:\\Users\\gaboq\\Desktop\\Gabo\\TEC\\Estructuras de datos\\ArbolDelJuicio\\ListaNombres.txt", ios::in);
+    archivoNombre.open("..\\ArbolDelJuicio\\ListaNombres.txt", ios::in);
     if (archivoNombre.fail()) {
         cout << "Error al cargar el archivo2";
         exit(1);
@@ -62,10 +109,17 @@ void GeneradorArchivos::setNombres() {
     archivoNombre.close();
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * Abre el archivo y lo cargaen un array
+ */
 void GeneradorArchivos::setApellidos() {
     ifstream archivoApellidos;
     string linea;
-    archivoApellidos.open("C:\\Users\\gaboq\\Desktop\\Gabo\\TEC\\Estructuras de datos\\ArbolDelJuicio\\ListaApellidos.txt", ios::in);
+    archivoApellidos.open("..\\ArbolDelJuicio\\ListaApellidos.txt", ios::in);
     if (archivoApellidos.fail()) {
         cout << "Error al cargar el archivo1";
         exit(1);
@@ -79,10 +133,17 @@ void GeneradorArchivos::setApellidos() {
     archivoApellidos.close();
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * Abre el archivo y lo cargaen un array
+ */
 void GeneradorArchivos::setPaises() {
     ifstream archivoPaises;
     string lineaP;
-    archivoPaises.open("C:\\Users\\gaboq\\Desktop\\Gabo\\TEC\\Estructuras de datos\\ArbolDelJuicio\\ListaPaises.txt", ios::in);
+    archivoPaises.open("..\\ArbolDelJuicio\\ListaPaises.txt", ios::in);
     if (archivoPaises.fail()) {
         cout << "Error al cargar el archivo5";
         exit(1);
@@ -96,10 +157,17 @@ void GeneradorArchivos::setPaises() {
     archivoPaises.close();
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * Abre el archivo y lo cargaen un array
+ */
 void GeneradorArchivos::setProfesiones() {
     ifstream archivoProfeciones;
     string lineaP;
-    archivoProfeciones.open("C:\\Users\\gaboq\\Desktop\\Gabo\\TEC\\Estructuras de datos\\ArbolDelJuicio\\ListaEmpleos.txt", ios::in);
+    archivoProfeciones.open("..\\ArbolDelJuicio\\ListaEmpleos.txt", ios::in);
     if (archivoProfeciones.fail()) {
         cout << "Error al cargar el archivo42";
         exit(1);
@@ -113,10 +181,17 @@ void GeneradorArchivos::setProfesiones() {
     archivoProfeciones.close();
 }
 
+
+/*
+ * Entradas: ninguna
+ * Salidas: niguna
+ *
+ * Abre el archivo y lo cargaen un array
+ */
 void GeneradorArchivos::setCeencias() {
     ifstream archivoCreencias;
     string lineaP;
-    archivoCreencias.open("C:\\Users\\gaboq\\Desktop\\Gabo\\TEC\\Estructuras de datos\\ArbolDelJuicio\\ListaCreencias.txt", ios::in);
+    archivoCreencias.open("..\\ArbolDelJuicio\\ListaCreencias.txt", ios::in);
     if (archivoCreencias.fail()) {
         cout << "Error al cargar el archivo24";
         exit(1);

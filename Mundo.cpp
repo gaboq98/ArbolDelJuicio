@@ -44,7 +44,12 @@ void Mundo::imprimir()
 {
     for(int i = 0; i < 10; i++) {
         Persona *p = crearPersona();
+<<<<<<< HEAD
 
+=======
+        cout << p->nombre << " " << p->apellido << " " << p->profesion << " " << p->creencia
+             << " " << p->correoElectonico << " " << p->horaYFecha << endl;
+>>>>>>> 8abe3cfa9f47bdc6fed9454b83f646fd47ec2156
     }
 }
 
@@ -67,7 +72,6 @@ void Mundo::nacer(int cantidad)
                 aux->agregar(&(per->hijos));
             }
         }
-        personas->insertarOrdenado(per);
     }
 }
 

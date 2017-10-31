@@ -41,7 +41,8 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 197, 149);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -58,7 +59,8 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 250, 80);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -75,7 +77,8 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 250, 80);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -92,7 +95,8 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 250, 80);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -110,7 +114,7 @@ border: none;</string>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(16, 255, 24);
 border: none;
-</string>
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -163,7 +167,8 @@ background-repeat: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 197, 149);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -198,7 +203,8 @@ background-repeat: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 250, 80);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -215,7 +221,8 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 250, 80);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -232,7 +239,8 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 250, 80);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -249,7 +257,8 @@ border: none;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(16, 255, 24);
-border: none;</string>
+border: none;
+background-repeat: none;</string>
     </property>
     <property name="text">
      <string/>
@@ -320,19 +329,19 @@ border: none;</string>
      <string>Oceania</string>
     </property>
    </widget>
-   <zorder>fondo_europa</zorder>
-   <zorder>fondo_asia</zorder>
-   <zorder>fondo_america</zorder>
-   <zorder>fondo_europa1</zorder>
-   <zorder>fondo_asia6</zorder>
-   <zorder>fondo_africa</zorder>
-   <zorder>fondo_asia5</zorder>
    <zorder>fondo_africa1</zorder>
-   <zorder>fondo_asia4</zorder>
-   <zorder>fondo_oceania3</zorder>
-   <zorder>fondo_asia3</zorder>
-   <zorder>fondo_asia1</zorder>
+   <zorder>fondo_america</zorder>
+   <zorder>fondo_europa</zorder>
+   <zorder>fondo_europa1</zorder>
+   <zorder>fondo_africa</zorder>
    <zorder>fondo_oceania</zorder>
+   <zorder>fondo_oceania3</zorder>
+   <zorder>fondo_asia6</zorder>
+   <zorder>fondo_asia4</zorder>
+   <zorder>fondo_asia1</zorder>
+   <zorder>fondo_asia</zorder>
+   <zorder>fondo_asia5</zorder>
+   <zorder>fondo_asia3</zorder>
    <zorder>label</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButton_2</zorder>
