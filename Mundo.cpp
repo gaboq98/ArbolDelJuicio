@@ -2,6 +2,7 @@
 // Created by gaboq on 19/10/2017.
 //
 #include "Mundo.h"
+#include <QDebug>
 
 Mundo::Mundo() {
     personas = new Lista();
@@ -10,9 +11,9 @@ Mundo::Mundo() {
 
 Persona *Mundo::crearPersona()
 {
-    int id = rand()%10000000;
+    int id = qrand()%10000000;
     while (diccionario.contains(id)) {
-        id = rand()%10000000;
+        id = qrand()%10000000;
     }
     diccionario[id] = 69;
     string nom = archivos->generadorNombre();
@@ -25,7 +26,6 @@ Persona *Mundo::crearPersona()
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
     persona->id = id;
     if(! no_nacidos.contains(id)){
-       personas->insertarOrdenado(persona);
        return persona;
     }
     return nullptr;
@@ -44,8 +44,7 @@ void Mundo::imprimir()
 {
     for(int i = 0; i < 10; i++) {
         Persona *p = crearPersona();
-        cout << p->nombre << " " << p->apellido << " " << p->profecion << " " << p->creencia
-             << " " << p->correoElectonico << " " << p->horaYFecha << endl;
+
     }
 }
 
