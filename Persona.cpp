@@ -27,13 +27,13 @@ string Persona::obtenerFecha()
     return momentoString;
 }
 
-Persona::Persona(string nombre, string apellido, string pais, string creencia, string profecion, string correo) {
+Persona::Persona(string nombre, string apellido, string pais, string creencia, string profesion, string correo) {
     this->papa = NULL;
     this->nombre = nombre;
     this->apellido = apellido;
     this->pais = pais;
     this->creencia = creencia;
-    this->profecion = profecion;
+    this->profesion = profesion;
     this->correoElectonico = correo;
     this->horaYFecha = obtenerFecha();
     limpiar();
@@ -54,4 +54,9 @@ void Persona::limpiar()
         i = 0;
         total_pecados = 0;
     }
+}
+
+void Persona::imprimir()
+{
+    cout << nombre << " " << apellido << " " << id << " " << profesion << " " << pais << " " << endl;
 }

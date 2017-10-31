@@ -25,6 +25,7 @@ MapaMundi::MapaMundi(QWidget *parent) :
 MapaMundi::~MapaMundi()
 {
     delete ui;
+
 }
 
 void MapaMundi::cambiar_color(int r, int g, int b, int i){

@@ -152,7 +152,7 @@ void Lista::insertarAlFinal(Persona *persona) {
 void Lista::imprimirLista() {
     Nodo *temp = primerNodo;
     while(temp != NULL) {
-        cout << temp->persona << " ";
+        temp->persona->imprimir();
         temp = temp->siguiente;
     }
     cout << endl;

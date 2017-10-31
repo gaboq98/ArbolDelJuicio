@@ -9,6 +9,7 @@ ventanaPersonas::ventanaPersonas(QWidget *parent) :
     ui->setupUi(this);
 
     mundo = new Mundo();
+    mundo->nacer(100);
 }
 
 ventanaPersonas::~ventanaPersonas()
@@ -18,14 +19,14 @@ ventanaPersonas::~ventanaPersonas()
 
 void ventanaPersonas::on_crear_clicked()
 {
-    mundo->nacer(100);
+    QString str;
     for(int i = 0; i < 10; i++) {
         Nodo *temp = mundo->personas->primerNodo;
         Persona *p = temp->persona;
-        QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + p->pais + " " +
-                p->profecion + " " + p->creencia + " " + p->correoElectonico + " " + p->horaYFecha);
+        str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + p->pais + " " +
+               p->profesion + " " + p->creencia + " " + p->correoElectonico + " " + p->horaYFecha);
         ui->labelPersonas->setText(ui->labelPersonas->text() + "\n" + str);
-        qDebug() << str;
         temp = temp->siguiente;
     }
+    mundo->personas->imprimirLista();
 }

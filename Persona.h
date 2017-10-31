@@ -15,7 +15,7 @@ struct Persona {
     string apellido;
     string pais;
     string creencia;
-    string profecion;
+    string profesion;
     string correoElectonico;
     string horaYFecha;
     int pecados[7];
@@ -24,9 +24,10 @@ struct Persona {
     int total_pecados;
 
     Persona();
-    Persona(string nombre, string apellido, string pais, string creencia, string profecion, string correo);
+    Persona(string nombre, string apellido, string pais, string creencia, string profesion, string correo);
     void pecar();
     void limpiar();
+    void imprimir();
 
     string obtenerFecha();
 
