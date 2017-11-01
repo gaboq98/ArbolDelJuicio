@@ -17,7 +17,7 @@ public:
     explicit VentanaConsultaApellido(QWidget *parent = 0);
     Mundo* mundo;
     ~VentanaConsultaApellido();
-
+    void asignarComponentes(Mundo *mundo);
 
 private:
     Ui::VentanaConsultaApellido *ui;

@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     mundo = new Mundo();
     ventana_personas = new ventanaPersonas();
+    ventana_personas->asignarComponentes(mundo);
     ventana_apellidos = new VentanaConsultaApellido();
     mapa_mundi = new MapaMundi();
 
@@ -51,8 +52,16 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_no_nacidos_button_clicked()
 {
-    while(true){
     char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"americaSkrtSkrt@gmail.com\" --mail-rcpt \"josuecanales0@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
         WinExec(command, SW_HIDE);
 }
+
+void MainWindow::on_pecadores_button_clicked()
+{
+    ventana_personas->show();
+}
+
+void MainWindow::on_nacimiento_button_clicked()
+{
+    mundo->nacer(ui->cantidadPersonas->value());
 }

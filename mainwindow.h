@@ -34,6 +34,10 @@ private slots:
 
     void on_no_nacidos_button_clicked();
 
+    void on_pecadores_button_clicked();
+
+    void on_nacimiento_button_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
