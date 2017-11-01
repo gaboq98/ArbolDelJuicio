@@ -7,9 +7,6 @@ ventanaPersonas::ventanaPersonas(QWidget *parent) :
     ui(new Ui::ventanaPersonas)
 {
     ui->setupUi(this);
-
-    mundo = new Mundo();
-    mundo->nacer(100);
 }
 
 ventanaPersonas::~ventanaPersonas()

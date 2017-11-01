@@ -23,7 +23,7 @@
       <x>10</x>
       <y>10</y>
       <width>991</width>
-      <height>401</height>
+      <height>411</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -369,7 +369,7 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>410</y>
+      <y>450</y>
       <width>311</width>
       <height>41</height>
      </rect>
@@ -386,25 +386,6 @@
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1043</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

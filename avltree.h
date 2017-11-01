@@ -1,6 +1,3 @@
-//
-// Created by gaboq on 26/10/2017.
-//
 #include "Lista.h"
 
 #ifndef UNTITLED_AVLTREE_H

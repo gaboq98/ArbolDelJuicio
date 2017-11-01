@@ -7,14 +7,23 @@ VentanaConsultaApellido::VentanaConsultaApellido(QWidget *parent) :
 {
     ui->setupUi(this);
 
-/*
-    while (condition) {
-
-
+    /*
+    mundo = new Mundo();
+    string apellidos[] = mundo->archivos->apellidos;
+    string pais[] = mundo->archivos->paises;
+    QStringList listaPaises;
+    QStringList listaApellidos;
+    for(int i = 0; i < 2000; i++){
+        if(i < 100)
+            listaPaises.append(QString::fromStdString(pais[i]));
+        listaApellidos.append(QString::fromStdString(apellidos[i]));
     }
-    ui->apellido->addItem();
+    ui->apellidos_box->addItems(listaApellidos);
+    ui->paises_box->addItems(listaPaises);
     */
+
 }
+
 
 VentanaConsultaApellido::~VentanaConsultaApellido()
 {

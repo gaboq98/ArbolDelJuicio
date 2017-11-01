@@ -14,5 +14,6 @@ int main(int argc, char *argv[])
     w.show();
     qRegisterMetaType<QVector<int> >("QVector<int>");
     qRegisterMetaType<QVector<Persona*> >("QVector<Persona*>");
+
     return a.exec();
 }

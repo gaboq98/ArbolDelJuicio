@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "ventanapersonas.h"
 
+
 namespace Ui {
 class VentanaConsultaApellido;
 }
@@ -14,6 +15,7 @@ class VentanaConsultaApellido : public QMainWindow
 
 public:
     explicit VentanaConsultaApellido(QWidget *parent = 0);
+    Mundo* mundo;
     ~VentanaConsultaApellido();
 
 

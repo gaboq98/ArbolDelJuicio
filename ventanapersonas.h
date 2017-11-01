@@ -15,7 +15,7 @@ class ventanaPersonas : public QMainWindow
 public:
     explicit ventanaPersonas(QWidget *parent = 0);
     ~ventanaPersonas();
-    Mundo *mundo;
+    Mundo* mundo;
 
 private slots:
     void on_crear_clicked();

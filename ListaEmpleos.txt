@@ -1,7 +1,7 @@
 ﻿Abogado
 Actor
 Arquitecto
-Barrendero
+Sacerdote
 Bibliotecario
 Bombero
 Cartero
@@ -10,7 +10,7 @@ Carpintero
 Cientifico
 Contador
 Chef
-Dentista 
+Dentista
 Doctor
 Enfermero
 Fontanero

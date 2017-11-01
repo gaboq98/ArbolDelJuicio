@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <windows.h>
 #include <QMainWindow>
 #include "ventanapersonas.h"
 #include "mapamundi.h"
@@ -21,6 +21,7 @@ public:
     ventanaPersonas* ventana_personas;
     MapaMundi* mapa_mundi;
     VentanaConsultaApellido* ventana_apellidos;
+    Mundo* mundo;
 
 
 
@@ -30,6 +31,8 @@ private slots:
     void on_mapa_button_clicked();
 
     void on_pushButton_clicked();
+
+    void on_no_nacidos_button_clicked();
 
 private:
     Ui::MainWindow *ui;
