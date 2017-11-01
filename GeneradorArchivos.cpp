@@ -10,7 +10,7 @@
 /*
  *Entradas:ninguna
  *Salidas: niguna
- *
+ *Contstructor
  *Funcion que setea los arrays de archivos
  */
 GeneradorArchivos::GeneradorArchivos() {
@@ -25,7 +25,7 @@ GeneradorArchivos::GeneradorArchivos() {
 
 /*
  * Entradas: ninguna
- * Salidas: niguna
+ * Salidas: String con el nombre aleatorio
  *
  * genera un nombre aleatorio
  */
@@ -37,7 +37,7 @@ string GeneradorArchivos::generadorNombre() {
 
 /*
  * Entradas: ninguna
- * Salidas: niguna
+ * Salidas: string  con un apellido aleatorio
  *
  * genera un apellido aleatorio
  */
@@ -50,7 +50,7 @@ string GeneradorArchivos::generadorApellido() {
 
 /*
  * Entradas: ninguna
- * Salidas: niguna
+ * Salidas: string con un pais
  *
  * genera un pais aleatorio
  */
@@ -62,7 +62,7 @@ string GeneradorArchivos::generadorPais() {
 
 /*
  * Entradas: ninguna
- * Salidas: niguna
+ * Salidas: string con la profesion generada
  *
  * genera una profesión aleatoria
  */
@@ -75,7 +75,7 @@ string GeneradorArchivos::genradorProfecion() {
 
 /*
  * Entradas: ninguna
- * Salidas: niguna
+ * Salidas: String con una creencia aleatoia
  *
  * genera una creencia aleatoria
  */

@@ -7,6 +7,11 @@ Persona::Persona() {
 
 }
 
+/*
+ * Entradas: Ninguna
+ * Obtiene la fecha y hora actual de la computadora
+ * Salidas: string con la fecha y hora
+ */
 string Persona::obtenerFecha()
 {
     time_t momento = time(0);
@@ -27,6 +32,7 @@ string Persona::obtenerFecha()
     return momentoString;
 }
 
+//Constructor
 Persona::Persona(string nombre, string apellido, string pais, string creencia, string profesion, string correo) {
     this->papa = NULL;
     this->nombre = nombre;
@@ -39,6 +45,10 @@ Persona::Persona(string nombre, string apellido, string pais, string creencia, s
     limpiar();
 }
 
+/*
+ * Entradas: Ninguna
+ * Salida: Ninguna
+ */
 void Persona::pecar()
 {
     for(int i = 0; i < 7; i++ ){
@@ -48,6 +58,11 @@ void Persona::pecar()
     }
 }
 
+/*
+ * Entradas: Ninguna
+ * Pone la lista de pecados en 0
+ * Salida: Ninguna
+ */
 void Persona::limpiar()
 {
     for (int i: pecados){
@@ -55,6 +70,7 @@ void Persona::limpiar()
         total_pecados = 0;
     }
 }
+
 
 void Persona::imprimir()
 {

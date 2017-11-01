@@ -36,8 +36,6 @@ struct Lista {
 
     void insertarAlFinal(Persona *persona);
 
-    void imprimirLista();
-
     Nodo *buscar(int id);
     
     Persona *borrar(int id);

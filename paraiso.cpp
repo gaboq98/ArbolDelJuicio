@@ -5,7 +5,9 @@ Paraiso::Paraiso()
     personas = new Lista();
 }
 
-
+/*
+ * Mata una persona :'( xD :3 8==D
+ */
 void Paraiso::genera_afortunado()
 {
     int id = rand()%10000000;

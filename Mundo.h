@@ -15,7 +15,6 @@ struct Mundo {
     GeneradorArchivos *archivos;
     Persona *crearPersona();
     string asignarCorreo(string pais);
-    void imprimir();
     void nacer(int cantidad);
     void pecar();
     Persona* eliminar(int id);

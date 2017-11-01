@@ -4,6 +4,10 @@
 
 #include "Lista.h"
 
+/*
+ * Entradas: Persona que se desea insertar. Lo inserta al inicio de la lista.
+ * Salidas: ninguna.
+ */
 void Lista::insertarAlInicio(Persona *persona) {
     if(primerNodo == NULL)
         primerNodo = ultimoNodo = new Nodo(persona);
@@ -19,27 +23,11 @@ void Lista::insertarAlInicio(Persona *persona) {
     }
 
 }
+
 /*
-void Lista::insertarOrdenado(Persona *persona)
-{
-    if(primerNodo == NULL) {
-        primerNodo = ultimoNodo = new Nodo(persona);
-    } else {
-        Nodo *temp = primerNodo;
-        while(temp->siguiente != NULL) {
-            if(temp->siguiente->persona->id > persona->id) {
-                Nodo *newNodo = new Nodo(persona);
-                temp->siguiente->anterior = newNodo;
-                newNodo->siguiente = temp->siguiente;
-                newNodo->anterior = temp;
-                temp->siguiente = newNodo;
-                break;
-            }
-            temp = temp->siguiente;
-        }
-    }
-}
-*/
+ * Entradas: Persona que se desea insertar. Lo inserta segun su id de menor a mayor.
+ * Salidas: ninguna.
+ */
 void Lista::insertarOrdenado(Persona *persona)
 {
     if(primerNodo == nullptr) {
@@ -107,6 +95,10 @@ void Lista::insertarOrdenado(Persona *persona)
     }
 }
 
+/*
+ * Entradas: Pecador que se desea insertar. Lo inserta segun su id de menor a mayor.
+ * Salidas: ninguna.
+ */
 void Lista::insertarPecador(Persona *persona){
     if(primerNodo == NULL) {
         primerNodo = ultimoNodo = new Nodo(persona);
@@ -132,6 +124,10 @@ void Lista::insertarPecador(Persona *persona){
     }
 }
 
+/*
+ * Entradas: Persona que se desea insertar. Lo inserta al final de la lista.
+ * Salidas: ninguna.
+ */
 void Lista::insertarAlFinal(Persona *persona) {
     if(primerNodo == NULL) {
         primerNodo = ultimoNodo = new Nodo(persona);
@@ -149,15 +145,10 @@ void Lista::insertarAlFinal(Persona *persona) {
     ultimoNodo->siguiente = NULL;
 }
 
-void Lista::imprimirLista() {
-    Nodo *temp = primerNodo;
-    while(temp != NULL) {
-        temp->persona->imprimir();
-        temp = temp->siguiente;
-    }
-    cout << endl;
-}
-
+/*
+ * Entradas: Id de la persona que se desea encontrar.
+ * Salidas: Nodo con la persona que tenga el id igual al de entrada.
+ */
 Nodo *Lista::buscar(int id)
 {
     Nodo *temp = primerNodo;
@@ -169,6 +160,11 @@ Nodo *Lista::buscar(int id)
     }
 }
 
+/*
+ * Entradas: Id de la persona que se desea borrar.
+ * Si encuentra a la persona lo borra de la lista y lo devuelve.
+ * Salidas: Persona que tenga el id igual al de entrada.
+ */
 Persona *Lista::borrar(int id)
 {
     Nodo *tmp = buscar(id);

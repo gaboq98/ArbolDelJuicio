@@ -1,8 +1,8 @@
 #ifndef VENTANAPERSONAS_H
 #define VENTANAPERSONAS_H
-#include "Mundo.h"
 #include <QMainWindow>
 #include <QDebug>
+#include "Mundo.h"
 
 namespace Ui {
 class ventanaPersonas;
@@ -22,6 +22,7 @@ private slots:
 
 private:
     Ui::ventanaPersonas *ui;
+
 };
 
 #endif // VENTANAPERSONAS_H

@@ -20,7 +20,7 @@ void Infierno::agregar(Persona *p)
 
 /*
  * Entradas: id de las persona
- * Salida: ninguna
+ * Salida: Persona que se acaba de eliminar
  *
  * elimina a la persona buscada de la lista
  * del infierno

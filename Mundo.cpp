@@ -9,6 +9,11 @@ Mundo::Mundo() {
     archivos = new GeneradorArchivos();
 }
 
+/*
+ * Entradas: Ninguna
+ * Genera una persona con todos los atributos
+ * Salidas: Persona generada
+ */
 Persona *Mundo::crearPersona()
 {
     int id = qrand()%10000000;
@@ -31,6 +36,11 @@ Persona *Mundo::crearPersona()
     return nullptr;
 }
 
+/*
+ * Entradas: String con un pais
+ * Genera una persona con todos los atributos
+ * Salidas: String con el correo correspondiente segun el pais
+ */
 string Mundo::asignarCorreo(string pais)
 {
     string correos[5] = {"personas.continente.america", "personas.continente.africa",
@@ -40,19 +50,11 @@ string Mundo::asignarCorreo(string pais)
     return correo;
 }
 
-void Mundo::imprimir()
-{
-    for(int i = 0; i < 10; i++) {
-        Persona *p = crearPersona();
-<<<<<<< HEAD
-
-=======
-        cout << p->nombre << " " << p->apellido << " " << p->profesion << " " << p->creencia
-             << " " << p->correoElectonico << " " << p->horaYFecha << endl;
->>>>>>> 8abe3cfa9f47bdc6fed9454b83f646fd47ec2156
-    }
-}
-
+/*
+ * Entradas: Cantidad de personas que se quiere generar
+ * Genera las personas que diga la cantidad
+ * Salidas: Ninguna
+ */
 void Mundo::nacer(int cantidad)
 {
     for(int i = 0; i < cantidad; i++) {
@@ -75,11 +77,18 @@ void Mundo::nacer(int cantidad)
     }
 }
 
-
+/*
+ * Entradas: Id de la persona que se quiere eliminar
+ * Salidas: Persona eliminada
+ */
 Persona* Mundo::eliminar(int id){
     return personas->borrar(id);
 }
 
+/*
+ * Entradas: Ninguna
+ * Salidas: Ninguna
+ */
 void Mundo::pecar()
 {
     Nodo *temp = personas->primerNodo;

@@ -7,7 +7,6 @@ AVLtree::AVLtree()
     root = nullptr;
 }
 
-//template<class T>
 int AVLtree::height(TreeNode* node)
 {
     if(node!=nullptr)
@@ -16,13 +15,12 @@ int AVLtree::height(TreeNode* node)
 }
 
 //Máximo
-//template<class T>
 int AVLtree::Max(int cmpa,int cmpb)
 {
     return cmpa>cmpb?cmpa:cmpb;
 }
 
-//template<class T>
+//Rotacion izquierda
 void AVLtree::SingRotateLeft(TreeNode* &k2)
 {
     TreeNode* k1;
@@ -35,7 +33,6 @@ void AVLtree::SingRotateLeft(TreeNode* &k2)
 }
 
 //En el caso de la rotación de la derecha
-//template<class T>
 void AVLtree::SingRotateRight(TreeNode* &k2)
 {
     TreeNode* k1;
@@ -47,8 +44,7 @@ void AVLtree::SingRotateRight(TreeNode* &k2)
     k1->hgt=Max(height(k1->rson),k2->hgt)+1;
 }
 
-//Rotar alrededor de la situación
-//template<class T>
+//Rotacion doble izquierda-derecha.
 void AVLtree::DoubleRotateLR(TreeNode* &k3)
 {
     SingRotateRight(k3->lson);
@@ -56,14 +52,12 @@ void AVLtree::DoubleRotateLR(TreeNode* &k3)
 }
 
 //La rotación de la izquierda a la derecha
-//template<class T>
 void AVLtree::DoubleRotateRL(TreeNode* &k3)
 {
     SingRotateLeft(k3->rson);
     SingRotateRight(k3);
 }
 
-//template<class T>
 void AVLtree::insertpri(TreeNode* &node,Persona *x)
 {
     if(node == nullptr)//Si los nodos vacío, con la información de este nodo X
@@ -95,8 +89,8 @@ void AVLtree::insertpri(TreeNode* &node,Persona *x)
     else ++(node->freq);//Si son iguales, con frecuencia 1
     node->hgt=Max(height(node->lson),height(node->rson));
 }
-//La inserción de la interfaz
 
+//La inserción de la interfaz
 void AVLtree::insert(Persona *x)
 {
     insertpri(root,x);
@@ -104,7 +98,6 @@ void AVLtree::insert(Persona *x)
 
 
 //Buscar
-
 TreeNode* AVLtree::findpri(TreeNode* node, Persona *x)
 {
     if(node==nullptr)//Si los nodos vacío que no encontrar, devuelve null
@@ -123,12 +116,12 @@ TreeNode* AVLtree::findpri(TreeNode* node, Persona *x)
 }
 
 //Interfaz de búsqueda
-
 TreeNode* AVLtree::find(Persona *x)
 {
     return findpri(root,x);
 }
 
+//Borrar
 void AVLtree::Deletepri(TreeNode* &node,Persona *x)
 {
     if(node==nullptr) return ;//No es encontrar el valor X de los nodos
@@ -186,10 +179,11 @@ void AVLtree::Deletepri(TreeNode* &node,Persona *x)
     return;
 }
 
+//Agrega
 void AVLtree::agregar(QVector<Persona*>* l){
     agregar(root, l);
 }
-
+//Agrega_2.0
 bool AVLtree::agregar(TreeNode *r,QVector<Persona*>* l){
     if(r == nullptr){
         return true;

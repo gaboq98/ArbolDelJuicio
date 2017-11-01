@@ -6,6 +6,14 @@ VentanaConsultaApellido::VentanaConsultaApellido(QWidget *parent) :
     ui(new Ui::VentanaConsultaApellido)
 {
     ui->setupUi(this);
+
+/*
+    while (condition) {
+
+
+    }
+    ui->apellido->addItem();
+    */
 }
 
 VentanaConsultaApellido::~VentanaConsultaApellido()

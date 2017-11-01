@@ -2,6 +2,7 @@
 #define VENTANACONSULTAAPELLIDO_H
 
 #include <QMainWindow>
+#include "ventanapersonas.h"
 
 namespace Ui {
 class VentanaConsultaApellido;
@@ -14,6 +15,7 @@ class VentanaConsultaApellido : public QMainWindow
 public:
     explicit VentanaConsultaApellido(QWidget *parent = 0);
     ~VentanaConsultaApellido();
+
 
 private:
     Ui::VentanaConsultaApellido *ui;
