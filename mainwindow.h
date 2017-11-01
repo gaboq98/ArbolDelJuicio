@@ -5,6 +5,7 @@
 #include "ventanapersonas.h"
 #include "mapamundi.h"
 #include "ventanaconsultaapellido.h"
+#include "Mundo.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,6 +22,7 @@ public:
     ventanaPersonas* ventana_personas;
     MapaMundi* mapa_mundi;
     VentanaConsultaApellido* ventana_apellidos;
+    Mundo* mundo;
 
 
 

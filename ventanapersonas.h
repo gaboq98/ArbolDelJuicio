@@ -1,6 +1,5 @@
 #ifndef VENTANAPERSONAS_H
 #define VENTANAPERSONAS_H
-#include "Mundo.h"
 #include <QMainWindow>
 #include <QDebug>
 
@@ -14,8 +13,9 @@ class ventanaPersonas : public QMainWindow
 
 public:
     explicit ventanaPersonas(QWidget *parent = 0);
+    ventanaPersonas(Mundo* m);
     ~ventanaPersonas();
-    Mundo *mundo;
+    Mundo* mundo;
 
 private slots:
     void on_crear_clicked();

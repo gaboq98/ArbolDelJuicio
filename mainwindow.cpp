@@ -8,10 +8,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ventana_personas = new ventanaPersonas();
-    ventana_apellidos = new VentanaConsultaApellido();
+    mundo = new Mundo();
+    ventana_personas = new ventanaPersonas(mundo);
+    ventana_apellidos = new VentanaConsultaApellido(mundo);
     mapa_mundi = new MapaMundi();
-
 
     on_tabWidget_tabBarClicked(1);
 
