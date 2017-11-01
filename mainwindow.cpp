@@ -8,11 +8,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QHash<QString , int> hash_paises;
     mundo = new Mundo();
+    mundo->hash_paises = &(hash_paises);
     ventana_personas = new ventanaPersonas();
     ventana_apellidos = new VentanaConsultaApellido();
     mapa_mundi = new MapaMundi();
-
+    ventana_top = new Top10paises();
     on_tabWidget_tabBarClicked(1);
 
 }
@@ -51,8 +53,32 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_no_nacidos_button_clicked()
 {
-    while(true){
     char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"americaSkrtSkrt@gmail.com\" --mail-rcpt \"josuecanales0@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
         WinExec(command, SW_HIDE);
+
 }
+
+void MainWindow::on_top_pecadores_button_clicked()
+{
+    /*
+    QList<int> vals = hash.values();
+    qSort( vals );
+    foreach( int val, vals )
+    {
+        QList<QString> keys = hash.keys( val );
+        qSort( keys );
+        foreach( QString key, keys )
+        {
+            qDebug() << val << ":" << key;
+        }
+    }
+    */
+    ventana_top->cambiar_pecadores();
+    ventana_top->show();
+}
+
+void MainWindow::on_top_santos_button_clicked()
+{
+    ventana_top->cambiar_salvados();
+    ventana_top->show();
 }

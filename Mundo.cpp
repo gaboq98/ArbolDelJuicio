@@ -93,7 +93,11 @@ void Mundo::pecar()
 {
     Nodo *temp = personas->primerNodo;
     while(temp != NULL) {
-        temp->persona->pecar();
+        int p_de_pecado = temp->persona->pecar();
+        if (hash_paises->contains(QString::fromStdString(temp->persona->pais))){
+            (*hash_paises)[QString::fromStdString(temp->persona->pais)] = 0;
+        }
+        (*hash_paises)[QString::fromStdString(temp->persona->pais)] = (*hash_paises)[QString::fromStdString(temp->persona->pais)] + p_de_pecado;
         temp = temp->siguiente;
     }
 }
