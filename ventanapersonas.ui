@@ -14,39 +14,36 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(76, 58, 0, 255), stop:0.504819 rgba(255, 255, 255, 255), stop:0.79 rgba(255, 255, 255, 255), stop:1 rgba(255, 158, 158, 255));</string>
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.83, x2:1, y2:0.437364, stop:0 rgba(14, 8, 73, 255), stop:0.124378 rgba(28, 17, 145, 255), stop:0.38806 rgba(126, 14, 81, 255), stop:0.671642 rgba(234, 11, 11, 255), stop:0.79 rgba(244, 70, 5, 255), stop:0.850746 rgba(255, 136, 0, 255), stop:1 rgba(235, 233, 70, 255));</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="crear">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>430</y>
+      <x>450</x>
+      <y>420</y>
       <width>93</width>
       <height>28</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 82, 82, 255), stop:0.313433 rgba(255, 255, 255, 255), stop:0.442786 rgba(255, 255, 255, 255), stop:1 rgba(76, 58, 0, 255));</string>
+     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(0, 0, 0, 255));</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelPersonas">
+   <widget class="QTextEdit" name="textPersonas">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>130</y>
-      <width>851</width>
-      <height>221</height>
+      <x>50</x>
+      <y>30</y>
+      <width>921</width>
+      <height>341</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 235, 235, 255), stop:0.35 rgba(255, 188, 188, 200), stop:0.4 rgba(255, 162, 162, 80), stop:0.44 rgba(252, 128, 128, 237), stop:0.562189 rgba(255, 132, 132, 255), stop:1 rgba(255, 255, 255, 114));</string>
-    </property>
-    <property name="text">
-     <string/>
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 255, 192), stop:1 rgba(255, 255, 255, 228));</string>
     </property>
    </widget>
   </widget>

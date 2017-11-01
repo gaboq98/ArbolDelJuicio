@@ -1,10 +1,9 @@
-cristianismo
-judaísmo
-hinduismo
-bahaísmo
-islam
-taoísmo
-satanismo
-budismo
-sijismo
-brahmanismo
+Cristiano
+Islam
+Judio
+Budista
+Hindu
+Sin religion
+Satanista
+Sijismo
+Brahmanismo

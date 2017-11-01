@@ -16,7 +16,7 @@ string Persona::obtenerFecha()
 
     momentoString += "Fecha de Nacimiento: ";
     momentoString += to_string(tiempoLocal->tm_mday) + "/";
-    momentoString += to_string(tiempoLocal->tm_mon) + "/";
+    momentoString += to_string(tiempoLocal->tm_mon + 1) + "/";
     momentoString += to_string(1900 + tiempoLocal->tm_year) + "\n";
 
     momentoString += "Hora de Nacimiento: ";

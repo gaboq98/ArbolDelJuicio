@@ -1,4 +1,4 @@
-Abogado
+﻿Abogado
 Actor
 Arquitecto
 Barrendero
@@ -7,7 +7,7 @@ Bombero
 Cartero
 Carnicero
 Carpintero
-Científico
+Cientifico
 Contador
 Chef
 Dentista 
@@ -15,7 +15,7 @@ Doctor
 Enfermero
 Fontanero
 Estilista
-Farmacéutico
+Farmaceutico
 Florista
 Fotógrafo
 Granjero
@@ -28,9 +28,9 @@ Periodista
 Pintor
 Piloto
 Plomero
-Policía
+Policia
 Exorcista
-Político
+Politico
 Profesor
 Psiquiatra
 Salvavidas
@@ -46,5 +46,5 @@ Modelo
 Ingeniero
 Dentista
 Publicista
-Topógrafo
-Matemático
+Topografo
+Matematico
