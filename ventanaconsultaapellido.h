@@ -19,6 +19,9 @@ public:
     ~VentanaConsultaApellido();
     void asignarComponentes(Mundo *mundo);
 
+private slots:
+    void on_consulta_button_clicked();
+
 private:
     Ui::VentanaConsultaApellido *ui;
 };

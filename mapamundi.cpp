@@ -17,7 +17,7 @@ MapaMundi::MapaMundi(QWidget *parent) :
     ui->fondo_asia5->setStyleSheet(white);
     ui->fondo_asia6->setStyleSheet(white);
     ui->fondo_europa->setStyleSheet(white);
-    ui->fondo_europa1->setStyleSheet(white);
+    //ui->fondo_europa1->setStyleSheet(white);
     ui->fondo_oceania->setStyleSheet(white);
     ui->fondo_oceania3->setStyleSheet(white);
 }

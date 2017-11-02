@@ -49,13 +49,16 @@ Persona::Persona(string nombre, string apellido, string pais, string creencia, s
  * Entradas: Ninguna
  * Salida: Ninguna
  */
-void Persona::pecar()
+int Persona::pecar()
 {
+    int result = 0;
     for(int i = 0; i < 7; i++ ){
         int pecado = rand()%101;
         pecados[i] += pecado;
+        result += pecado;
         total_pecados += pecado;
     }
+    return result;
 }
 
 /*

@@ -25,7 +25,7 @@ struct Persona {
 
     Persona();
     Persona(string nombre, string apellido, string pais, string creencia, string profesion, string correo);
-    void pecar();
+    int pecar();
     void limpiar();
     void imprimir();
 

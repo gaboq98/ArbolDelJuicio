@@ -38,6 +38,9 @@
     <property name="currentIndex">
      <number>1</number>
     </property>
+    <property name="usesScrollButtons">
+     <bool>true</bool>
+    </property>
     <widget class="QWidget" name="tab_paraiso">
      <attribute name="title">
       <string>PARAISO</string>
@@ -296,14 +299,17 @@
      <widget class="QSpinBox" name="cantidadPersonas">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>270</x>
         <y>100</y>
-        <width>71</width>
+        <width>81</width>
         <height>31</height>
        </rect>
       </property>
       <property name="buttonSymbols">
        <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="maximum">
+       <number>9999999</number>
       </property>
      </widget>
     </widget>

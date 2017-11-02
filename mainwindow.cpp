@@ -9,12 +9,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     mundo = new Mundo();
+    mundo->hash_paises = &(hash_paises);
     ventana_personas = new ventanaPersonas();
     ventana_personas->asignarComponentes(mundo);
     ventana_apellidos = new VentanaConsultaApellido();
     mapa_mundi = new MapaMundi();
-
+    ventana_top = new Top10paises();
     on_tabWidget_tabBarClicked(1);
+    ui->spinBox->setMaximum(9999999);
 
 }
 
@@ -48,12 +50,60 @@ void MainWindow::on_mapa_button_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     ventana_apellidos->show();
+    ventana_apellidos->asignarComponentes(mundo);
 }
 
 void MainWindow::on_no_nacidos_button_clicked()
 {
     char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"americaSkrtSkrt@gmail.com\" --mail-rcpt \"josuecanales0@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
         WinExec(command, SW_HIDE);
+
+}
+
+
+void MainWindow::on_top_pecadores_button_clicked()
+{
+    QList<int> vals = hash_paises.values();
+    qSort( vals );
+    int val;
+    QString str;
+    for(int i = vals.length()-1; i > vals.length() - 11; i--)
+    {
+        val = vals[i];
+        {
+            QList<QString> keys = hash_paises.keys( val );
+            qSort( keys );
+            foreach( QString key, keys )
+            {
+                str =  str + key + ": " + QString::number(val) + "\n";
+            }
+        }
+    }
+    ventana_top->cambiar_pecadores(str);
+    ventana_top->show();
+}
+
+void MainWindow::on_top_santos_button_clicked()
+{
+    QList<int> vals = hash_paises.values();
+    qSort( vals );
+    int i = 0;
+    QString str;
+    foreach( int val, vals )
+    {
+        if(i < 5)
+        {
+            QList<QString> keys = hash_paises.keys( val );
+            qSort( keys );
+            foreach( QString key, keys )
+            {
+               str =  str + key + ": " + QString::number(val) + "\n";
+            }
+        }
+        i++;
+    }
+    ventana_top->cambiar_salvados(str);
+    ventana_top->show();
 }
 
 void MainWindow::on_pecadores_button_clicked()
@@ -63,5 +113,12 @@ void MainWindow::on_pecadores_button_clicked()
 
 void MainWindow::on_nacimiento_button_clicked()
 {
-    mundo->nacer(ui->cantidadPersonas->value());
+    mundo->nacer(ui->spinBox->value());
+    qDebug() << "nacieron" + QString::number(ui->spinBox->value());
+}
+
+void MainWindow::on_pecar_button_clicked()
+{
+    mundo->pecar();
+    qDebug() << "PECARON";
 }
