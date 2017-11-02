@@ -122,3 +122,8 @@ void MainWindow::on_pecar_button_clicked()
     mundo->pecar();
     qDebug() << "PECARON";
 }
+
+void MainWindow::on_condenar_button_clicked()
+{
+    //abre ventana para condenar
+}

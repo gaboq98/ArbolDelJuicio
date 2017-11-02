@@ -36,7 +36,9 @@ SOURCES += \
     paraiso.cpp \
     avltree.cpp \
     ventanapersonas.cpp \
-    ventanaconsultaapellido.cpp
+    ventanaconsultaapellido.cpp \
+    top10paises.cpp \
+    ventanacondenar.cpp
 
 
 HEADERS += \
@@ -51,14 +53,18 @@ HEADERS += \
     paraiso.h \
     avltree.h \
     ventanapersonas.h \
-    ventanaconsultaapellido.h
+    ventanaconsultaapellido.h \
+    top10paises.h \
+    ventanacondenar.h
 
 
 FORMS += \
     mainwindow.ui \
     mapamundi.ui \
     ventanapersonas.ui \
-    ventanaconsultaapellido.ui
+    ventanaconsultaapellido.ui \
+    top10paises.ui \
+    ventanacondenar.ui
 
 RESOURCES += \
     imagenes.qrc
