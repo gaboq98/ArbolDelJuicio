@@ -70,7 +70,7 @@ void Mundo::nacer(int cantidad)
             }
             int random = rand()%9;
             for(int i = 0; i < random; i++) {
-                aux->agregar(&(per->hijos));
+                aux->agregar(&(per->hijos),per->pais);
             }
             aux->insert(per);
         }

@@ -35,9 +35,11 @@ void VentanaConsultaApellido::asignarComponentes(Mundo *mundo)
 
 void VentanaConsultaApellido::on_consulta_button_clicked()
 {
+    /*
     QString val = ui->apellidos_box->itemData(ui->apellidos_box->currentIndex());
     if(mundo->apellidosArbol.contains(val)){
         AVLtree* arbol_apellido = mundo->apellidosArbol[val];
 
     }
+    */
 }

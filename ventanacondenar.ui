@@ -1,17 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>VentanaCondenar</class>
- <widget name="VentanaCondenar" class="QDialog">
+ <widget class="QDialog" name="VentanaCondenar">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>418</width>
+    <height>277</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QComboBox" name="paises_box">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>90</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="condenar_button">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>130</y>
+     <width>261</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Condenar</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
