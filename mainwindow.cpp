@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     mapa_mundi = new MapaMundi();
     ventana_top = new Top10paises();
     on_tabWidget_tabBarClicked(1);
-    ui->spinBox->setMaximum(9999999);
+    ui->cantidadPersonas->setMaximum(9999999);
 
 }
 
@@ -113,8 +113,8 @@ void MainWindow::on_pecadores_button_clicked()
 
 void MainWindow::on_nacimiento_button_clicked()
 {
-    mundo->nacer(ui->spinBox->value());
-    qDebug() << "nacieron" + QString::number(ui->spinBox->value());
+    mundo->nacer(ui->cantidadPersonas->value());
+    qDebug() << "nacieron" + QString::number(ui->cantidadPersonas->value());
 }
 
 void MainWindow::on_pecar_button_clicked()

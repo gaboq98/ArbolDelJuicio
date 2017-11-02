@@ -17,7 +17,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -45,18 +44,17 @@ public:
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MapaMundi)
     {
         if (MapaMundi->objectName().isEmpty())
             MapaMundi->setObjectName(QStringLiteral("MapaMundi"));
-        MapaMundi->resize(969, 700);
+        MapaMundi->resize(969, 674);
         centralwidget = new QWidget(MapaMundi);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(0, 0, 971, 671));
+        label->setGeometry(QRect(0, 0, 971, 681));
         label->setStyleSheet(QStringLiteral("background-image: url(:/continentes (1).png);"));
         fondo_oceania3 = new QPushButton(centralwidget);
         fondo_oceania3->setObjectName(QStringLiteral("fondo_oceania3"));
@@ -96,8 +94,8 @@ public:
 "background-repeat: none;"));
         fondo_europa1 = new QPushButton(centralwidget);
         fondo_europa1->setObjectName(QStringLiteral("fondo_europa1"));
-        fondo_europa1->setGeometry(QRect(250, -20, 391, 171));
-        fondo_europa1->setStyleSheet(QLatin1String("background-color: rgb(255, 89, 239);\n"
+        fondo_europa1->setGeometry(QRect(250, -20, 191, 171));
+        fondo_europa1->setStyleSheet(QLatin1String("background-color: rgb(0, 89, 239);\n"
 "border: none;\n"
 "background-repeat: none;"));
         fondo_oceania = new QPushButton(centralwidget);
@@ -152,7 +150,6 @@ public:
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         pushButton_5->setGeometry(QRect(840, 630, 75, 23));
         MapaMundi->setCentralWidget(centralwidget);
-        fondo_africa1->raise();
         fondo_america->raise();
         fondo_europa->raise();
         fondo_europa1->raise();
@@ -165,15 +162,13 @@ public:
         fondo_asia->raise();
         fondo_asia5->raise();
         fondo_asia3->raise();
-        label->raise();
+        fondo_africa1->raise();
         pushButton->raise();
         pushButton_2->raise();
         pushButton_3->raise();
         pushButton_4->raise();
         pushButton_5->raise();
-        statusbar = new QStatusBar(MapaMundi);
-        statusbar->setObjectName(QStringLiteral("statusbar"));
-        MapaMundi->setStatusBar(statusbar);
+        label->raise();
 
         retranslateUi(MapaMundi);
 

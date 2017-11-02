@@ -63,6 +63,7 @@ public:
         tabWidget->setStyleSheet(QStringLiteral(""));
         tabWidget->setTabPosition(QTabWidget::North);
         tabWidget->setTabShape(QTabWidget::Rounded);
+        tabWidget->setUsesScrollButtons(true);
         tab_paraiso = new QWidget();
         tab_paraiso->setObjectName(QStringLiteral("tab_paraiso"));
         label_3 = new QLabel(tab_paraiso);
@@ -136,8 +137,9 @@ public:
         pecadores_button->setFont(font1);
         cantidadPersonas = new QSpinBox(tab_mundo);
         cantidadPersonas->setObjectName(QStringLiteral("cantidadPersonas"));
-        cantidadPersonas->setGeometry(QRect(260, 100, 71, 31));
+        cantidadPersonas->setGeometry(QRect(270, 100, 81, 31));
         cantidadPersonas->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        cantidadPersonas->setMaximum(9999999);
         tabWidget->addTab(tab_mundo, QString());
         tab_infierno = new QWidget();
         tab_infierno->setObjectName(QStringLiteral("tab_infierno"));
