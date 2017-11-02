@@ -42,7 +42,7 @@ public:
     QPushButton *top_santos_button;
     QPushButton *mapa_button;
     QPushButton *pecadores_button;
-    QSpinBox *spinBox;
+    QSpinBox *cantidadPersonas;
     QWidget *tab_infierno;
     QLabel *label_2;
     QPushButton *condenar_button;
@@ -134,10 +134,10 @@ public:
         pecadores_button->setObjectName(QStringLiteral("pecadores_button"));
         pecadores_button->setGeometry(QRect(20, 300, 231, 31));
         pecadores_button->setFont(font1);
-        spinBox = new QSpinBox(tab_mundo);
-        spinBox->setObjectName(QStringLiteral("spinBox"));
-        spinBox->setGeometry(QRect(260, 100, 71, 31));
-        spinBox->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        cantidadPersonas = new QSpinBox(tab_mundo);
+        cantidadPersonas->setObjectName(QStringLiteral("cantidadPersonas"));
+        cantidadPersonas->setGeometry(QRect(260, 100, 71, 31));
+        cantidadPersonas->setButtonSymbols(QAbstractSpinBox::NoButtons);
         tabWidget->addTab(tab_mundo, QString());
         tab_infierno = new QWidget();
         tab_infierno->setObjectName(QStringLiteral("tab_infierno"));
