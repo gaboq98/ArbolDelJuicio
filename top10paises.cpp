@@ -13,12 +13,16 @@ Top10paises::~Top10paises()
     delete ui;
 }
 
-void Top10paises::cambiar_pecadores()
+void Top10paises::cambiar_pecadores(QString str)
 {
     ui->Qtitulo->setText("Top 10 países más pecadores");
+    ui->Qtext->clear();
+    ui->Qtext->appendPlainText(str);
 }
 
-void Top10paises::cambiar_salvados()
+void Top10paises::cambiar_salvados(QString str)
 {
     ui->Qtitulo->setText("Top 5 países menos pecadores");
+    ui->Qtext->clear();
+    ui->Qtext->appendPlainText(str);
 }

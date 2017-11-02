@@ -31,6 +31,7 @@ Persona *Mundo::crearPersona()
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
     persona->id = id;
     if(! no_nacidos.contains(id)){
+       personas->insertarOrdenado(persona);
        return persona;
     }
     return nullptr;
@@ -63,16 +64,15 @@ void Mundo::nacer(int cantidad)
             AVLtree *aux;
             if (!apellidosArbol.contains(per->apellido)) {
                 aux = new AVLtree();
-                aux->insert(per);
                 apellidosArbol[per->apellido] = *aux;
             } else {
                 aux = &apellidosArbol[per->apellido];
-                aux->insert(per);
             }
             int random = rand()%9;
             for(int i = 0; i < random; i++) {
                 aux->agregar(&(per->hijos));
             }
+            aux->insert(per);
         }
     }
 }
@@ -94,7 +94,7 @@ void Mundo::pecar()
     Nodo *temp = personas->primerNodo;
     while(temp != NULL) {
         int p_de_pecado = temp->persona->pecar();
-        if (hash_paises->contains(QString::fromStdString(temp->persona->pais))){
+        if (!hash_paises->contains(QString::fromStdString(temp->persona->pais))){
             (*hash_paises)[QString::fromStdString(temp->persona->pais)] = 0;
         }
         (*hash_paises)[QString::fromStdString(temp->persona->pais)] = (*hash_paises)[QString::fromStdString(temp->persona->pais)] + p_de_pecado;

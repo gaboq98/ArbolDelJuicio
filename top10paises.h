@@ -14,8 +14,8 @@ class Top10paises : public QDialog
 public:
     explicit Top10paises(QWidget *parent = 0);
     ~Top10paises();
-    void cambiar_pecadores();
-    void cambiar_salvados();
+    void cambiar_pecadores(QString str);
+    void cambiar_salvados(QString str);
 
 private:
     Ui::Top10paises *ui;

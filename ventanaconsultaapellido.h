@@ -17,7 +17,10 @@ public:
     explicit VentanaConsultaApellido(QWidget *parent = 0);
     Mundo* mundo;
     ~VentanaConsultaApellido();
+    void asignarComponentes(Mundo *mundo);
 
+private slots:
+    void on_consulta_button_clicked();
 
 private:
     Ui::VentanaConsultaApellido *ui;

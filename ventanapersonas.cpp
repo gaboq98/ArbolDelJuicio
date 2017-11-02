@@ -14,10 +14,15 @@ ventanaPersonas::~ventanaPersonas()
     delete ui;
 }
 
+void ventanaPersonas::asignarComponentes(Mundo *mundo)
+{
+    this->mundo = mundo;
+}
+
 void ventanaPersonas::on_crear_clicked()
 {
-    mundo->nacer(10000);
     Nodo *temp = mundo->personas->primerNodo;
+    qDebug() <<  QString::fromStdString(temp->persona->nombre);
     int i = 1;
     while(temp != NULL) {
         ui->textPersonas->append("\n");
@@ -29,8 +34,7 @@ void ventanaPersonas::on_crear_clicked()
         for(int i = 0; i < p->hijos.length(); i++) {
             ui->textPersonas->append(QString::number(p->hijos[i]->id));
         }
-        //qDebug() << str;
-
         temp = temp->siguiente;
     }
+    qDebug() << "Pene gordo";
 }
