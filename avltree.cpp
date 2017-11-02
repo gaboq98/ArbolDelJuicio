@@ -181,19 +181,19 @@ void AVLtree::Deletepri(TreeNode* &node,Persona *x)
 }
 
 //Agrega
-void AVLtree::agregar(QVector<Persona*>* l){
-    agregar(root, l);
+void AVLtree::agregar(QVector<Persona*>* l, string pais){
+    agregar(root, l, pais);
 }
 
 //Agrega_2.0
-bool AVLtree::agregar(TreeNode *r,QVector<Persona*>* l){
+bool AVLtree::agregar(TreeNode *r,QVector<Persona*>* l,string pais){
     if(r == nullptr){
         return true;
-    }else if(!r->isSon){
+    }else if(!r->isSon && pais == r->ptHumano->pais){
         l->append(r->ptHumano);
         r->isSon = true;
         return false;
     }
-    return agregar(r->lson, l) && agregar(r->rson, l);
+    return agregar(r->lson, l, pais) && agregar(r->rson, l, pais);
 }
 

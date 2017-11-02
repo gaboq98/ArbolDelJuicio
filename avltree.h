@@ -44,9 +44,9 @@ struct AVLtree {
 
     TreeNode *find(Persona *x);
 
-    void agregar(QVector<Persona*>* l);
+    void agregar(QVector<Persona*>* l, string);
 
-    bool agregar(TreeNode* r, QVector<Persona*>* l);
+    bool agregar(TreeNode* r, QVector<Persona*>* l, string);
 
 };
 
