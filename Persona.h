@@ -22,6 +22,7 @@ struct Persona {
     QVector<Persona*> hijos;
     Persona *papa;
     int total_pecados;
+    string estado;
 
     Persona();
     Persona(string nombre, string apellido, string pais, string creencia, string profesion, string correo);

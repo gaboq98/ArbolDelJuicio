@@ -36,5 +36,4 @@ void ventanaPersonas::on_crear_clicked()
         }
         temp = temp->siguiente;
     }
-    qDebug() << "Pene gordo";
 }

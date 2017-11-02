@@ -31,6 +31,7 @@ Persona *Mundo::crearPersona()
     Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
     persona->id = id;
     if(! no_nacidos.contains(id)){
+       persona->estado = "Vivo";
        personas->insertarOrdenado(persona);
        return persona;
     }
@@ -64,9 +65,9 @@ void Mundo::nacer(int cantidad)
             AVLtree *aux;
             if (!apellidosArbol.contains(per->apellido)) {
                 aux = new AVLtree();
-                apellidosArbol[per->apellido] = *aux;
+                apellidosArbol[per->apellido] = aux;
             } else {
-                aux = &apellidosArbol[per->apellido];
+                aux = apellidosArbol[per->apellido];
             }
             int random = rand()%9;
             for(int i = 0; i < random; i++) {

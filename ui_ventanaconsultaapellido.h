@@ -17,10 +17,8 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -33,16 +31,14 @@ public:
     QComboBox *paises_box;
     QLabel *label;
     QLabel *label_2;
-    QPlainTextEdit *plainTextEdit;
+    QPlainTextEdit *text_edit;
     QPushButton *consulta_button;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *VentanaConsultaApellido)
     {
         if (VentanaConsultaApellido->objectName().isEmpty())
             VentanaConsultaApellido->setObjectName(QStringLiteral("VentanaConsultaApellido"));
-        VentanaConsultaApellido->resize(800, 600);
+        VentanaConsultaApellido->resize(808, 572);
         centralwidget = new QWidget(VentanaConsultaApellido);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         apellidos_box = new QComboBox(centralwidget);
@@ -61,20 +57,13 @@ public:
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(30, 250, 41, 21));
         label_2->setFont(font);
-        plainTextEdit = new QPlainTextEdit(centralwidget);
-        plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(280, 10, 511, 541));
+        text_edit = new QPlainTextEdit(centralwidget);
+        text_edit->setObjectName(QStringLiteral("text_edit"));
+        text_edit->setGeometry(QRect(280, 10, 511, 541));
         consulta_button = new QPushButton(centralwidget);
         consulta_button->setObjectName(QStringLiteral("consulta_button"));
         consulta_button->setGeometry(QRect(50, 310, 191, 31));
         VentanaConsultaApellido->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(VentanaConsultaApellido);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
-        VentanaConsultaApellido->setMenuBar(menubar);
-        statusbar = new QStatusBar(VentanaConsultaApellido);
-        statusbar->setObjectName(QStringLiteral("statusbar"));
-        VentanaConsultaApellido->setStatusBar(statusbar);
 
         retranslateUi(VentanaConsultaApellido);
 

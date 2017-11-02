@@ -94,6 +94,7 @@ void AVLtree::insertpri(TreeNode* &node,Persona *x)
 void AVLtree::insert(Persona *x)
 {
     insertpri(root,x);
+    listaPersonas.append(x);
 }
 
 
@@ -183,6 +184,7 @@ void AVLtree::Deletepri(TreeNode* &node,Persona *x)
 void AVLtree::agregar(QVector<Persona*>* l){
     agregar(root, l);
 }
+
 //Agrega_2.0
 bool AVLtree::agregar(TreeNode *r,QVector<Persona*>* l){
     if(r == nullptr){

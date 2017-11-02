@@ -11,11 +11,14 @@ struct  TreeNode {
     int freq;
     bool isSon;
 
+
 };
 
 struct AVLtree {
 
     TreeNode *root;
+
+    QVector<Persona*> listaPersonas;
 
     AVLtree();
 
