@@ -12,6 +12,7 @@ struct Mundo {
     QHash<int, int> diccionario;
     QHash<QString, int>* hash_paises;
     QMap<string, AVLtree*> apellidosArbol;
+    QMap<QString, Lista*> lista_paises;
     Lista* personas;
     GeneradorArchivos *archivos;
     Persona *crearPersona();

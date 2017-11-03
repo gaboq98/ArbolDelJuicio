@@ -2,7 +2,7 @@
 #define VENTANAPERSONAS_H
 #include <QMainWindow>
 #include <QDebug>
-#include "Mundo.h"
+#include "paraiso.h"
 
 namespace Ui {
 class ventanaPersonas;
