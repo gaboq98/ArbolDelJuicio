@@ -24,12 +24,11 @@ void VentanaCondenar::asignarComponentes(Mundo *mundo,Infierno* infierno)
     for(int i = 0; i < 100; i++){
         listaPaises.append(QString::fromStdString(pais[i]).mid(1));
     }
-    //ui->paises_box->addItems(listaPaises);
+    ui->paises_box->addItems(listaPaises);
 }
 
 void VentanaCondenar::on_condenar_button_clicked()
 {
-    /*
     QString pais_condenado = ui->paises_box->currentText();
     Nodo* tmp = mundo->lista_paises[pais_condenado]->primerNodo;
     Lista* pecadores = new Lista();
@@ -39,7 +38,7 @@ void VentanaCondenar::on_condenar_button_clicked()
         total_del_pais++;
     }
     int porcentaje = total_del_pais * 0.25;
-    tmp = pecadores->primerNodo();
+    tmp = pecadores->primerNodo;
     for(int i = 0; i < porcentaje; i ++){
         infierno->agregar(mundo->eliminar(tmp->persona->id));
         tmp = tmp->siguiente;
