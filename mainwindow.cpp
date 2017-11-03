@@ -22,7 +22,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->cantidadPersonas->setMaximum(9999999);
     ventana_consultas = new ventanaConsultas();
     ventana_consultas->asignarComponentes(mundo);
-
+    for(int i = 0; i< 5; i++){
+        mapa_mundi->continentes[i] = mundo->continentes[i];
+    }
 }
 
 MainWindow::~MainWindow()
@@ -49,6 +51,8 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
 
 void MainWindow::on_mapa_button_clicked()
 {
+    mapa_mundi->setDefault();
+    mapa_mundi->ordenar();
     mapa_mundi->show();
 }
 

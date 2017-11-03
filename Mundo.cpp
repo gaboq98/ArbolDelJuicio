@@ -7,6 +7,10 @@
 Mundo::Mundo() {
     personas = new Lista();
     archivos = new GeneradorArchivos();
+    for(int i = 0; i < 5; i++)
+    {
+        continentes[i] = new Continente(i);
+    }
 }
 
 /*
@@ -27,8 +31,9 @@ Persona *Mundo::crearPersona()
     string prof = archivos->genradorProfecion();
     string pais = archivos->generadorPais();
     string correo = asignarCorreo(pais);
+    int indice = stoi(pais.substr(0));
     pais = pais.substr(1, pais.size());
-    Persona *persona = new Persona(nom, ape, pais, cree, prof, correo);
+    Persona *persona = new Persona(nom, ape, pais, cree, prof, correo,continentes[indice]);
     persona->id = id;
     if(! no_nacidos.contains(id)){
        persona->estado = "Vivo";

@@ -41,10 +41,8 @@ void VentanaCondenar::on_condenar_button_clicked()
     tmp = pecadores->primerNodo;
     for(int i = 0; i < porcentaje; i ++){
         Persona* p = mundo->eliminar(tmp->persona->id);
-        qDebug() << QString::fromStdString(p->nombre);
         infierno->agregar(p);
         tmp = tmp->siguiente;
     }
-    qDebug() << infierno->pecadores->imprimir();
     //*/
 }

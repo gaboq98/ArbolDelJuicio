@@ -15,6 +15,7 @@ struct Mundo {
     QMap<QString, Lista*> lista_paises;
     Lista* personas;
     GeneradorArchivos *archivos;
+    Continente* continentes[5];
     Persona *crearPersona();
     string asignarCorreo(string pais);
     void nacer(int cantidad);
