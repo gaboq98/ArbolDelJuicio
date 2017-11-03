@@ -26,6 +26,7 @@ public:
     VentanaConsultaApellido* ventana_apellidos;
     Top10paises* ventana_top;
     Mundo* mundo;
+    Infierno* infierno;
     VentanaCondenar* ventanaCondenar;
     QHash<QString , int> hash_paises;
 

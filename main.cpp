@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     w.show();
     qRegisterMetaType<QVector<int> >("QVector<int>");
     qRegisterMetaType<QHash<string, int> >("QHah<string, int>");
+    qRegisterMetaType<QHash<string, Lista*> >("QHah<string, Lista*>");
     qRegisterMetaType<QVector<Persona*> >("QVector<Persona*>");
 
     return a.exec();

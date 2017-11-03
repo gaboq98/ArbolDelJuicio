@@ -13,27 +13,27 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QComboBox" name="paises_box">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>90</y>
-     <width>261</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="condenar_button">
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>130</y>
+     <y>170</y>
      <width>261</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
     <string>Condenar</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="paises_box">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>120</y>
+     <width>261</width>
+     <height>22</height>
+    </rect>
    </property>
   </widget>
  </widget>

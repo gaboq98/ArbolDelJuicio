@@ -9,10 +9,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     mundo = new Mundo();
+    infierno = new Infierno();
     mundo->hash_paises = &(hash_paises);
     ventana_personas = new ventanaPersonas();
     ventana_personas->asignarComponentes(mundo);
     ventana_apellidos = new VentanaConsultaApellido();
+    ventanaCondenar = new VentanaCondenar();
     mapa_mundi = new MapaMundi();
     ventana_top = new Top10paises();
     on_tabWidget_tabBarClicked(1);
@@ -125,5 +127,6 @@ void MainWindow::on_pecar_button_clicked()
 
 void MainWindow::on_condenar_button_clicked()
 {
-    //abre ventana para condenar
+    ventanaCondenar->asignarComponentes(mundo,infierno);//abre ventana para condenar
+    ventanaCondenar->show();
 }

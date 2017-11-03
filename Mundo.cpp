@@ -66,8 +66,10 @@ void Mundo::nacer(int cantidad)
             if (!apellidosArbol.contains(per->apellido)) {
                 aux = new AVLtree();
                 apellidosArbol[per->apellido] = aux;
+                lista_paises[QString::fromStdString(per->pais)] = new Lista();
             } else {
                 aux = apellidosArbol[per->apellido];
+                lista_paises[QString::fromStdString(per->pais)]->insertarOrdenado(per);
             }
             int random = rand()%9;
             for(int i = 0; i < random; i++) {
@@ -83,6 +85,8 @@ void Mundo::nacer(int cantidad)
  * Salidas: Persona eliminada
  */
 Persona* Mundo::eliminar(int id){
+    Persona* p = personas->buscar(id)->persona;
+    lista_paises[QString::fromStdString(p->pais)]->borrar(p->id);
     return personas->borrar(id);
 }
 
