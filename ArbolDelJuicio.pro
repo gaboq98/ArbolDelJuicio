@@ -39,7 +39,8 @@ SOURCES += \
     ventanaconsultaapellido.cpp \
     top10paises.cpp \
     ventanacondenar.cpp \
-    ventanaconsultas.cpp
+    ventanaconsultas.cpp \
+    condenadosdialog.cpp
 
 
 HEADERS += \
@@ -57,7 +58,8 @@ HEADERS += \
     ventanaconsultaapellido.h \
     top10paises.h \
     ventanacondenar.h \
-    ventanaconsultas.h
+    ventanaconsultas.h \
+    condenadosdialog.h
 
 
 FORMS += \
@@ -67,7 +69,8 @@ FORMS += \
     ventanaconsultaapellido.ui \
     top10paises.ui \
     ventanacondenar.ui \
-    ventanaconsultas.ui
+    ventanaconsultas.ui \
+    condenadosdialog.ui
 
 RESOURCES += \
     imagenes.qrc

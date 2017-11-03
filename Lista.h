@@ -40,4 +40,6 @@ struct Lista {
     
     Persona *borrar(int id);
 
+    QString imprimir();
+
 };

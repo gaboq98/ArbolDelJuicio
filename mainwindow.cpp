@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     mundo->hash_paises = &(hash_paises);
     ventana_personas = new ventanaPersonas();
     ventana_apellidos = new VentanaConsultaApellido();
+    condenardialog = new CondenadosDialog();
     ventanaCondenar = new VentanaCondenar();
     mapa_mundi = new MapaMundi();
     ventana_top = new Top10paises();
@@ -136,4 +137,10 @@ void MainWindow::on_consultar_familia_button_clicked()
 {
     ventana_personas->asignarComponentes(mundo);
     ventana_personas->show();
+}
+
+void MainWindow::on_condenados_button_clicked()
+{
+    condenardialog->asignarComponentes(infierno);
+    condenardialog->show();
 }
