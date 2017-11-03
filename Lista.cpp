@@ -96,7 +96,7 @@ void Lista::insertarOrdenado(Persona *persona)
 }
 
 /*
- * Entradas: Pecador que se desea insertar. Lo inserta segun su id de menor a mayor.
+ * Entradas: Pecador que se desea insertar. Lo inserta segun su total de pecados de menor a mayor.
  * Salidas: ninguna.
  */
 void Lista::insertarPecador(Persona *persona){

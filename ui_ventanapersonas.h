@@ -45,6 +45,7 @@ public:
         textPersonas->setGeometry(QRect(50, 30, 921, 341));
         textPersonas->setStyleSheet(QLatin1String("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 255, 192), stop:1 rgba(255, 255, 255, 228));\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.00497512 rgba(255, 255, 255, 192), stop:1 rgba(255, 255, 255, 189));"));
+        textPersonas->setReadOnly(true);
         ventanaPersonas->setCentralWidget(centralwidget);
 
         retranslateUi(ventanaPersonas);

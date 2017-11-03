@@ -12,9 +12,15 @@ INPUT(
 ./debug\avltree.o
 ./debug\ventanapersonas.o
 ./debug\ventanaconsultaapellido.o
+./debug\top10paises.o
+./debug\ventanacondenar.o
+./debug\ventanaconsultas.o
 ./debug\qrc_imagenes.o
 ./debug\moc_mainwindow.o
 ./debug\moc_mapamundi.o
 ./debug\moc_ventanapersonas.o
 ./debug\moc_ventanaconsultaapellido.o
+./debug\moc_top10paises.o
+./debug\moc_ventanacondenar.o
+./debug\moc_ventanaconsultas.o
 );

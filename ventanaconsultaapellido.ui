@@ -79,6 +79,9 @@
       <height>541</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="consulta_button">
     <property name="geometry">

@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "ventanapersonas.h"
 #include "mapamundi.h"
-#include "ventanaconsultaapellido.h"
+#include "ventanaconsultas.h"
 #include "top10paises.h"
 #include "ventanacondenar.h"
 
@@ -28,6 +28,7 @@ public:
     Mundo* mundo;
     VentanaCondenar* ventanaCondenar;
     QHash<QString , int> hash_paises;
+    ventanaConsultas *ventana_consultas;
 
 
 private slots:
@@ -50,6 +51,8 @@ private slots:
     void on_pecar_button_clicked();
 
     void on_condenar_button_clicked();
+
+    void on_consultar_familia_button_clicked();
 
 private:
     Ui::MainWindow *ui;

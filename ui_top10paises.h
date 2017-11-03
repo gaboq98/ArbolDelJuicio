@@ -44,6 +44,7 @@ public:
         Qtext->setGeometry(QRect(50, 100, 371, 281));
         Qtext->setStyleSheet(QLatin1String("background: none;\n"
 ""));
+        Qtext->setReadOnly(true);
 
         retranslateUi(Top10paises);
 

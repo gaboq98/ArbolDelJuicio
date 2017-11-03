@@ -33,6 +33,7 @@ Persona *Mundo::crearPersona()
     if(! no_nacidos.contains(id)){
        persona->estado = "Vivo";
        personas->insertarOrdenado(persona);
+
        return persona;
     }
     return nullptr;

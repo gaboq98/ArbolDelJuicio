@@ -60,6 +60,7 @@ public:
         text_edit = new QPlainTextEdit(centralwidget);
         text_edit->setObjectName(QStringLiteral("text_edit"));
         text_edit->setGeometry(QRect(280, 10, 511, 541));
+        text_edit->setReadOnly(true);
         consulta_button = new QPushButton(centralwidget);
         consulta_button->setObjectName(QStringLiteral("consulta_button"));
         consulta_button->setGeometry(QRect(50, 310, 191, 31));

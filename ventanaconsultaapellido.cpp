@@ -13,7 +13,7 @@ VentanaConsultaApellido::~VentanaConsultaApellido()
 {
     delete ui;
 }
-//12416
+
 void VentanaConsultaApellido::asignarComponentes(Mundo *mundo)
 {
     this->mundo = mundo;
@@ -35,6 +35,7 @@ void VentanaConsultaApellido::asignarComponentes(Mundo *mundo)
 void VentanaConsultaApellido::on_consulta_button_clicked()
 {
     ui->text_edit->setPlainText("");
+    bool estaVacio = true;
     QString val = ui->apellidos_box->currentText();
     QString pais = ui->paises_box->currentText();
     if(mundo->apellidosArbol.contains(val.toStdString())){
@@ -42,12 +43,15 @@ void VentanaConsultaApellido::on_consulta_button_clicked()
         for(int i = 0; i < arbol_apellido->listaPersonas.length(); i++) {
             Persona *p = arbol_apellido->listaPersonas.at(i);
             if(p->pais.compare(pais.toStdString()) == 0) {
-                QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + p->estado + " " +
-                        p->pais + " " + p->profesion + " " + p->creencia + " " + p->horaYFecha);
+                estaVacio = false;
+                QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " +
+                        p->pais + " " + p->profesion + " " + p->creencia + " " + p->horaYFecha + " Estado: " + p->estado);
                 ui->text_edit->appendPlainText(str + "\n\n");
             }
         }
     }
+    if (estaVacio)
+        ui->text_edit->appendPlainText("No existen personas con los datos especificados");
 }
 
 

@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ventana_top = new Top10paises();
     on_tabWidget_tabBarClicked(1);
     ui->cantidadPersonas->setMaximum(9999999);
+    ventana_consultas = new ventanaConsultas();
+    ventana_consultas->asignarComponentes(mundo);
 
 }
 
@@ -108,7 +110,7 @@ void MainWindow::on_top_santos_button_clicked()
 
 void MainWindow::on_pecadores_button_clicked()
 {
-    ventana_personas->show();
+    ventana_consultas->show();
 }
 
 void MainWindow::on_nacimiento_button_clicked()
@@ -126,4 +128,9 @@ void MainWindow::on_pecar_button_clicked()
 void MainWindow::on_condenar_button_clicked()
 {
     //abre ventana para condenar
+}
+
+void MainWindow::on_consultar_familia_button_clicked()
+{
+    ventana_personas->show();
 }

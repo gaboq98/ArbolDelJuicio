@@ -15,8 +15,8 @@ class VentanaConsultaApellido : public QMainWindow
 
 public:
     explicit VentanaConsultaApellido(QWidget *parent = 0);
-    Mundo* mundo;
     ~VentanaConsultaApellido();
+    Mundo* mundo;
     void asignarComponentes(Mundo *mundo);
 
 private slots:
