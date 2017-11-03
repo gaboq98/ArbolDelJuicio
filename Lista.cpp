@@ -99,6 +99,7 @@ void Lista::insertarOrdenado(Persona *persona)
  * Entradas: Pecador que se desea insertar. Lo inserta segun su total de pecados de menor a mayor.
  * Salidas: ninguna.
  */
+
 void Lista::insertarPecador(Persona *persona){
     if(primerNodo == NULL) {
         primerNodo = ultimoNodo = new Nodo(persona);

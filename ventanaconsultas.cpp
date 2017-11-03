@@ -35,6 +35,7 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
 {
     this->mundo = _mundo;
     Nodo *temp = mundo->personas->primerNodo;
+    int i = 0;
     while(temp != NULL) {
         pecadores->insertarPecador(temp->persona);
         temp = temp->siguiente;
@@ -69,39 +70,90 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
     }
 
     ui->apellidos_comboBox->addItems(listaApellidos);
-    ui->paises_comboBox->addItems(listaPaises);
     ui->continentes_comboBox->addItems(listaContinentes);
     ui->creencias_comboBox->addItems(listaCreencias);
+    ui->paises_comboBox->addItems(listaPaises);
     ui->profesiones_comboBox->addItems(listaProfesiones);
+
 }
 
 
 void ventanaConsultas::on_pushButton_clicked()
 {
+    //Nodo *temp = pecadores->primerNodo;
+    Nodo *temp = mundo->personas->primerNodo;
+    while(temp != NULL) {
+        ui->plainTextEdit->appendPlainText("\n");
+        Persona *p = temp->persona;
+        QString str =  QString::fromStdString("====== " + to_string( p->id));
+        ui->plainTextEdit->appendPlainText(str);
+        temp = temp->siguiente;
+    }
+    /*
     int id = buttonGroup->checkedId();
-    ui->plainTextEdit->appendPlainText(QString::number(id));
+    Nodo *temp = pecadores->primerNodo;
     switch (id) {
-        //Nodo *temp = pecadores->primerNodo;
-        case 0:
-        /*
+        case 0:     //Apellidos
             while(temp != NULL) {
+                Persona *p = temp->persona;
+                if(temp->persona->apellido.compare((ui->apellidos_comboBox->currentText().toStdString())) == 0) {
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    ui->plainTextEdit->appendPlainText(str + "\n\n");
+                }
                 temp = temp->siguiente;
             }
-            */
+            ui->plainTextEdit->appendPlainText("========== " + QString::number(id) + " ==========");
             break;
-        case 1:
-
+        case 1:     //Continentes
+            while(temp != NULL) {
+                Persona *p = temp->persona;
+                string current = ui->apellidos_comboBox->currentText().toStdString();
+                transform(current.begin(), current.end(), current.begin(), ::tolower);
+                string continente = temp->persona->correoElectonico.substr(19, temp->persona->correoElectonico.length());
+                if(continente.compare(current) == 0) {
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    ui->plainTextEdit->appendPlainText(str + "\n\n");
+                }
+                temp = temp->siguiente;
+            }
+            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
-        case 2:
-
+        case 2:     //Creencias
+            while(temp != NULL) {
+                Persona *p = temp->persona;
+                if(temp->persona->creencia.compare((ui->creencias_comboBox->currentText().toStdString())) == 0) {
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    ui->plainTextEdit->appendPlainText(str + "\n\n");
+                }
+                temp = temp->siguiente;
+            }
+            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
-        case 3:
-
+        case 3:     //Paises
+            while(temp != NULL) {
+                Persona *p = temp->persona;
+                if(temp->persona->pais.compare((ui->paises_comboBox->currentText().toStdString())) == 0) {
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    ui->plainTextEdit->appendPlainText(str + "\n\n");
+                }
+                temp = temp->siguiente;
+            }
+            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
-        case 4:
-
+        case 4:     //Profesiones
+        while(temp != NULL) {
+                Persona *p = temp->persona;
+                if(temp->persona->profesion.compare((ui->profesiones_comboBox->currentText().toStdString())) == 0) {
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    ui->plainTextEdit->appendPlainText(str + "\n\n");
+                }
+                temp = temp->siguiente;
+            }
+            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
         default:
+        ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
     }
+    */
 }
