@@ -57,8 +57,22 @@ int Persona::pecar()
         pecados[i] += pecado;
         result += pecado;
         total_pecados += pecado;
+        heredar(i, pecado * 0.5);
     }
     return result;
+}
+
+/*
+ * Entradas: indice, pecados
+ * Salida: Ninguna
+ */
+void Persona::heredar(int i, int pecados)
+{
+    for(Persona* hijo: hijos)
+    {
+        hijo->pecados[i] += pecados;
+        hijo->heredar(i, pecados * 0.5);
+    }
 }
 
 /*

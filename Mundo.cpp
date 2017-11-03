@@ -90,7 +90,8 @@ void Mundo::nacer(int cantidad)
 Persona* Mundo::eliminar(int id){
     Persona* p = personas->buscar(id)->persona;
     lista_paises[QString::fromStdString(p->pais)]->borrar(p->id);
-    return personas->borrar(id);
+    personas->borrar(id);
+    return p;
 }
 
 /*

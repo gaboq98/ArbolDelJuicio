@@ -100,26 +100,56 @@ void Lista::insertarOrdenado(Persona *persona)
  * Salidas: ninguna.
  */
 void Lista::insertarPecador(Persona *persona){
-    if(primerNodo == NULL) {
-        primerNodo = ultimoNodo = new Nodo(persona);
-    } else if(primerNodo == ultimoNodo) {
-        if(persona->total_pecados > ultimoNodo->persona->total_pecados) {
+    if(primerNodo == nullptr) {
+        insertarAlInicio(persona);
+    } else if(primerNodo == ultimoNodo){
+        Nodo *temp = primerNodo;
+        if(temp->persona->total_pecados > persona->total_pecados) {
             insertarAlFinal(persona);
         } else {
             insertarAlInicio(persona);
         }
     } else {
         Nodo *temp = primerNodo;
-        while(temp != NULL) {
-            if(temp->siguiente->persona->total_pecados > persona->total_pecados) {
-                Nodo *newNodo = new Nodo(persona);
-                temp->siguiente->anterior = newNodo;
-                newNodo->siguiente = temp->siguiente;
-                newNodo->anterior = temp;
-                temp->siguiente = newNodo;
-                break;
+        while(temp != nullptr) {
+            if(temp->siguiente != nullptr) {
+                if (temp->persona->total_pecados < persona->total_pecados) {
+                    if(temp != primerNodo) {
+                        Nodo *newNodo = new Nodo(persona);
+                        temp->anterior->siguiente = newNodo;
+                        newNodo->anterior = temp->anterior;
+                        newNodo->siguiente = temp;
+                        temp->anterior = newNodo;
+                        primerNodo->anterior = nullptr;
+                        break;
+                    } else {
+                        Nodo *newNodo = new Nodo(persona);
+                        newNodo->siguiente = temp;
+                        temp->anterior = newNodo;
+                        primerNodo = newNodo;
+                        primerNodo->anterior = nullptr;
+                        break;
+                    }
+                }
+                temp = temp->siguiente;
+            } else {
+                if(temp->persona->total_pecados > persona->total_pecados) {
+                    Nodo *nuevo = new Nodo(persona);
+                    nuevo->anterior = ultimoNodo;
+                    ultimoNodo->siguiente = nuevo;
+                    ultimoNodo = nuevo;
+                    ultimoNodo->siguiente = nullptr;
+                    break;
+                } else if(temp->persona->total_pecados < persona->total_pecados) {
+                    Nodo *newNodo = new Nodo(persona);
+                    ultimoNodo->anterior->siguiente = newNodo;
+                    newNodo->anterior = ultimoNodo->anterior;
+                    newNodo->siguiente = ultimoNodo;
+                    ultimoNodo->anterior = newNodo;
+                    break;
+                }
+                temp = temp->siguiente;
             }
-            temp = temp->siguiente;
         }
     }
 }
@@ -180,4 +210,16 @@ Persona *Lista::borrar(int id)
         tmp->anterior->siguiente = tmp->siguiente;
         return tmp->persona;
     }
+}
+
+QString Lista::imprimir()
+{
+    Nodo *temp = primerNodo;
+    QString str= "";
+    while(temp != NULL)
+    {
+        str += QString::fromStdString(temp->persona->nombre) + QString::fromStdString(temp->persona->pais);
+        temp = temp->siguiente;
+    }
+    return str;
 }

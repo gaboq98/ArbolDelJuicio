@@ -34,14 +34,17 @@ void VentanaCondenar::on_condenar_button_clicked()
     Lista* pecadores = new Lista();
     int total_del_pais = 0;
     for(tmp; tmp != nullptr; tmp = tmp->siguiente){
-        pecadores->insertarOrdenado(tmp->persona);
+        pecadores->insertarPecador(tmp->persona);
         total_del_pais++;
     }
     int porcentaje = total_del_pais * 0.25;
     tmp = pecadores->primerNodo;
     for(int i = 0; i < porcentaje; i ++){
-        infierno->agregar(mundo->eliminar(tmp->persona->id));
+        Persona* p = mundo->eliminar(tmp->persona->id);
+        qDebug() << QString::fromStdString(p->nombre);
+        infierno->agregar(p);
         tmp = tmp->siguiente;
     }
+    qDebug() << infierno->pecadores->imprimir();
     //*/
 }

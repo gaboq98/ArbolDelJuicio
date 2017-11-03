@@ -14,7 +14,7 @@ Infierno::Infierno()
  */
 void Infierno::agregar(Persona *p)
 {
-    pecadores->insertarOrdenado(p);
+    pecadores->insertarPecador(p);
     condenados[p->id] = 666;
 }
 

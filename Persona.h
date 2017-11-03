@@ -29,6 +29,7 @@ struct Persona {
     int pecar();
     void limpiar();
     void imprimir();
+    void heredar(int i, int pecados);
 
     string obtenerFecha();
 
