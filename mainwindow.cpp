@@ -12,7 +12,6 @@ MainWindow::MainWindow(QWidget *parent) :
     infierno = new Infierno();
     mundo->hash_paises = &(hash_paises);
     ventana_personas = new ventanaPersonas();
-    ventana_personas->asignarComponentes(mundo);
     ventana_apellidos = new VentanaConsultaApellido();
     condenardialog = new CondenadosDialog();
     ventanaCondenar = new VentanaCondenar();
@@ -117,13 +116,14 @@ void MainWindow::on_top_santos_button_clicked()
 
 void MainWindow::on_pecadores_button_clicked()
 {
+    ventana_consultas->asignarComponentes(mundo);
     ventana_consultas->show();
 }
 
 void MainWindow::on_nacimiento_button_clicked()
 {
     mundo->nacer(ui->cantidadPersonas->value());
-    qDebug() << "nacieron" + QString::number(ui->cantidadPersonas->value());
+    qDebug() << "Nacieron: " + QString::number(ui->cantidadPersonas->value());
 }
 
 void MainWindow::on_pecar_button_clicked()
@@ -140,6 +140,7 @@ void MainWindow::on_condenar_button_clicked()
 
 void MainWindow::on_consultar_familia_button_clicked()
 {
+    ventana_personas->asignarComponentes(mundo);
     ventana_personas->show();
 }
 

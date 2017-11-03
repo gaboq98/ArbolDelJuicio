@@ -23,20 +23,20 @@ QT_BEGIN_NAMESPACE
 class Ui_VentanaCondenar
 {
 public:
-    QComboBox *paises_box;
     QPushButton *condenar_button;
+    QComboBox *paises_box;
 
     void setupUi(QDialog *VentanaCondenar)
     {
         if (VentanaCondenar->objectName().isEmpty())
             VentanaCondenar->setObjectName(QStringLiteral("VentanaCondenar"));
         VentanaCondenar->resize(418, 277);
-        paises_box = new QComboBox(VentanaCondenar);
-        paises_box->setObjectName(QStringLiteral("paises_box"));
-        paises_box->setGeometry(QRect(70, 90, 261, 22));
         condenar_button = new QPushButton(VentanaCondenar);
         condenar_button->setObjectName(QStringLiteral("condenar_button"));
-        condenar_button->setGeometry(QRect(70, 130, 261, 23));
+        condenar_button->setGeometry(QRect(70, 170, 261, 23));
+        paises_box = new QComboBox(VentanaCondenar);
+        paises_box->setObjectName(QStringLiteral("paises_box"));
+        paises_box->setGeometry(QRect(70, 120, 261, 22));
 
         retranslateUi(VentanaCondenar);
 
