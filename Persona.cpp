@@ -53,16 +53,19 @@ Persona::Persona(string nombre, string apellido, string pais, string creencia, s
  */
 int Persona::pecar()
 {
-    int result = 0;
-    for(int i = 0; i < 7; i++ ){
-        int pecado = rand()%101;
-        pecados[i] += pecado;
-        continente->cantidad_pecados += pecado;
-        result += pecado;
-        total_pecados += pecado;
-        heredar(i, pecado * 0.5);
+    if(estado.compare("Vivo") == 0){
+        int result = 0;
+        for(int i = 0; i < 7; i++ ){
+            int pecado = rand()%101;
+            pecados[i] += pecado;
+            continente->cantidad_pecados += pecado;
+            result += pecado;
+            total_pecados += pecado;
+            heredar(i, pecado * 0.5);
+        }
+        return result;
     }
-    return result;
+    return 0;
 }
 
 /*

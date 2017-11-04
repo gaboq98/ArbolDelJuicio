@@ -17,13 +17,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ventanaCondenar = new VentanaCondenar();
     mapa_mundi = new MapaMundi();
     ventana_top = new Top10paises();
-    on_tabWidget_tabBarClicked(1);
     ui->cantidadPersonas->setMaximum(9999999);
     ventana_consultas = new ventanaConsultas();
     ventana_consultas->asignarComponentes(mundo);
     for(int i = 0; i< 5; i++){
         mapa_mundi->continentes[i] = mundo->continentes[i];
     }
+    ui->tabWidget->setStyleSheet("border: none;");
+    on_tabWidget_tabBarClicked(1);
 }
 
 MainWindow::~MainWindow()
@@ -36,16 +37,32 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
 {
     if(index == 0)
     {
-        ui->tabWidget->setStyleSheet("background-color:rgb(170,170,255)");
+        //ui->centralWidget->setStyleSheet("background-image: url(:/heaven.jpg);");
+        ui->arbol_de_vida_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->no_nacidos_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->salvados_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->centralWidget->setStyleSheet("background-color:rgb(170,170,255)");
     }
     else if(index == 1)
     {
-        ui->tabWidget->setStyleSheet("background-color:rgb(255, 111, 31)");
+        ui->pecadores_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->pecar_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->nacimiento_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->consultar_familia_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->top_pecadores_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->top_santos_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->mapa_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->cantidadPersonas->setStyleSheet("background-color: rgb(255, 255, 255);");
+        ui->centralWidget->setStyleSheet("background-color:rgb(153, 209, 97)");
     }
     else
     {
-        ui->tabWidget->setStyleSheet("background-color:rgb(180, 0, 0)");
+        //ui->centralWidget->setStyleSheet("background-image: url(:/hell.jpg);");
+        ui->condenar_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->condenados_button->setStyleSheet("background-color: rgb(240, 240, 240)");
+        ui->centralWidget->setStyleSheet("background-color:rgb(255, 51, 51)");
     }
+    ui->pushButton->setStyleSheet("background-color: rgb(240, 240, 240)");
 }
 
 void MainWindow::on_mapa_button_clicked()

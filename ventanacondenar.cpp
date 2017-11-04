@@ -33,7 +33,7 @@ void VentanaCondenar::on_condenar_button_clicked()
     Nodo* tmp = mundo->lista_paises[pais_condenado]->primerNodo;
     Lista* pecadores = new Lista();
     int total_del_pais = 0;
-    for(tmp; tmp != nullptr; tmp = tmp->siguiente){
+    for(; tmp != nullptr; tmp = tmp->siguiente){
         pecadores->insertarPecador(tmp->persona);
         total_del_pais++;
     }
@@ -42,6 +42,7 @@ void VentanaCondenar::on_condenar_button_clicked()
     for(int i = 0; i < porcentaje; i ++){
         Persona* p = mundo->eliminar(tmp->persona->id);
         p->continente->cantidad_pecados -= p->total_pecados;
+        p->estado = "Infierno";
         infierno->agregar(p);
         tmp = tmp->siguiente;
     }
