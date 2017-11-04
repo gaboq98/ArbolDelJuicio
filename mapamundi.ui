@@ -23,8 +23,17 @@
       <height>681</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Source Code Pro</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(:/continentes (1).png);</string>
+     <string notr="true">background-image: url(:/continentes (1).png);
+color: white;</string>
     </property>
     <property name="text">
      <string/>
@@ -264,6 +273,19 @@ background-repeat: none;</string>
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="lbl_ranking">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>171</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>fondo_america</zorder>
    <zorder>fondo_europa</zorder>
    <zorder>fondo_europa1</zorder>
@@ -278,6 +300,7 @@ background-repeat: none;</string>
    <zorder>fondo_asia3</zorder>
    <zorder>fondo_africa1</zorder>
    <zorder>label</zorder>
+   <zorder>lbl_ranking</zorder>
   </widget>
  </widget>
  <resources/>

@@ -22,7 +22,7 @@ public:
     explicit MapaMundi(QWidget *parent = 0);
     void aumentar(int *r,int *g,int *b);
     void cambiar_color(int r, int g, int b, int i);
-    int posiciones[5] = {21,13,8,5,3};
+    int posiciones[5] = {27,21,15,9,3};
     Continente* continentes[5];
     void ordenar();
     void colorear(Continente* c[]);

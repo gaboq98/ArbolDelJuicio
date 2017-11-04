@@ -41,6 +41,7 @@ void VentanaCondenar::on_condenar_button_clicked()
     tmp = pecadores->primerNodo;
     for(int i = 0; i < porcentaje; i ++){
         Persona* p = mundo->eliminar(tmp->persona->id);
+        p->continente->cantidad_pecados -= p->total_pecados;
         infierno->agregar(p);
         tmp = tmp->siguiente;
     }

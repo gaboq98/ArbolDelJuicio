@@ -42,7 +42,7 @@ QString to_str(int i){
         return "AMERICA";
     if(i == 1)
         return "AFRICA";
-    if(i == 2)
+    if(i == 4)
         return "ASIA";
     if(i == 3)
         return "OCEANIA";
@@ -52,14 +52,19 @@ QString to_str(int i){
 
 void MapaMundi::aumentar(int *r, int *g, int *b)
 {
-    if(*g == 255 && *r > 0 && *r == *b ){
+    if(*g == 0 && *b == 0 && *r != 255){
+            *r -= 40;
+            if(*r < 0){
+                *r= 0;
+            }
+    }else if(*g == 255 && *r > 0 && *r == *b){
         *r -= 40;
         *b -= 40;
         if(*r < 0){
             *r = *b = 0;
             *g -= 1;
         }
-    }else if(*r < 255){
+    }else if(*r < 255 ){
         *r += 40;
         if (*r > 255){
             *r = 255;
@@ -68,11 +73,7 @@ void MapaMundi::aumentar(int *r, int *g, int *b)
         *g -= 40;
         if(*g < 0){
             *g = 0;
-        }
-    }else{
-        *r -= 40;
-        if(*r < 0){
-            *r = 0;
+            *r -= 1;
         }
     }
 }
@@ -85,11 +86,14 @@ void MapaMundi::ordenar()
         sort->insertar(c);
     }
     NodoCont* n = sort->pn;
+    QString ranking = "";
     for(int i = 0; i < 5; i++){
-        qDebug() << to_str(n->c->nombre) << QString::number(n->c->cantidad_pecados) ;
+        ranking += to_str(n->c->nombre).append(":").append(QString::number(n->c->cantidad_pecados)).append("\n") ;
         aux[i] = n->c;
         n = n->siguiente;
     }
+    QString str = "\n\n\n\n";
+    ui->label->setText(str.append(ranking));
     colorear(aux);
 }
 
