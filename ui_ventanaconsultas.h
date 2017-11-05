@@ -51,7 +51,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         plainTextEdit = new QPlainTextEdit(centralwidget);
         plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(360, 20, 601, 601));
+        plainTextEdit->setGeometry(QRect(360, 20, 591, 601));
         plainTextEdit->setReadOnly(true);
         consu_apellido = new QRadioButton(centralwidget);
         consu_apellido->setObjectName(QStringLiteral("consu_apellido"));

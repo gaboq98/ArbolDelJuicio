@@ -6,7 +6,6 @@ VentanaConsultaApellido::VentanaConsultaApellido(QWidget *parent) :
     ui(new Ui::VentanaConsultaApellido)
 {
     ui->setupUi(this);
-
 }
 
 VentanaConsultaApellido::~VentanaConsultaApellido()
@@ -18,12 +17,12 @@ void VentanaConsultaApellido::asignarComponentes(Mundo *mundo)
 {
     this->mundo = mundo;
 
-    string apellidos[2000] = mundo->archivos->apellidos;
+    string apellidos[1000] = mundo->archivos->apellidos;
     string pais[100] = mundo->archivos->paises;
 
     QStringList listaPaises;
     QStringList listaApellidos;
-    for(int i = 0; i < 2000; i++){
+    for(int i = 0; i < 1000; i++){
         if(i < 100)
             listaPaises.append(QString::fromStdString(pais[i]).mid(1));
         listaApellidos.append(QString::fromStdString(apellidos[i]));
@@ -53,15 +52,4 @@ void VentanaConsultaApellido::on_consulta_button_clicked()
     if (estaVacio)
         ui->text_edit->appendPlainText("No existen personas con los datos especificados");
 }
-
-
-
-
-
-
-
-
-
-
-
 

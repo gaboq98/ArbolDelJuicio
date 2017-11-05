@@ -105,7 +105,7 @@ void Lista::insertarPecador(Persona *persona){
         insertarAlInicio(persona);
     } else if(primerNodo == ultimoNodo){
         Nodo *temp = primerNodo;
-        if(temp->persona->total_pecados > persona->total_pecados) {
+        if(temp->persona->total_pecados >= persona->total_pecados) {
             insertarAlFinal(persona);
         } else {
             insertarAlInicio(persona);
@@ -114,7 +114,7 @@ void Lista::insertarPecador(Persona *persona){
         Nodo *temp = primerNodo;
         while(temp != nullptr) {
             if(temp->siguiente != nullptr) {
-                if (temp->persona->total_pecados < persona->total_pecados) {
+                if (temp->persona->total_pecados <= persona->total_pecados) {
                     if(temp != primerNodo) {
                         Nodo *newNodo = new Nodo(persona);
                         temp->anterior->siguiente = newNodo;
@@ -141,7 +141,7 @@ void Lista::insertarPecador(Persona *persona){
                     ultimoNodo = nuevo;
                     ultimoNodo->siguiente = nullptr;
                     break;
-                } else if(temp->persona->total_pecados < persona->total_pecados) {
+                } else if(temp->persona->total_pecados <= persona->total_pecados) {
                     Nodo *newNodo = new Nodo(persona);
                     ultimoNodo->anterior->siguiente = newNodo;
                     newNodo->anterior = ultimoNodo->anterior;

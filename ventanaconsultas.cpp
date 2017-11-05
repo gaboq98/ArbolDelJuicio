@@ -37,11 +37,11 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
     Nodo *temp = mundo->personas->primerNodo;
     int i = 0;
     while(temp != NULL) {
+        totalPecados += temp->persona->total_pecados;
         pecadores->insertarPecador(temp->persona);
         temp = temp->siguiente;
     }
-
-    string apellidos[2000] = mundo->archivos->apellidos;
+    string apellidos[1000] = mundo->archivos->apellidos;
     string pais[100] = mundo->archivos->paises;
     string creencias[10] = mundo->archivos->creencias;
     string profesiones[50] = mundo->archivos->profesiones;
@@ -53,7 +53,7 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
     QStringList listaCreencias;
     QStringList listaProfesiones;
 
-    for(int i = 0; i < 2000; i++){
+    for(int i = 0; i < 1000; i++){
         if(i < 100) {
             if(i < 50) {
                 if(i < 10) {
@@ -77,19 +77,19 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
 
 }
 
+double ventanaConsultas::porcentaje(int pecados)
+{
+    double result = (pecados * 100.0) / totalPecados;
+    return result;
+}
+
 
 void ventanaConsultas::on_pushButton_clicked()
 {
-    //Nodo *temp = pecadores->primerNodo;
-    Nodo *temp = mundo->personas->primerNodo;
-    while(temp != NULL) {
-        ui->plainTextEdit->appendPlainText("\n");
-        Persona *p = temp->persona;
-        QString str =  QString::fromStdString("====== " + to_string( p->id));
-        ui->plainTextEdit->appendPlainText(str);
-        temp = temp->siguiente;
+    ui->plainTextEdit->setPlainText("");
+    if(totalPecados == 0) {
+        return;
     }
-    /*
     int id = buttonGroup->checkedId();
     Nodo *temp = pecadores->primerNodo;
     switch (id) {
@@ -97,63 +97,65 @@ void ventanaConsultas::on_pushButton_clicked()
             while(temp != NULL) {
                 Persona *p = temp->persona;
                 if(temp->persona->apellido.compare((ui->apellidos_comboBox->currentText().toStdString())) == 0) {
-                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " |  "
+                            + to_string(p->total_pecados) + "       " + to_string(porcentaje(p->total_pecados)) + "%");
                     ui->plainTextEdit->appendPlainText(str + "\n\n");
                 }
                 temp = temp->siguiente;
             }
-            ui->plainTextEdit->appendPlainText("========== " + QString::number(id) + " ==========");
             break;
+
         case 1:     //Continentes
             while(temp != NULL) {
                 Persona *p = temp->persona;
-                string current = ui->apellidos_comboBox->currentText().toStdString();
+                string current = ui->continentes_comboBox->currentText().toStdString();
                 transform(current.begin(), current.end(), current.begin(), ::tolower);
-                string continente = temp->persona->correoElectonico.substr(19, temp->persona->correoElectonico.length());
+                string continente = temp->persona->correoElectonico.substr(20, temp->persona->correoElectonico.length());
                 if(continente.compare(current) == 0) {
-                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " |  "
+                            + to_string(p->total_pecados) + "       " + to_string(porcentaje(p->total_pecados)) + "%");
                     ui->plainTextEdit->appendPlainText(str + "\n\n");
                 }
                 temp = temp->siguiente;
             }
-            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
+
         case 2:     //Creencias
             while(temp != NULL) {
                 Persona *p = temp->persona;
                 if(temp->persona->creencia.compare((ui->creencias_comboBox->currentText().toStdString())) == 0) {
-                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " |  "
+                                                          + to_string(p->total_pecados) + "       " + to_string(porcentaje(p->total_pecados)) + "%");
                     ui->plainTextEdit->appendPlainText(str + "\n\n");
                 }
                 temp = temp->siguiente;
             }
-            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
+
         case 3:     //Paises
             while(temp != NULL) {
                 Persona *p = temp->persona;
                 if(temp->persona->pais.compare((ui->paises_comboBox->currentText().toStdString())) == 0) {
-                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " |  "
+                            + to_string(p->total_pecados) + "       " + to_string(porcentaje(p->total_pecados)) + "%");
                     ui->plainTextEdit->appendPlainText(str + "\n\n");
                 }
                 temp = temp->siguiente;
             }
-            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
         case 4:     //Profesiones
         while(temp != NULL) {
                 Persona *p = temp->persona;
                 if(temp->persona->profesion.compare((ui->profesiones_comboBox->currentText().toStdString())) == 0) {
-                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->total_pecados));
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " |  "
+                            + to_string(p->total_pecados) + "       " + to_string(porcentaje(p->total_pecados)) + "%");
                     ui->plainTextEdit->appendPlainText(str + "\n\n");
                 }
                 temp = temp->siguiente;
             }
-            ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
+
         default:
-        ui->plainTextEdit->appendPlainText(QString::number(id));
             break;
     }
-    */
 }

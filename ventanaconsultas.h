@@ -1,6 +1,7 @@
 #ifndef VENTANACONSULTAS_H
 #define VENTANACONSULTAS_H
 
+#include <math.h>
 #include <QMainWindow>
 #include <QButtonGroup>
 #include "ventanaconsultaapellido.h"
@@ -19,7 +20,9 @@ public:
     QButtonGroup *buttonGroup;
     Mundo* mundo;
     Lista *pecadores;
+    int totalPecados;
     void asignarComponentes(Mundo *mundo);
+    double porcentaje(int pecados);
 
 
 private slots:

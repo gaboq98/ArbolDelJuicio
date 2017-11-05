@@ -9,7 +9,7 @@ struct GeneradorArchivos {
     GeneradorArchivos();
 
     string nombres[2000];
-    string apellidos[2000];
+    string apellidos[1000];
     string paises[100];
     string profesiones[50];
     string creencias[10];

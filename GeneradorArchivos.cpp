@@ -42,7 +42,7 @@ string GeneradorArchivos::generadorNombre() {
  * genera un apellido aleatorio
  */
 string GeneradorArchivos::generadorApellido() {
-    int random = rand()%2000;
+    int random = rand()%1000;
     string apellido = apellidos[random];
     return apellido;
 }

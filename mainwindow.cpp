@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ventana_top = new Top10paises();
     on_tabWidget_tabBarClicked(1);
     ui->cantidadPersonas->setMaximum(9999999);
-    ventana_consultas = new ventanaConsultas();
+    ventana_consultas = new ventanaConsultas(this);
 
 }
 
@@ -58,9 +58,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_no_nacidos_button_clicked()
 {
-    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"americaSkrtSkrt@gmail.com\" --mail-rcpt \"josuecanales0@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
+    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"personas.continente.europa@gmail.com\" --mail-rcpt \"gaboq980@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
         WinExec(command, SW_HIDE);
-
 }
 
 
