@@ -7,6 +7,7 @@ ventanaPersonas::ventanaPersonas(QWidget *parent) :
     ui(new Ui::ventanaPersonas)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Window | Qt::MSWindowsFixedSizeDialogHint);
 }
 
 ventanaPersonas::~ventanaPersonas()

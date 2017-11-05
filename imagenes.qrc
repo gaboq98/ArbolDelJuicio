@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>continentes (1).png</file>
+        <file>hell.jpg</file>
+        <file>heaven.jpg</file>
     </qresource>
 </RCC>

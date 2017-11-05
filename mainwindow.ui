@@ -86,6 +86,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
       <property name="text">
        <string>Árbol de la vida</string>
       </property>
@@ -106,6 +109,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
       <property name="text">
        <string>No nacidos</string>
       </property>
@@ -125,6 +131,9 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
       </property>
       <property name="text">
        <string>Salvados</string>
@@ -150,6 +159,9 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
       </property>
       <property name="text">
        <string>Naciemiento</string>
@@ -192,6 +204,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
       <property name="text">
        <string>Pecar</string>
       </property>
@@ -211,6 +226,9 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
       </property>
       <property name="text">
        <string>Consultar Familia</string>
@@ -232,6 +250,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
       <property name="text">
        <string>Top 10 Paises Pecadores</string>
       </property>
@@ -251,6 +272,9 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
       </property>
       <property name="text">
        <string>Top 5 paises Santos</string>
@@ -272,6 +296,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
       <property name="text">
        <string>Mapa del Mundo</string>
       </property>
@@ -292,6 +319,9 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
       <property name="text">
        <string>Pecadores</string>
       </property>
@@ -304,6 +334,9 @@
         <width>81</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="buttonSymbols">
        <enum>QAbstractSpinBox::NoButtons</enum>
@@ -353,7 +386,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
       </property>
       <property name="text">
        <string>Condenar</string>
@@ -376,7 +409,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
       </property>
       <property name="text">
        <string>Consdenados</string>
@@ -399,6 +432,9 @@
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(199, 199, 199);</string>
     </property>
     <property name="text">
      <string>Consultar por apellido</string>

@@ -6,6 +6,7 @@ ventanaConsultas::ventanaConsultas(QWidget *parent) :
     ui(new Ui::ventanaConsultas)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Window | Qt::MSWindowsFixedSizeDialogHint);
     buttonGroup = new QButtonGroup(this);
 
     buttonGroup->addButton(ui->consu_apellido);
@@ -35,12 +36,12 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
 {
     this->mundo = _mundo;
     Nodo *temp = mundo->personas->primerNodo;
-    int i = 0;
     while(temp != NULL) {
         totalPecados += temp->persona->total_pecados;
         pecadores->insertarPecador(temp->persona);
         temp = temp->siguiente;
     }
+
     string apellidos[1000] = mundo->archivos->apellidos;
     string pais[100] = mundo->archivos->paises;
     string creencias[10] = mundo->archivos->creencias;
@@ -57,9 +58,8 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
         if(i < 100) {
             if(i < 50) {
                 if(i < 10) {
-                    if(i < 5) {
+                    if(i < 5)
                         listaContinentes.append(QString::fromStdString(continentes[i]));
-                    }
                     listaCreencias.append(QString::fromStdString(creencias[i]));
                 }
                 listaProfesiones.append(QString::fromStdString(profesiones[i]));

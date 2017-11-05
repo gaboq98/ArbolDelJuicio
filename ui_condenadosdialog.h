@@ -36,7 +36,7 @@ public:
         textEdit->setGeometry(QRect(20, 80, 611, 431));
         label = new QLabel(CondenadosDialog);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(200, 20, 231, 41));
+        label->setGeometry(QRect(170, 20, 281, 41));
         QFont font;
         font.setFamily(QStringLiteral("Chiller"));
         font.setPointSize(36);

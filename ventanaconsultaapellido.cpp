@@ -6,6 +6,7 @@ VentanaConsultaApellido::VentanaConsultaApellido(QWidget *parent) :
     ui(new Ui::VentanaConsultaApellido)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Window | Qt::MSWindowsFixedSizeDialogHint);
 }
 
 VentanaConsultaApellido::~VentanaConsultaApellido()

@@ -40,7 +40,9 @@ SOURCES += \
     top10paises.cpp \
     ventanacondenar.cpp \
     ventanaconsultas.cpp \
-    condenadosdialog.cpp
+    condenadosdialog.cpp \
+    continente.cpp \
+    listacont.cpp
 
 
 HEADERS += \
@@ -59,7 +61,9 @@ HEADERS += \
     top10paises.h \
     ventanacondenar.h \
     ventanaconsultas.h \
-    condenadosdialog.h
+    condenadosdialog.h \
+    continente.h \
+    listacont.h
 
 
 FORMS += \

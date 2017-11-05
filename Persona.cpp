@@ -33,7 +33,8 @@ string Persona::obtenerFecha()
 }
 
 //Constructor
-Persona::Persona(string nombre, string apellido, string pais, string creencia, string profesion, string correo) {
+Persona::Persona(string nombre, string apellido, string pais, string creencia, string profesion, string correo,Continente* c)
+{
     this->papa = NULL;
     this->nombre = nombre;
     this->apellido = apellido;
@@ -42,6 +43,7 @@ Persona::Persona(string nombre, string apellido, string pais, string creencia, s
     this->profesion = profesion;
     this->correoElectonico = correo;
     this->horaYFecha = obtenerFecha();
+    continente = c;
     limpiar();
 }
 
@@ -51,15 +53,19 @@ Persona::Persona(string nombre, string apellido, string pais, string creencia, s
  */
 int Persona::pecar()
 {
-    int result = 0;
-    for(int i = 0; i < 7; i++ ){
-        int pecado = rand()%101;
-        pecados[i] += pecado;
-        result += pecado;
-        total_pecados += pecado;
-        heredar(i, pecado * 0.5);
+    if(estado.compare("Vivo") == 0){
+        int result = 0;
+        for(int i = 0; i < 7; i++ ){
+            int pecado = rand()%101;
+            pecados[i] += pecado;
+            continente->cantidad_pecados += pecado;
+            result += pecado;
+            total_pecados += pecado;
+            heredar(i, pecado * 0.5);
+        }
+        return result;
     }
-    return result;
+    return 0;
 }
 
 /*
@@ -71,6 +77,7 @@ void Persona::heredar(int i, int pecados)
     for(Persona* hijo: hijos)
     {
         hijo->pecados[i] += pecados;
+        hijo->continente->cantidad_pecados += pecados;
         hijo->heredar(i, pecados * 0.5);
     }
 }
