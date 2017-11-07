@@ -168,10 +168,10 @@ background-repeat: none;</string>
    <widget class="QLabel" name="lbl_ranking">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>480</y>
-      <width>171</width>
-      <height>181</height>
+      <x>190</x>
+      <y>110</y>
+      <width>641</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="text">
@@ -290,10 +290,10 @@ background-repeat: none;</string>
    <zorder>fondo_europa1</zorder>
    <zorder>fondo_asia</zorder>
    <zorder>fondo_asia1</zorder>
-   <zorder>lbl_ranking</zorder>
    <zorder>fondo_asia3</zorder>
    <zorder>fondo_asia5</zorder>
    <zorder>label</zorder>
+   <zorder>lbl_ranking</zorder>
   </widget>
  </widget>
  <resources/>

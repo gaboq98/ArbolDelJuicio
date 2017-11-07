@@ -6,8 +6,8 @@
 #include "mapamundi.h"
 #include "ventanaconsultas.h"
 #include "top10paises.h"
-#include "ventanacondenar.h"
 #include "condenadosdialog.h"
+#include "hilovida.h"
 
 
 namespace Ui {
@@ -32,6 +32,9 @@ public:
     VentanaCondenar* ventanaCondenar;
     QHash<QString , int> hash_paises;
     ventanaConsultas *ventana_consultas;
+    Paraiso *paraiso;
+    HiloVida *hiloVida;
+
 
 
 private slots:
@@ -58,6 +61,10 @@ private slots:
     void on_consultar_familia_button_clicked();
 
     void on_condenados_button_clicked();
+
+    void on_pausa_button_clicked();
+
+    void on_reset_button_clicked();
 
 private:
     Ui::MainWindow *ui;

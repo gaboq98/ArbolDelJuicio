@@ -103,7 +103,7 @@ public:
 "background-repeat: none;"));
         lbl_ranking = new QLabel(centralwidget);
         lbl_ranking->setObjectName(QStringLiteral("lbl_ranking"));
-        lbl_ranking->setGeometry(QRect(10, 480, 171, 181));
+        lbl_ranking->setGeometry(QRect(190, 110, 641, 361));
         fondo_asia3 = new QLabel(centralwidget);
         fondo_asia3->setObjectName(QStringLiteral("fondo_asia3"));
         fondo_asia3->setGeometry(QRect(560, 0, 411, 311));
@@ -145,10 +145,10 @@ public:
         fondo_europa1->raise();
         fondo_asia->raise();
         fondo_asia1->raise();
-        lbl_ranking->raise();
         fondo_asia3->raise();
         fondo_asia5->raise();
         label->raise();
+        lbl_ranking->raise();
 
         retranslateUi(MapaMundi);
 

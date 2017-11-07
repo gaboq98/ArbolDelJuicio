@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QIcon icon(":/arbl.jpg");
+    this->setWindowIcon(icon);
     setWindowFlags(Qt::Window | Qt::MSWindowsFixedSizeDialogHint);
     mundo = new Mundo();
     infierno = new Infierno();
@@ -20,16 +22,21 @@ MainWindow::MainWindow(QWidget *parent) :
     ventana_top = new Top10paises();
     ui->cantidadPersonas->setMaximum(9999999);
     ventana_consultas = new ventanaConsultas(this);
-    ventana_consultas->asignarComponentes(mundo);
     for(int i = 0; i< 5; i++){
         mapa_mundi->continentes[i] = mundo->continentes[i];
     }
-    ui->tabWidget->setStyleSheet("border: none;");
     on_tabWidget_tabBarClicked(1);
+    paraiso = new Paraiso();
+    hiloVida = new HiloVida(paraiso);
+    hiloVida->tiempo = ui->tiempo_spinBox->value();
+    hiloVida->start();
+    hiloVida->pausa = false;
 }
 
 MainWindow::~MainWindow()
 {
+    hiloVida->encendido = false;
+    hiloVida->wait();
     delete ui;
 }
 
@@ -38,7 +45,6 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
 {
     if(index == 0)
     {
-        //ui->centralWidget->setStyleSheet("background-image: url(:/heaven.jpg);");
         ui->arbol_de_vida_button->setStyleSheet("background-color: rgb(240, 240, 240)");
         ui->no_nacidos_button->setStyleSheet("background-color: rgb(240, 240, 240)");
         ui->salvados_button->setStyleSheet("background-color: rgb(240, 240, 240)");
@@ -58,7 +64,6 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
     }
     else
     {
-        //ui->centralWidget->setStyleSheet("background-image: url(:/hell.jpg);");
         ui->condenar_button->setStyleSheet("background-color: rgb(240, 240, 240)");
         ui->condenados_button->setStyleSheet("background-color: rgb(240, 240, 240)");
         ui->centralWidget->setStyleSheet("background-color:rgb(255, 51, 51)");
@@ -81,15 +86,16 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_no_nacidos_button_clicked()
 {
-    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"personas.continente.europa@gmail.com\" --mail-rcpt \"gaboq980@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
+    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"personas.continente.europa@gmail.com\" --mail-rcpt \"josuecanales0@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
         WinExec(command, SW_HIDE);
+    qDebug() << "Enviado";
 }
 
 
 void MainWindow::on_top_pecadores_button_clicked()
 {
     QList<int> vals = hash_paises.values();
-    qSort( vals );
+    qSort(vals);
     int val;
     QString str;
     for(int i = vals.length()-1; i > vals.length() - 11; i--)
@@ -97,7 +103,7 @@ void MainWindow::on_top_pecadores_button_clicked()
         val = vals[i];
         {
             QList<QString> keys = hash_paises.keys( val );
-            qSort( keys );
+            qSort(keys);
             foreach( QString key, keys )
             {
                 str =  str + key + ": " + QString::number(val) + "\n";
@@ -111,7 +117,7 @@ void MainWindow::on_top_pecadores_button_clicked()
 void MainWindow::on_top_santos_button_clicked()
 {
     QList<int> vals = hash_paises.values();
-    qSort( vals );
+    qSort(vals);
     int i = 0;
     QString str;
     foreach( int val, vals )
@@ -119,7 +125,7 @@ void MainWindow::on_top_santos_button_clicked()
         if(i < 5)
         {
             QList<QString> keys = hash_paises.keys( val );
-            qSort( keys );
+            qSort(keys);
             foreach( QString key, keys )
             {
                str =  str + key + ": " + QString::number(val) + "\n";
@@ -166,3 +172,18 @@ void MainWindow::on_condenados_button_clicked()
     condenardialog->asignarComponentes(infierno);
     condenardialog->show();
 }
+
+void MainWindow::on_pausa_button_clicked()
+{
+    hiloVida->pausa = !hiloVida->pausa;
+}
+
+void MainWindow::on_reset_button_clicked()
+{
+    /*//
+    ////
+    ////
+    ////
+    //*/
+}
+

@@ -58,8 +58,10 @@ void ventanaConsultas::asignarComponentes(Mundo *_mundo)
         if(i < 100) {
             if(i < 50) {
                 if(i < 10) {
-                    if(i < 5)
+                    if(i < 5) {
                         listaContinentes.append(QString::fromStdString(continentes[i]));
+                        qDebug() << i;
+                    }
                     listaCreencias.append(QString::fromStdString(creencias[i]));
                 }
                 listaProfesiones.append(QString::fromStdString(profesiones[i]));
