@@ -15,7 +15,7 @@ void CondenadosDialog::asignarComponentes(Infierno *infierno)
     for (tmp = infierno->pecadores->primerNodo; tmp != nullptr; tmp = tmp->siguiente){
         QString str = QString::fromStdString(tmp->persona->nombre + " ") + QString::fromStdString(tmp->persona->apellido + " ")
                        + QString::fromStdString(tmp->persona->pais  + " ") + QString::fromStdString(tmp->persona->creencia + "\n")
-                 + QString::number(tmp->persona->total_pecados);
+                 + QString::number(tmp->persona->total_pecados) + "\n\n";
         ui->textEdit->append(str);
     }
 }

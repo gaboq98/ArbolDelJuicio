@@ -44,7 +44,8 @@ SOURCES += \
     listacont.cpp \
     hilovida.cpp \
     ventanaparaiso.cpp\
-    dialogconsultafamilia.cpp
+    dialogconsultafamilia.cpp \
+    salvadosdialog.cpp
 
 
 HEADERS += \
@@ -67,7 +68,8 @@ HEADERS += \
     listacont.h \
     hilovida.h \
     ventanaparaiso.h\
-    dialogconsultafamilia.h
+    dialogconsultafamilia.h \
+    salvadosdialog.h
 
 
 FORMS += \
@@ -80,7 +82,8 @@ FORMS += \
     ventanaconsultas.ui \
     condenadosdialog.ui \
     ventanaparaiso.ui \
-    dialogconsultafamilia.ui
+    dialogconsultafamilia.ui \
+    salvadosdialog.ui
 
 RESOURCES += \
     imagenes.qrc \
