@@ -22,6 +22,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ventana_top = new Top10paises();
     ui->cantidadPersonas->setMaximum(9999999);
     ventana_consultas = new ventanaConsultas(this);
+    ventana_consultas->asignarComponentes(mundo);
+    ventanaFamilia = new DialogConsultaFamilia();
+    ventanaFamilia->asignarComponentes(mundo);
     for(int i = 0; i< 5; i++){
         mapa_mundi->continentes[i] = mundo->continentes[i];
     }
@@ -86,7 +89,7 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_no_nacidos_button_clicked()
 {
-    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"personas.continente.europa@gmail.com\" --mail-rcpt \"josuecanales0@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
+    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"personas.continente.europa@gmail.com\" --mail-rcpt \"josuecanales@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
         WinExec(command, SW_HIDE);
     qDebug() << "Enviado";
 }
@@ -163,8 +166,10 @@ void MainWindow::on_condenar_button_clicked()
 
 void MainWindow::on_consultar_familia_button_clicked()
 {
-    ventana_personas->asignarComponentes(mundo);
-    ventana_personas->show();
+    ventanaFamilia->show();
+    //ventana_personas->asignarComponentes(mundo);
+    //ventana_personas->show();
+
 }
 
 void MainWindow::on_condenados_button_clicked()

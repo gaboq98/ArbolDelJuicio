@@ -7,7 +7,7 @@
 #include "ventanaconsultas.h"
 #include "top10paises.h"
 #include "condenadosdialog.h"
-#include "hilovida.h"
+#include "dialogconsultafamilia.h"
 
 
 namespace Ui {
@@ -32,9 +32,9 @@ public:
     VentanaCondenar* ventanaCondenar;
     QHash<QString , int> hash_paises;
     ventanaConsultas *ventana_consultas;
+    DialogConsultaFamilia* ventanaFamilia;
     Paraiso *paraiso;
     HiloVida *hiloVida;
-
 
 
 private slots:
