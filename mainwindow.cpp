@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
     on_tabWidget_tabBarClicked(1);
     paraiso = new Paraiso();
     hiloVida = new HiloVida(paraiso);
-    hiloVida->tiempo = ui->tiempo_spinBox->value();
+    *hiloVida->tiempo = ui->tiempo_spinBox->value();
     hiloVida->start();
     hiloVida->pausa = false;
 }
