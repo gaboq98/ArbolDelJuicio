@@ -37,6 +37,7 @@ public:
     QSpinBox *tiempo_spinBox;
     QPushButton *pausa_button;
     QPushButton *pushButton_2;
+    QPushButton *arbol_de_vida_button_2;
     QWidget *tab_mundo;
     QPushButton *nacimiento_button;
     QLabel *label;
@@ -82,7 +83,7 @@ public:
         label_3->setMouseTracking(false);
         arbol_de_vida_button = new QPushButton(tab_paraiso);
         arbol_de_vida_button->setObjectName(QStringLiteral("arbol_de_vida_button"));
-        arbol_de_vida_button->setGeometry(QRect(30, 180, 171, 51));
+        arbol_de_vida_button->setGeometry(QRect(30, 210, 171, 41));
         QFont font1;
         font1.setPointSize(11);
         font1.setBold(true);
@@ -91,7 +92,7 @@ public:
         arbol_de_vida_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         no_nacidos_button = new QPushButton(tab_paraiso);
         no_nacidos_button->setObjectName(QStringLiteral("no_nacidos_button"));
-        no_nacidos_button->setGeometry(QRect(30, 240, 171, 51));
+        no_nacidos_button->setGeometry(QRect(30, 260, 171, 41));
         QFont font2;
         font2.setPointSize(12);
         font2.setBold(true);
@@ -100,7 +101,7 @@ public:
         no_nacidos_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         salvados_button = new QPushButton(tab_paraiso);
         salvados_button->setObjectName(QStringLiteral("salvados_button"));
-        salvados_button->setGeometry(QRect(30, 300, 171, 51));
+        salvados_button->setGeometry(QRect(30, 310, 171, 41));
         salvados_button->setFont(font2);
         salvados_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         label_4 = new QLabel(tab_paraiso);
@@ -130,6 +131,11 @@ public:
         pushButton_2->setGeometry(QRect(180, 360, 41, 51));
         pushButton_2->setStyleSheet(QStringLiteral("border-image: url(:/ok.png);"));
         pushButton_2->setFlat(false);
+        arbol_de_vida_button_2 = new QPushButton(tab_paraiso);
+        arbol_de_vida_button_2->setObjectName(QStringLiteral("arbol_de_vida_button_2"));
+        arbol_de_vida_button_2->setGeometry(QRect(30, 160, 171, 41));
+        arbol_de_vida_button_2->setFont(font1);
+        arbol_de_vida_button_2->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         tabWidget->addTab(tab_paraiso, QString());
         label_3->raise();
         arbol_de_vida_button->raise();
@@ -139,6 +145,7 @@ public:
         tiempo_spinBox->raise();
         pushButton_2->raise();
         pausa_button->raise();
+        arbol_de_vida_button_2->raise();
         tab_mundo = new QWidget();
         tab_mundo->setObjectName(QStringLiteral("tab_mundo"));
         nacimiento_button = new QPushButton(tab_mundo);
@@ -213,7 +220,7 @@ public:
         label_2->setFont(font6);
         condenar_button = new QPushButton(tab_infierno);
         condenar_button->setObjectName(QStringLiteral("condenar_button"));
-        condenar_button->setGeometry(QRect(30, 220, 151, 41));
+        condenar_button->setGeometry(QRect(30, 220, 151, 51));
         QFont font7;
         font7.setFamily(QStringLiteral("Chiller"));
         font7.setPointSize(26);
@@ -223,7 +230,7 @@ public:
         condenar_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         condenados_button = new QPushButton(tab_infierno);
         condenados_button->setObjectName(QStringLiteral("condenados_button"));
-        condenados_button->setGeometry(QRect(30, 280, 151, 41));
+        condenados_button->setGeometry(QRect(30, 280, 151, 51));
         QFont font8;
         font8.setFamily(QStringLiteral("Chiller"));
         font8.setPointSize(24);
@@ -259,6 +266,7 @@ public:
         label_4->setText(QApplication::translate("MainWindow", "Tiempo:", Q_NULLPTR));
         pausa_button->setText(QString());
         pushButton_2->setText(QString());
+        arbol_de_vida_button_2->setText(QApplication::translate("MainWindow", "No Nacidos", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_paraiso), QApplication::translate("MainWindow", "PARAISO", Q_NULLPTR));
         nacimiento_button->setText(QApplication::translate("MainWindow", "Naciemiento", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "MUNDO", Q_NULLPTR));

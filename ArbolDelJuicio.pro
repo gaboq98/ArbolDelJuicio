@@ -42,13 +42,11 @@ SOURCES += \
     condenadosdialog.cpp \
     continente.cpp \
     listacont.cpp \
-<<<<<<< HEAD
     hilovida.cpp \
-    ventanaparaiso.cpp
-=======
-    dialogconsultafamilia.cpp\
-    hilovida.cpp
->>>>>>> cb242f79618d6b713a3424f331d80ba2cad1e747
+    ventanaparaiso.cpp \
+    dialogconsultafamilia.cpp \
+    ventanasalvados.cpp \
+    ventananonacidos.cpp
 
 
 HEADERS += \
@@ -69,13 +67,11 @@ HEADERS += \
     condenadosdialog.h \
     continente.h \
     listacont.h \
-<<<<<<< HEAD
     hilovida.h \
-    ventanaparaiso.h
-=======
-    dialogconsultafamilia.h\
-    hilovida.h
->>>>>>> cb242f79618d6b713a3424f331d80ba2cad1e747
+    ventanaparaiso.h \
+    dialogconsultafamilia.h \
+    ventanasalvados.h \
+    ventananonacidos.h
 
 
 FORMS += \
@@ -87,11 +83,10 @@ FORMS += \
     ventanacondenar.ui \
     ventanaconsultas.ui \
     condenadosdialog.ui \
-<<<<<<< HEAD
-    ventanaparaiso.ui
-=======
-    dialogconsultafamilia.ui
->>>>>>> cb242f79618d6b713a3424f331d80ba2cad1e747
+    ventanaparaiso.ui \
+    dialogconsultafamilia.ui \
+    ventanasalvados.ui \
+    ventananonacidos.ui
 
 RESOURCES += \
     imagenes.qrc \

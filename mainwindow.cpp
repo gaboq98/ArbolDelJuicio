@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ventana_top = new Top10paises();
     ui->cantidadPersonas->setMaximum(9999999);
     ventana_consultas = new ventanaConsultas(this);
-    ventana_consultas->asignarComponentes(mundo);
     ventanaFamilia = new DialogConsultaFamilia();
     ventanaFamilia->asignarComponentes(mundo);
     for(int i = 0; i< 5; i++){
@@ -30,10 +29,14 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     on_tabWidget_tabBarClicked(1);
     paraiso = new Paraiso(mundo, infierno);
+    mundo->agregarParaiso(paraiso->personas, &(paraiso->no_nacidos));
+    ventanaParaiso = new VentanaParaiso();
     hiloVida = new HiloVida(paraiso);
     hiloVida->asignarComponentes(ui->tiempo_spinBox->value());
     hiloVida->pausa = true;
     hiloVida->start();
+    ventanaSalvado = new VentanaSalvados();
+    ventanaNoNacidos = new VentanaNoNacidos();
 }
 
 MainWindow::~MainWindow()
@@ -167,9 +170,6 @@ void MainWindow::on_condenar_button_clicked()
 void MainWindow::on_consultar_familia_button_clicked()
 {
     ventanaFamilia->show();
-    //ventana_personas->asignarComponentes(mundo);
-    //ventana_personas->show();
-
 }
 
 void MainWindow::on_condenados_button_clicked()
@@ -186,4 +186,22 @@ void MainWindow::on_pausa_button_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
     hiloVida->asignarComponentes(ui->tiempo_spinBox->value());
+}
+
+void MainWindow::on_arbol_de_vida_button_clicked()
+{
+    ventanaParaiso->agregarComponentes(paraiso);
+    ventanaParaiso->show();
+}
+
+void MainWindow::on_salvados_button_clicked()
+{
+    ventanaSalvado->agregarComponentes(paraiso);
+    ventanaSalvado->show();
+}
+
+void MainWindow::on_arbol_de_vida_button_2_clicked()
+{
+    ventanaNoNacidos->agregarComponentes(paraiso);
+    ventanaNoNacidos->show();
 }

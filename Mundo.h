@@ -16,11 +16,14 @@ struct Mundo {
     Lista* personas;
     GeneradorArchivos *archivos;
     Continente* continentes[5];
+    Lista *paraiso;
+    QVector<int> *noNacidosParaiso;
     Persona *crearPersona();
     string asignarCorreo(string pais);
     void nacer(int cantidad);
     void pecar();
     Persona* eliminar(int id);
     void decrementar_pecados(Persona* p);
+    void agregarParaiso(Lista *l, QVector<int> *v);
 
 };

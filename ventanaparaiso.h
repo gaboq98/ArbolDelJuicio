@@ -3,6 +3,8 @@
 #include <QtCore>
 #include <QtGui>
 #include <QMainWindow>
+#include "dialogconsultafamilia.h"
+
 
 namespace Ui {
 class VentanaParaiso;
@@ -15,8 +17,11 @@ class VentanaParaiso : public QMainWindow
 public:
     explicit VentanaParaiso(QWidget *parent = 0);
     ~VentanaParaiso();
-    void agregarRaiz(QString nombre, QString descripcion);
-    void agregarHijo(QTreeW ,QString nombre, QString descripcion);
+    void agregarComponentes(Paraiso *p);
+    Paraiso *paraiso;
+
+private slots:
+    void on_crear_clicked();
 
 private:
     Ui::VentanaParaiso *ui;
