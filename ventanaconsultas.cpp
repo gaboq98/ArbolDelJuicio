@@ -112,7 +112,7 @@ void ventanaConsultas::on_pushButton_clicked()
                 transform(current.begin(), current.end(), current.begin(), ::tolower);
                 string continente = temp->persona->correoElectonico.substr(20, temp->persona->correoElectonico.length());
                 if(continente.compare(current) == 0) {
-                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " |  "
+                    QString str =  QString::fromStdString(to_string( p->id) + " " + p->nombre + " " + p->apellido + " " + to_string(p->hijos.size()) + " hijos" + " |  "
                             + to_string(p->total_pecados) + "       " + to_string(porcentaje(p->total_pecados)) + "%");
                     ui->plainTextEdit->appendPlainText(str + "\n\n");
                 }

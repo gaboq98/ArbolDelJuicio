@@ -93,7 +93,7 @@ void MapaMundi::ordenar()
         aux[i] = n->c;
         n = n->siguiente;
     }
-    QString str = "\n\n\n\n";
+    QString str = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
     ui->label->setText(str.append(ranking));
     colorear(aux);
 }

@@ -189,6 +189,7 @@ Nodo *Lista::buscar(int id)
         }
         temp = temp->siguiente;
     }
+    return nullptr;
 }
 
 /*

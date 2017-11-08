@@ -116,4 +116,9 @@ void Mundo::pecar()
     }
 }
 
+void Mundo::decrementar_pecados(Persona *p)
+{
+    (*hash_paises)[QString::fromStdString(p->pais)] -= p->total_pecados;
+}
+
 

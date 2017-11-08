@@ -21,5 +21,6 @@ struct Mundo {
     void nacer(int cantidad);
     void pecar();
     Persona* eliminar(int id);
+    void decrementar_pecados(Persona* p);
 
 };

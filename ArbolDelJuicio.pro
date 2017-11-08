@@ -42,7 +42,8 @@ SOURCES += \
     ventanaconsultas.cpp \
     condenadosdialog.cpp \
     continente.cpp \
-    listacont.cpp
+    listacont.cpp \
+    dialogconsultafamilia.cpp
 
 
 HEADERS += \
@@ -63,7 +64,8 @@ HEADERS += \
     ventanaconsultas.h \
     condenadosdialog.h \
     continente.h \
-    listacont.h
+    listacont.h \
+    dialogconsultafamilia.h
 
 
 FORMS += \
@@ -74,7 +76,8 @@ FORMS += \
     top10paises.ui \
     ventanacondenar.ui \
     ventanaconsultas.ui \
-    condenadosdialog.ui
+    condenadosdialog.ui \
+    dialogconsultafamilia.ui
 
 RESOURCES += \
     imagenes.qrc
