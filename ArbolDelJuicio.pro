@@ -42,7 +42,8 @@ SOURCES += \
     condenadosdialog.cpp \
     continente.cpp \
     listacont.cpp \
-    hilovida.cpp
+    hilovida.cpp \
+    ventanaparaiso.cpp
 
 
 HEADERS += \
@@ -63,7 +64,8 @@ HEADERS += \
     condenadosdialog.h \
     continente.h \
     listacont.h \
-    hilovida.h
+    hilovida.h \
+    ventanaparaiso.h
 
 
 FORMS += \
@@ -74,7 +76,9 @@ FORMS += \
     top10paises.ui \
     ventanacondenar.ui \
     ventanaconsultas.ui \
-    condenadosdialog.ui
+    condenadosdialog.ui \
+    ventanaparaiso.ui
 
 RESOURCES += \
-    imagenes.qrc
+    imagenes.qrc \
+    ventanaparaiso.qrc

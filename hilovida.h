@@ -13,9 +13,10 @@ public:
     HiloVida(Paraiso *par);
     bool encendido;
     bool pausa;
-    int *tiempo;
+    int tiempo;
     Paraiso *paraiso;
     void run();
+    void asignarComponentes(int tiempo);
 };
 
 #endif // HILOVIDA_H

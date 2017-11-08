@@ -6,5 +6,6 @@
         <file>restart.png</file>
         <file>stop.png</file>
         <file>arbl.jpg</file>
+        <file>ok.png</file>
     </qresource>
 </RCC>

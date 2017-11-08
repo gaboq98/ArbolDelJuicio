@@ -17,8 +17,14 @@ void HiloVida::run()
     while(encendido) {
         if(pausa) {
             sleep(0.9);
+            continue;
         }
         paraiso->genera_afortunado();
-        sleep(*tiempo);
+        sleep(tiempo);
     }
+}
+
+void HiloVida::asignarComponentes(int tiempo)
+{
+    this->tiempo = tiempo;
 }

@@ -26,11 +26,11 @@ MainWindow::MainWindow(QWidget *parent) :
         mapa_mundi->continentes[i] = mundo->continentes[i];
     }
     on_tabWidget_tabBarClicked(1);
-    paraiso = new Paraiso();
+    paraiso = new Paraiso(mundo, infierno);
     hiloVida = new HiloVida(paraiso);
-    hiloVida->tiempo = ui->tiempo_spinBox->value();
+    hiloVida->asignarComponentes(ui->tiempo_spinBox->value());
+    hiloVida->pausa = true;
     hiloVida->start();
-    hiloVida->pausa = false;
 }
 
 MainWindow::~MainWindow()
@@ -178,12 +178,7 @@ void MainWindow::on_pausa_button_clicked()
     hiloVida->pausa = !hiloVida->pausa;
 }
 
-void MainWindow::on_reset_button_clicked()
+void MainWindow::on_pushButton_2_clicked()
 {
-    /*//
-    ////
-    ////
-    ////
-    //*/
+    hiloVida->asignarComponentes(ui->tiempo_spinBox->value());
 }
-

@@ -64,7 +64,7 @@ private slots:
 
     void on_pausa_button_clicked();
 
-    void on_reset_button_clicked();
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

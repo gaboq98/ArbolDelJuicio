@@ -1,10 +1,17 @@
 #include "paraiso.h"
+#include <QDebug>
 
 Paraiso::Paraiso()
+{    
+}
+
+Paraiso::Paraiso(Mundo *m, Infierno *inf)
 {
     personas = new Lista();
-    dic_mundo = mundo->diccionario;
-    dic_infierno = infierno->condenados;
+    mundo = m;
+    infierno = inf;
+    dic_mundo = &mundo->diccionario;
+    dic_infierno = &infierno->condenados;
 }
 
 /*
