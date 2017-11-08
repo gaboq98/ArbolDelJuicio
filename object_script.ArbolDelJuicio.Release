@@ -6,7 +6,6 @@ INPUT(
 ./release\Mundo.o
 ./release\Persona.o
 ./release\mapamundi.o
-./release\abb.o
 ./release\infierno.o
 ./release\paraiso.o
 ./release\avltree.o
@@ -15,6 +14,10 @@ INPUT(
 ./release\top10paises.o
 ./release\ventanacondenar.o
 ./release\ventanaconsultas.o
+./release\condenadosdialog.o
+./release\continente.o
+./release\listacont.o
+./release\hilovida.o
 ./release\qrc_imagenes.o
 ./release\moc_mainwindow.o
 ./release\moc_mapamundi.o
@@ -23,4 +26,6 @@ INPUT(
 ./release\moc_top10paises.o
 ./release\moc_ventanacondenar.o
 ./release\moc_ventanaconsultas.o
+./release\moc_condenadosdialog.o
+./release\moc_hilovida.o
 );

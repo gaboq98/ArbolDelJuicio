@@ -1,6 +1,6 @@
 #ifndef DIALOGCONSULTAFAMILIA_H
 #define DIALOGCONSULTAFAMILIA_H
-#include "ventanaconsultas.h"
+#include "hilovida.h"
 #include <QTreeWidgetItem>
 
 #include <QDialog>

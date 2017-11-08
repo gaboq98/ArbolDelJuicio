@@ -31,7 +31,6 @@ SOURCES += \
     Mundo.cpp \
     Persona.cpp \
     mapamundi.cpp \
-    abb.cpp \
     infierno.cpp \
     paraiso.cpp \
     avltree.cpp \
@@ -43,7 +42,8 @@ SOURCES += \
     condenadosdialog.cpp \
     continente.cpp \
     listacont.cpp \
-    dialogconsultafamilia.cpp
+    dialogconsultafamilia.cpp\
+    hilovida.cpp
 
 
 HEADERS += \
@@ -53,7 +53,6 @@ HEADERS += \
     Mundo.h \
     Persona.h \
     mapamundi.h \
-    abb.h \
     infierno.h \
     paraiso.h \
     avltree.h \
@@ -65,7 +64,8 @@ HEADERS += \
     condenadosdialog.h \
     continente.h \
     listacont.h \
-    dialogconsultafamilia.h
+    dialogconsultafamilia.h\
+    hilovida.h
 
 
 FORMS += \

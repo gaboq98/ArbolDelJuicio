@@ -3,5 +3,8 @@
         <file>continentes (1).png</file>
         <file>hell.jpg</file>
         <file>heaven.jpg</file>
+        <file>restart.png</file>
+        <file>stop.png</file>
+        <file>arbl.jpg</file>
     </qresource>
 </RCC>

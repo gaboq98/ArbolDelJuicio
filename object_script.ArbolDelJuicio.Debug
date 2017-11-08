@@ -6,7 +6,6 @@ INPUT(
 ./debug\Mundo.o
 ./debug\Persona.o
 ./debug\mapamundi.o
-./debug\abb.o
 ./debug\infierno.o
 ./debug\paraiso.o
 ./debug\avltree.o
@@ -15,6 +14,10 @@ INPUT(
 ./debug\top10paises.o
 ./debug\ventanacondenar.o
 ./debug\ventanaconsultas.o
+./debug\condenadosdialog.o
+./debug\continente.o
+./debug\listacont.o
+./debug\hilovida.o
 ./debug\qrc_imagenes.o
 ./debug\moc_mainwindow.o
 ./debug\moc_mapamundi.o
@@ -23,4 +26,6 @@ INPUT(
 ./debug\moc_top10paises.o
 ./debug\moc_ventanacondenar.o
 ./debug\moc_ventanaconsultas.o
+./debug\moc_condenadosdialog.o
+./debug\moc_hilovida.o
 );

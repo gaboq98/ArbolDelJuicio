@@ -13,9 +13,10 @@ public:
     Infierno* infierno;
     Mundo* mundo;
     Paraiso();
-    QHash<int, int> dic_mundo;
-    QHash<int, int> dic_infierno;
+    QHash<int, int> *dic_mundo;
+    QHash<int, int> *dic_infierno;
     void genera_afortunado();
+
 };
 
 #endif // PARAISO_H
