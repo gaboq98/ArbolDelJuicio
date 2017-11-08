@@ -88,6 +88,7 @@ FORMS += \
     ventanasalvados.ui \
     ventananonacidos.ui
 
+
 RESOURCES += \
     imagenes.qrc \
     ventanaparaiso.qrc
