@@ -43,9 +43,10 @@ SOURCES += \
     continente.cpp \
     listacont.cpp \
     hilovida.cpp \
-    ventanaparaiso.cpp\
+    ventanaparaiso.cpp \
     dialogconsultafamilia.cpp \
-    salvadosdialog.cpp
+    ventanasalvados.cpp \
+    ventananonacidos.cpp
 
 
 HEADERS += \
@@ -67,9 +68,10 @@ HEADERS += \
     continente.h \
     listacont.h \
     hilovida.h \
-    ventanaparaiso.h\
+    ventanaparaiso.h \
     dialogconsultafamilia.h \
-    salvadosdialog.h
+    ventanasalvados.h \
+    ventananonacidos.h
 
 
 FORMS += \
@@ -83,7 +85,8 @@ FORMS += \
     condenadosdialog.ui \
     ventanaparaiso.ui \
     dialogconsultafamilia.ui \
-    salvadosdialog.ui
+    ventanasalvados.ui \
+    ventananonacidos.ui
 
 RESOURCES += \
     imagenes.qrc \

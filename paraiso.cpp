@@ -30,5 +30,4 @@ void Paraiso::genera_afortunado()
         no_nacidos.append(id);
         mundo->no_nacidos.append(id);
     }
-    qDebug() << id;
 }

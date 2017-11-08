@@ -7,8 +7,7 @@
 #include "ventanaconsultas.h"
 #include "top10paises.h"
 #include "condenadosdialog.h"
-#include "dialogconsultafamilia.h"
-
+#include "ventananonacidos.h"
 
 namespace Ui {
 class MainWindow;
@@ -35,6 +34,9 @@ public:
     DialogConsultaFamilia* ventanaFamilia;
     Paraiso *paraiso;
     HiloVida *hiloVida;
+    VentanaParaiso *ventanaParaiso;
+    VentanaSalvados *ventanaSalvado;
+    VentanaNoNacidos *ventanaNoNacidos;
 
 
 private slots:
@@ -65,6 +67,12 @@ private slots:
     void on_pausa_button_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_arbol_de_vida_button_clicked();
+
+    void on_salvados_button_clicked();
+
+    void on_arbol_de_vida_button_2_clicked();
 
 private:
     Ui::MainWindow *ui;

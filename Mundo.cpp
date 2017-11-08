@@ -38,9 +38,12 @@ Persona *Mundo::crearPersona()
     if(! no_nacidos.contains(id)){
        persona->estado = "Vivo";
        personas->insertarOrdenado(persona);
-
        return persona;
     }
+    persona->estado = "Paraiso";
+    paraiso->insertarOrdenado(persona);
+    noNacidosParaiso->remove(noNacidosParaiso->indexOf(persona->id));
+    no_nacidos.remove(no_nacidos.indexOf(persona->id));
     return nullptr;
 }
 
@@ -119,6 +122,12 @@ void Mundo::pecar()
 void Mundo::decrementar_pecados(Persona *p)
 {
     (*hash_paises)[QString::fromStdString(p->pais)] -= p->total_pecados;
+}
+
+void Mundo::agregarParaiso(Lista *l, QVector<int> *v)
+{
+    paraiso = l;
+    noNacidosParaiso = v;
 }
 
 
