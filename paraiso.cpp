@@ -2,7 +2,8 @@
 #include <QDebug>
 
 Paraiso::Paraiso()
-{    
+{
+
 }
 
 Paraiso::Paraiso(Mundo *m, Infierno *inf)
@@ -30,4 +31,5 @@ void Paraiso::genera_afortunado()
         no_nacidos.append(id);
         mundo->no_nacidos.append(id);
     }
+    qDebug() << "Muerto";
 }
