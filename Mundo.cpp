@@ -100,6 +100,7 @@ Persona* Mundo::eliminar(int id){
     Persona* p = personas->buscar(id)->persona;
     lista_paises[QString::fromStdString(p->pais)]->borrar(p->id);
     personas->borrar(id);
+    p->continente->cantidad_poblacion -= 1;
     return p;
 }
 

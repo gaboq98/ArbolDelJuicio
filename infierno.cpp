@@ -27,7 +27,9 @@ void Infierno::agregar(Persona *p)
  */
 Persona* Infierno::eliminar(int id)
 {
-    return pecadores->borrar(id);
+    Persona* p = pecadores->borrar(id);
+    p->continente->cantidad_poblacion -= 1;
+    return p;
 }
 
 void Infierno::correoAmerica()
