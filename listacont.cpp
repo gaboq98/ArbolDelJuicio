@@ -36,3 +36,35 @@ void ListaCont::insertar(Continente *dato)
          }
      }
 }
+
+void ListaCont::insertar_pob(Continente *dato)
+{
+    if (pn == nullptr){
+        pn = new NodoCont(dato);
+    }else if(pn->siguiente == nullptr){
+        if(dato->cantidad_poblacion > pn->c->cantidad_poblacion){
+            NodoCont* aux = new NodoCont(dato);
+            aux->siguiente = pn;
+            pn = aux;
+        }else{
+            pn->siguiente = new NodoCont(dato);
+        }
+    }else if(dato->cantidad_poblacion > pn->c->cantidad_poblacion){
+        NodoCont* aux = new NodoCont(dato);
+        aux->siguiente = pn;
+        pn = aux;
+    }else{
+        NodoCont* tmp = pn;
+        while (tmp->siguiente != nullptr) {
+            if(dato->cantidad_poblacion > tmp->siguiente->c->cantidad_poblacion){
+                NodoCont* aux = new NodoCont(dato);
+                aux->siguiente = tmp->siguiente;
+                tmp->siguiente = aux;
+                break;
+            }
+            tmp = tmp->siguiente;
+        }if(tmp->siguiente == nullptr){
+            tmp->siguiente = new NodoCont(dato);
+        }
+    }
+}

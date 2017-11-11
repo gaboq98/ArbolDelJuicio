@@ -79,12 +79,18 @@ void MapaMundi::aumentar(int *r, int *g, int *b)
     }
 }
 
-void MapaMundi::ordenar()
+void MapaMundi::ordenar(int opcion)
 {
     Continente* aux[5];
     ListaCont* sort = new ListaCont();
-    for(Continente* c: continentes){
-        sort->insertar(c);
+    if(opcion == 1){
+        for(Continente* c: continentes){
+            sort->insertar_pob(c);
+        }
+    }else{
+        for(Continente* c: continentes){
+            sort->insertar(c);
+        }
     }
     NodoCont* n = sort->pn;
     QString ranking = "";
@@ -95,6 +101,10 @@ void MapaMundi::ordenar()
     }
     ui->lbl_ranking->setText(ranking);
     colorear(aux);
+    if(opcion == 1){
+        setDefault();
+        colorear_pob(aux);
+    }
 }
 
 void MapaMundi::colorear(Continente *c[])
@@ -124,6 +134,18 @@ void MapaMundi::colorear(int opcion)
     }
     aumentar(r,g,b);
     cambiar_color(*r,*g,*b,opcion);
+}
+
+void MapaMundi::colorear_pob(Continente *c[])
+{
+    for(int i = 0; i < 5; i++)
+    {
+        int aux = c[i]->cantidad_poblacion;
+        while(aux > 0){
+            colorear(c[i]->nombre);
+            aux -= 1000;
+        }
+    }
 }
 
 void MapaMundi::setDefault()

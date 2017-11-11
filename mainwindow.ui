@@ -39,7 +39,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -269,7 +269,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>140</y>
+        <y>100</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -313,7 +313,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>180</y>
+        <y>140</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -336,7 +336,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>220</y>
+        <y>180</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -359,7 +359,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>260</y>
+        <y>220</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -382,7 +382,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>300</y>
+        <y>260</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -405,7 +405,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>380</y>
+        <y>340</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -428,7 +428,7 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>340</y>
+        <y>300</y>
         <width>231</width>
         <height>31</height>
        </rect>
@@ -451,7 +451,7 @@
       <property name="geometry">
        <rect>
         <x>290</x>
-        <y>140</y>
+        <y>100</y>
         <width>81</width>
         <height>31</height>
        </rect>
@@ -467,6 +467,29 @@ background-repeat: none;</string>
        <number>9999999</number>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>380</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
+      <property name="text">
+       <string>Densidad de Población</string>
+      </property>
+     </widget>
      <zorder>cantidadPersonas</zorder>
      <zorder>nacimiento_button</zorder>
      <zorder>label</zorder>
@@ -476,6 +499,7 @@ background-repeat: none;</string>
      <zorder>top_santos_button</zorder>
      <zorder>mapa_button</zorder>
      <zorder>pecadores_button</zorder>
+     <zorder>pushButton_3</zorder>
     </widget>
     <widget class="QWidget" name="tab_infierno">
      <attribute name="title">

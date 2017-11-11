@@ -72,6 +72,7 @@ void Mundo::nacer(int cantidad)
         Persona *per = crearPersona();
         if(per != nullptr){
             AVLtree *aux;
+            per->continente->cantidad_poblacion += 1;
             if (!apellidosArbol.contains(per->apellido)) {
                 aux = new AVLtree();
                 apellidosArbol[per->apellido] = aux;
