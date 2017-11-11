@@ -18,6 +18,7 @@ public:
     NodoCont* pn;
     ListaCont();
     void insertar(Continente*);
+    void insertar_pob(Continente*);
 };
 
 #endif // LISTACONT_H

@@ -80,7 +80,14 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
 void MainWindow::on_mapa_button_clicked()
 {
     mapa_mundi->setDefault();
-    mapa_mundi->ordenar();
+    mapa_mundi->ordenar(0);
+    mapa_mundi->show();
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    mapa_mundi->setDefault();
+    mapa_mundi->ordenar(1);
     mapa_mundi->show();
 }
 

@@ -48,6 +48,7 @@ public:
     QPushButton *mapa_button;
     QPushButton *pecadores_button;
     QSpinBox *cantidadPersonas;
+    QPushButton *pushButton_3;
     QWidget *tab_infierno;
     QLabel *label_2;
     QPushButton *condenar_button;
@@ -151,7 +152,7 @@ public:
         tab_mundo->setObjectName(QStringLiteral("tab_mundo"));
         nacimiento_button = new QPushButton(tab_mundo);
         nacimiento_button->setObjectName(QStringLiteral("nacimiento_button"));
-        nacimiento_button->setGeometry(QRect(30, 140, 231, 31));
+        nacimiento_button->setGeometry(QRect(30, 100, 231, 31));
         nacimiento_button->setFont(font1);
         nacimiento_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         label = new QLabel(tab_mundo);
@@ -165,41 +166,46 @@ public:
         label->setFont(font5);
         pecar_button = new QPushButton(tab_mundo);
         pecar_button->setObjectName(QStringLiteral("pecar_button"));
-        pecar_button->setGeometry(QRect(30, 180, 231, 31));
+        pecar_button->setGeometry(QRect(30, 140, 231, 31));
         pecar_button->setFont(font1);
         pecar_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         consultar_familia_button = new QPushButton(tab_mundo);
         consultar_familia_button->setObjectName(QStringLiteral("consultar_familia_button"));
-        consultar_familia_button->setGeometry(QRect(30, 220, 231, 31));
+        consultar_familia_button->setGeometry(QRect(30, 180, 231, 31));
         consultar_familia_button->setFont(font1);
         consultar_familia_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         top_pecadores_button = new QPushButton(tab_mundo);
         top_pecadores_button->setObjectName(QStringLiteral("top_pecadores_button"));
-        top_pecadores_button->setGeometry(QRect(30, 260, 231, 31));
+        top_pecadores_button->setGeometry(QRect(30, 220, 231, 31));
         top_pecadores_button->setFont(font1);
         top_pecadores_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         top_santos_button = new QPushButton(tab_mundo);
         top_santos_button->setObjectName(QStringLiteral("top_santos_button"));
-        top_santos_button->setGeometry(QRect(30, 300, 231, 31));
+        top_santos_button->setGeometry(QRect(30, 260, 231, 31));
         top_santos_button->setFont(font1);
         top_santos_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         mapa_button = new QPushButton(tab_mundo);
         mapa_button->setObjectName(QStringLiteral("mapa_button"));
-        mapa_button->setGeometry(QRect(30, 380, 231, 31));
+        mapa_button->setGeometry(QRect(30, 340, 231, 31));
         mapa_button->setFont(font1);
         mapa_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         pecadores_button = new QPushButton(tab_mundo);
         pecadores_button->setObjectName(QStringLiteral("pecadores_button"));
-        pecadores_button->setGeometry(QRect(30, 340, 231, 31));
+        pecadores_button->setGeometry(QRect(30, 300, 231, 31));
         pecadores_button->setFont(font1);
         pecadores_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         cantidadPersonas = new QSpinBox(tab_mundo);
         cantidadPersonas->setObjectName(QStringLiteral("cantidadPersonas"));
-        cantidadPersonas->setGeometry(QRect(290, 140, 81, 31));
+        cantidadPersonas->setGeometry(QRect(290, 100, 81, 31));
         cantidadPersonas->setStyleSheet(QLatin1String("border: none;\n"
 "background-repeat: none;"));
         cantidadPersonas->setButtonSymbols(QAbstractSpinBox::NoButtons);
         cantidadPersonas->setMaximum(9999999);
+        pushButton_3 = new QPushButton(tab_mundo);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(30, 380, 231, 31));
+        pushButton_3->setFont(font1);
+        pushButton_3->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         tabWidget->addTab(tab_mundo, QString());
         cantidadPersonas->raise();
         nacimiento_button->raise();
@@ -210,6 +216,7 @@ public:
         top_santos_button->raise();
         mapa_button->raise();
         pecadores_button->raise();
+        pushButton_3->raise();
         tab_infierno = new QWidget();
         tab_infierno->setObjectName(QStringLiteral("tab_infierno"));
         label_2 = new QLabel(tab_infierno);
@@ -256,7 +263,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -282,6 +289,7 @@ public:
         top_santos_button->setText(QApplication::translate("MainWindow", "Top 5 paises Santos", Q_NULLPTR));
         mapa_button->setText(QApplication::translate("MainWindow", "Mapa del Mundo", Q_NULLPTR));
         pecadores_button->setText(QApplication::translate("MainWindow", "Pecadores", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Densidad de Poblaci\303\263n", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_mundo), QApplication::translate("MainWindow", "MUNDO", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "INFIERNO", Q_NULLPTR));
         condenar_button->setText(QApplication::translate("MainWindow", "Condenar", Q_NULLPTR));

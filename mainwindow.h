@@ -75,6 +75,7 @@ private slots:
     void on_arbol_de_vida_button_2_clicked();
 
     void on_condenar_button_2_clicked();
+    void on_pushButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -24,9 +24,10 @@ public:
     void cambiar_color(int r, int g, int b, int i);
     int posiciones[5] = {27,21,15,9,3};
     Continente* continentes[5];
-    void ordenar();
+    void ordenar(int);
     void colorear(Continente* c[]);
     void colorear(int opcion);
+    void colorear_pob(Continente* c[]);
     void setDefault();
     ~MapaMundi();
 
