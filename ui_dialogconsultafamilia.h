@@ -40,7 +40,7 @@ public:
         input->setGeometry(QRect(50, 290, 201, 21));
         label = new QLabel(DialogConsultaFamilia);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 290, 21, 21));
+        label->setGeometry(QRect(20, 290, 31, 21));
         QFont font;
         font.setPointSize(12);
         font.setBold(true);
@@ -48,7 +48,7 @@ public:
         label->setFont(font);
         consultar_button = new QPushButton(DialogConsultaFamilia);
         consultar_button->setObjectName(QStringLiteral("consultar_button"));
-        consultar_button->setGeometry(QRect(20, 330, 231, 23));
+        consultar_button->setGeometry(QRect(20, 330, 231, 31));
         QFont font1;
         font1.setPointSize(14);
         consultar_button->setFont(font1);

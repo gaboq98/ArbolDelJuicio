@@ -168,11 +168,16 @@ background-repeat: none;</string>
    <widget class="QLabel" name="lbl_ranking">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>460</y>
-      <width>441</width>
+      <x>20</x>
+      <y>450</y>
+      <width>301</width>
       <height>201</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">backgorund-color: rgb(255, 255, 255);</string>
