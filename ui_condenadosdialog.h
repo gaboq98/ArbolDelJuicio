@@ -34,6 +34,7 @@ public:
         textEdit = new QTextEdit(CondenadosDialog);
         textEdit->setObjectName(QStringLiteral("textEdit"));
         textEdit->setGeometry(QRect(20, 80, 611, 431));
+        textEdit->setReadOnly(true);
         label = new QLabel(CondenadosDialog);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(170, 20, 281, 41));

@@ -92,9 +92,11 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_no_nacidos_button_clicked()
 {
-    char* command = "curl smtp://smtp.gmail.com:587 -v --mail-from \"personas.continente.europa@gmail.com\" --mail-rcpt \"josuecanales@gmail.com\" --ssl -u personas.continente.europa@gmail.com:estructurasdatos -T \"correo.txt\" -k --anyauth";
-        WinExec(command, SW_HIDE);
-    qDebug() << "Enviado";
+    paraiso->correoAmerica();
+    paraiso->correoAfrica();
+    paraiso->correoAsia();
+    paraiso->correoEuropa();
+    paraiso->correoOciania();
 }
 
 
@@ -204,4 +206,13 @@ void MainWindow::on_arbol_de_vida_button_2_clicked()
 {
     ventanaNoNacidos->agregarComponentes(paraiso);
     ventanaNoNacidos->show();
+}
+
+void MainWindow::on_condenar_button_2_clicked()
+{
+    infierno->correoAfrica();
+    infierno->correoAmerica();
+    infierno->correoAsia();
+    infierno->correoEuropa();
+    infierno->correoOciania();
 }

@@ -52,6 +52,7 @@ public:
     QLabel *label_2;
     QPushButton *condenar_button;
     QPushButton *condenados_button;
+    QPushButton *condenar_button_2;
     QPushButton *pushButton;
 
     void setupUi(QMainWindow *MainWindow)
@@ -220,7 +221,7 @@ public:
         label_2->setFont(font6);
         condenar_button = new QPushButton(tab_infierno);
         condenar_button->setObjectName(QStringLiteral("condenar_button"));
-        condenar_button->setGeometry(QRect(30, 220, 151, 51));
+        condenar_button->setGeometry(QRect(30, 180, 201, 51));
         QFont font7;
         font7.setFamily(QStringLiteral("Chiller"));
         font7.setPointSize(26);
@@ -230,12 +231,17 @@ public:
         condenar_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         condenados_button = new QPushButton(tab_infierno);
         condenados_button->setObjectName(QStringLiteral("condenados_button"));
-        condenados_button->setGeometry(QRect(30, 280, 151, 51));
+        condenados_button->setGeometry(QRect(30, 240, 201, 51));
         QFont font8;
         font8.setFamily(QStringLiteral("Chiller"));
         font8.setPointSize(24);
         condenados_button->setFont(font8);
         condenados_button->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
+        condenar_button_2 = new QPushButton(tab_infierno);
+        condenar_button_2->setObjectName(QStringLiteral("condenar_button_2"));
+        condenar_button_2->setGeometry(QRect(30, 300, 201, 51));
+        condenar_button_2->setFont(font7);
+        condenar_button_2->setStyleSheet(QStringLiteral("background-color: rgb(199, 199, 199);"));
         tabWidget->addTab(tab_infierno, QString());
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
@@ -250,7 +256,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -280,6 +286,7 @@ public:
         label_2->setText(QApplication::translate("MainWindow", "INFIERNO", Q_NULLPTR));
         condenar_button->setText(QApplication::translate("MainWindow", "Condenar", Q_NULLPTR));
         condenados_button->setText(QApplication::translate("MainWindow", "Condenados", Q_NULLPTR));
+        condenar_button_2->setText(QApplication::translate("MainWindow", "Mandar Correo", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_infierno), QApplication::translate("MainWindow", "INFIERNO", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "Consultar por apellido", Q_NULLPTR));
     } // retranslateUi

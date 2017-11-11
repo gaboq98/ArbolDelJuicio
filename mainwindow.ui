@@ -39,7 +39,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -504,8 +504,8 @@ background-repeat: none;</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>220</y>
-        <width>151</width>
+        <y>180</y>
+        <width>201</width>
         <height>51</height>
        </rect>
       </property>
@@ -528,8 +528,8 @@ background-repeat: none;</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>280</y>
-        <width>151</width>
+        <y>240</y>
+        <width>201</width>
         <height>51</height>
        </rect>
       </property>
@@ -544,6 +544,30 @@ background-repeat: none;</string>
       </property>
       <property name="text">
        <string>Condenados</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="condenar_button_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>300</y>
+        <width>201</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chiller</family>
+        <pointsize>26</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(199, 199, 199);</string>
+      </property>
+      <property name="text">
+       <string>Mandar Correo</string>
       </property>
      </widget>
     </widget>

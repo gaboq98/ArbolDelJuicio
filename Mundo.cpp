@@ -56,7 +56,7 @@ string Mundo::asignarCorreo(string pais)
 {
     string correos[5] = {"personas.continente.america", "personas.continente.africa",
                          "personas.continente.europa", "personas.continente.oceania", "personas.continente.asia"};
-    int indice = stoi(pais.substr(0));
+    int indice = std::stoi(pais.substr(0));
     string correo = correos[indice];
     return correo;
 }

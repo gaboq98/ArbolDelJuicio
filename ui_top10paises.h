@@ -30,10 +30,10 @@ public:
     {
         if (Top10paises->objectName().isEmpty())
             Top10paises->setObjectName(QStringLiteral("Top10paises"));
-        Top10paises->resize(485, 408);
+        Top10paises->resize(473, 408);
         Qtitulo = new QLabel(Top10paises);
         Qtitulo->setObjectName(QStringLiteral("Qtitulo"));
-        Qtitulo->setGeometry(QRect(30, 10, 411, 61));
+        Qtitulo->setGeometry(QRect(10, 10, 451, 61));
         QFont font;
         font.setPointSize(20);
         font.setBold(false);

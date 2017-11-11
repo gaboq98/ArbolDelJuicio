@@ -18,7 +18,12 @@ INPUT(
 ./debug\continente.o
 ./debug\listacont.o
 ./debug\hilovida.o
+./debug\ventanaparaiso.o
+./debug\dialogconsultafamilia.o
+./debug\ventanasalvados.o
+./debug\ventananonacidos.o
 ./debug\qrc_imagenes.o
+./debug\qrc_ventanaparaiso.o
 ./debug\moc_mainwindow.o
 ./debug\moc_mapamundi.o
 ./debug\moc_ventanapersonas.o
@@ -28,4 +33,8 @@ INPUT(
 ./debug\moc_ventanaconsultas.o
 ./debug\moc_condenadosdialog.o
 ./debug\moc_hilovida.o
+./debug\moc_ventanaparaiso.o
+./debug\moc_dialogconsultafamilia.o
+./debug\moc_ventanasalvados.o
+./debug\moc_ventananonacidos.o
 );

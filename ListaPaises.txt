@@ -1,4 +1,4 @@
-4Afganistán
+4Afganistan
 2Albania
 2Alemania
 4Arabia Saudita
@@ -6,11 +6,11 @@
 0Argentina
 3Australia
 2Austria
-4Bangladés
+4Banglades
 0Brasil
-4Brunéi
+4Brunei
 2Bulgaria
-0Canadá
+0Canada
 4Catar
 1Chad
 0Chile
@@ -26,57 +26,57 @@
 0Ecuador
 1Egipto
 0El Salvador
-4Emiratos Árabes Unidos
+4Emiratos Arabes Unidos
 2Eslovaquia
-2España
+2Espana
 0Estados Unidos
 2Estonia
-1Etiopía
+1Etiopia
 4Filipinas
 2Finlandia
 2Francia
 2Grecia
 0Guatemala
 0Honduras
-2Hungría
+2Hungria
 4India
 4Indonesia
 4Irak
-4Irán
+4Iran
 2Irlanda
 2Islandia
 4Israel
 2Italia
 0Jamaica
-4Japón
+4Japon
 4Jordania
-4Kazajistán
+4Kazajistan
 1Kenia
 1Kuwait
 2Luxemburgo
 1Madagascar
 4Malasia
-0México
+0Mexico
 3Micronesia
 4Mongolia
 4Nepal
 0Nicaragua
-1Níger
+1Niger
 1Nigeria
 2Noruega
 3Nueva Zelanda
-2Países Bajos
-4Pakistán
-0Panamá
+2Paises Bajos
+4Pakistan
+0Panama
 0Paraguay
-0Perú
+0Peru
 2Polonia
 2Portugal
 2Reino Unido
-1República Centroafricana
-2República Checa
-0República Dominicana
-1República Sudafricana
+1Republica Centroafricana
+2Republica Checa
+0Republica Dominicana
+1Republica Sudafricana
 1Ruanda
 2Rusia
 1Senegal
@@ -85,11 +85,11 @@
 4Siria
 1Somalia
 4Sri Lanka
-1Sudán
+1Sudan
 2Suecia
 2Suiza
 4Tailandia
-4Turquía
+4Turquia
 2Ucrania
 1Uganda
 0Uruguay

@@ -16,7 +16,15 @@ public:
     Paraiso(Mundo *m, Infierno *inf);
     QHash<int, int> *dic_mundo;
     QHash<int, int> *dic_infierno;
+    QVector <int> enviados;
+    string correos[5] = {"personas.continente.america", "personas.continente.africa",
+                         "personas.continente.europa", "personas.continente.oceania", "personas.continente.asia"};
     void genera_afortunado();
+    void correoAmerica();
+    void correoEuropa();
+    void correoAfrica();
+    void correoOciania();
+    void correoAsia();
 
 };
 

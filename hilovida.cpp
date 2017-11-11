@@ -16,7 +16,7 @@ void HiloVida::run()
 {
     while(encendido) {
         if(pausa) {
-            sleep(0.9);
+            sleep(1);
             continue;
         }
         paraiso->genera_afortunado();

@@ -103,7 +103,10 @@ public:
 "background-repeat: none;"));
         lbl_ranking = new QLabel(centralwidget);
         lbl_ranking->setObjectName(QStringLiteral("lbl_ranking"));
-        lbl_ranking->setGeometry(QRect(20, 450, 441, 201));
+        lbl_ranking->setGeometry(QRect(20, 450, 301, 201));
+        QFont font1;
+        font1.setPointSize(12);
+        lbl_ranking->setFont(font1);
         lbl_ranking->setStyleSheet(QStringLiteral("backgorund-color: rgb(255, 255, 255);"));
         fondo_asia3 = new QLabel(centralwidget);
         fondo_asia3->setObjectName(QStringLiteral("fondo_asia3"));
