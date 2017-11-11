@@ -8,5 +8,5 @@ Continente::Continente()
 Continente::Continente(int continente)
 {
     this->nombre = continente;
-    cantidad_pecados = 0;
+    cantidad_pecados = cantidad_poblacion = 0;
 }

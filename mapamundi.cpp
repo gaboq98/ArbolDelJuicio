@@ -87,23 +87,31 @@ void MapaMundi::ordenar(int opcion)
         for(Continente* c: continentes){
             sort->insertar_pob(c);
         }
+        NodoCont* n = sort->pn;
+        QString ranking = "";
+        int total = 0;
+        for(int i = 0; i < 5; i++){
+            ranking += to_str(n->c->nombre).append(":").append(QString::number(n->c->cantidad_poblacion)).append("\n") ;
+            aux[i] = n->c;
+            total += n->c->cantidad_poblacion;
+            n = n->siguiente;
+        }
+        ranking.append("\n\nTotal de Poblacion : ").append(QString::number(total));
+        ui->lbl_ranking->setText(ranking);
+        colorear_pob(aux);
     }else{
         for(Continente* c: continentes){
             sort->insertar(c);
         }
-    }
-    NodoCont* n = sort->pn;
-    QString ranking = "";
-    for(int i = 0; i < 5; i++){
-        ranking += to_str(n->c->nombre).append(":").append(QString::number(n->c->cantidad_pecados)).append("\n") ;
-        aux[i] = n->c;
-        n = n->siguiente;
-    }
-    ui->lbl_ranking->setText(ranking);
-    colorear(aux);
-    if(opcion == 1){
-        setDefault();
-        colorear_pob(aux);
+        NodoCont* n = sort->pn;
+        QString ranking = "";
+        for(int i = 0; i < 5; i++){
+            ranking += to_str(n->c->nombre).append(":").append(QString::number(n->c->cantidad_pecados)).append("\n") ;
+            aux[i] = n->c;
+            n = n->siguiente;
+        }
+        ui->lbl_ranking->setText(ranking);
+        colorear(aux);
     }
 }
 
@@ -143,7 +151,7 @@ void MapaMundi::colorear_pob(Continente *c[])
         int aux = c[i]->cantidad_poblacion;
         while(aux > 0){
             colorear(c[i]->nombre);
-            aux -= 1000;
+            aux -= 350;
         }
     }
 }

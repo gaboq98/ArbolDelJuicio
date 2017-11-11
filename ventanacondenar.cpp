@@ -43,6 +43,7 @@ void VentanaCondenar::on_condenar_button_clicked()
         Persona* p = mundo->eliminar(tmp->persona->id);
         mundo->decrementar_pecados(p);
         p->continente->cantidad_pecados -= p->total_pecados;
+        p->continente->cantidad_poblacion -= 1;
         p->estado = "Infierno";
         infierno->agregar(p);
         tmp = tmp->siguiente;

@@ -67,6 +67,7 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
         ui->mapa_button->setStyleSheet("background-color: rgb(240, 240, 240)");
         ui->cantidadPersonas->setStyleSheet("background-color: rgb(255, 255, 255);");
         ui->centralWidget->setStyleSheet("background-color:rgb(153, 209, 97)");
+        ui->pushButton_3->setStyleSheet("background-color:rgb(240, 240, 240)");
     }
     else
     {
